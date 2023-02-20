@@ -61,12 +61,16 @@
             <div class="main__sample">
                 <div id="sample01" class="sample">
                     <h3>01. 변수 : 데이터 저장</h3>
-                    <p>변수는 데이터를 저장하는 저장소입니다.</p>
+                    변수는 데이터를 저장하는 저장소입니다.</br>
+                    변수 X에 숫자 100을 저장함<br>
+                    변수 y에 숫자 200을 저정함<br>
+                    변수 z에 문자 "javascript"를 저장함<br>
+                    </div>
                     <div class="script">
 <pre><code class="language-js">{
-    var x = 100;                //변수 X에 숫자 100을 저장함
-    var y = 200;                //변수 y에 숫자 200을 저정함
-    var z = "javascript";       //변수 z에 문자 "javascript"를 저장함
+    var x = 100;                
+    var y = 200;                
+    var z = "javascript";       
 
     console.log(x);
     console.log(y);
@@ -83,7 +87,7 @@
 
                 <div id="sample02" class="sample">
                     <h3>02. 변수 : 데이터 저장 + 데이터 변경</h3>
-                    <p>변수는 데이터를 저장 할수도 있지만 변경도 가능함</p>
+                    변수는 데이터를 저장 할수도 있지만 변경도 가능함</br>
                     <div class="script">
 <pre><code code class="language-js">{
     let x = 100;
@@ -136,7 +140,7 @@
                 <!-- //sample03 -->
 
                 <div id="sample04" class="sample">
-                    <h3>상수 : 데이터 저장 + 데이터 변경(X)</h3>
+                    <h3>04. 상수 : 데이터 저장 + 데이터 변경(X)</h3>
                     <p>상수는 데이터 저장은 가능하나 변경은 불가능함</p>
                     <div class="script">
 <pre><code code class="language-js">{
@@ -160,13 +164,175 @@
                         javascriptreact
                 </div>
                 <!-- //sample04 -->
-                
-                <div id="sample05" class="sample"></div>
-                <div id="sample06" class="sample"></div>
-                <div id="sample07" class="sample"></div>
-                <div id="sample08" class="sample"></div>
-                <div id="sample09" class="sample"></div>
-                <div id="sample10" class="sample"></div>
+                <div id="sample05" class="sample">
+                    <h3>05. 배열 : 데이터 저장(여러개): 표현방법1</h3>
+                    <div class="script">
+<pre><code code class="language-js">{
+    const arr = new Array();
+    arr[0] = 100;
+    arr[1] = 200;
+    arr[2] = "javascript";
+
+    console.log(arr[0]);
+    // console.log(arr[1]);
+    console.log(arr[2]);
+}    
+</code></pre>
+                    </div>
+                    <div class="result">
+                        100<br>
+                        200<br>
+                        javascriptreact
+                </div>
+                <!-- //sample05 -->
+                <div id="sample06" class="sample">
+                    <h3>06. 배열 : 데이터 저장(여러개): 표현방법2</h3>
+                    <div class="script">
+<pre><code code class="language-js">{
+    const arr = new Array();
+    arr[0] = 100;
+    arr[1] = 200;
+    arr[2] = "javascript";
+
+    console.log(arr[0]);
+    // console.log(arr[1]);
+    console.log(arr[2]);
+}    
+</code></pre>
+                    </div>
+                    <div class="result">
+                        100<br>
+                        200<br>
+                        javascriptreact
+                </div>
+                <!-- //sample06 -->
+                <div id="sample06" class="sample">
+                    <h3>07. 배열 : 데이터 저장(여러개): 표현방법3</h3>
+                    <div class="script">
+<pre><code code class="language-js">{
+    const arr = new Array();
+    arr[0] = 100;
+    arr[1] = 200;
+    arr[2] = "javascript";
+
+    console.log(arr[0]);
+    // console.log(arr[1]);
+    console.log(arr[2]);
+}    
+</code></pre>
+                    </div>
+                    <div class="result">
+                        100<br>
+                        200<br>
+                        javascriptreact
+                </div>
+                <!-- //sample07 -->
+                </div>
+                <div id="sample07" class="sample">
+                    <h3>08. 배열 : 데이터 저장(여러개): 표현방법4</h3>
+                    <div class="script">
+<pre><code code class="language-js">{
+    const arr = [100, 200, "javascript"];
+
+            console.log(arr[0]);
+            console.log(arr[1]);
+            console.log(arr[2]);
+}    
+</code></pre>
+                    </div>
+                    <div class="result">
+                        100<br>
+                        200<br>
+                        javascriptreact
+                </div>
+                <!-- //sample08 -->
+                </div>
+                <div id="sample09" class="sample">
+                    <h3>//09. 객체 : 데이터 저장(키와 값) : 표현방법1</h3>
+                    <div class="script">
+<pre><code code class="language-js">{
+    const obj = new Object();
+            obj [0] = 100;
+            obj [1] = 200;
+            obj [2] = "javascript"
+            
+            console.log(obj[0]);
+            console.log(obj[1]);
+            console.log(obj[2]);
+}    
+</code></pre>
+                    </div>
+                    <div class="result">
+                        100<br>
+                        200<br>
+                        javascriptreact
+                </div>
+                <!-- //sample09 -->
+                </div>
+                <div id="sample09" class="sample">
+                    <h3>//10. 객체 : 데이터 저장(키와 값) : 표현방법2</h3>
+                    <div class="script">
+<pre><code code class="language-js">{
+    const obj = new Object();
+            obj.a = 100;
+            obj.b = 200;
+            obj.c = "javascript";   
+            
+            console.log(obj.a);
+            console.log(obj.b);
+            console.log(obj.c);
+}    
+</code></pre>
+                    </div>
+                    <div class="result">
+                        100<br>
+                        200<br>
+                        javascriptreact
+                </div>
+                <!-- //sample10 -->
+                </div>
+                <div id="sample10" class="sample">
+                    <h3>//11. 객체 : 데이터 저장(키와 값) : 표현방법3</h3>
+                    <div class="script">
+<pre><code code class="language-js">{
+    const obj = {};
+            obj.a = 100;
+            obj.b = 200;
+            obj.c = "javascript"
+
+            console.log(obj.a);
+            console.log(obj.b);
+            console.log(obj.c);
+}    
+</code></pre>
+                    </div>
+                    <div class="result">
+                        100<br>
+                        200<br>
+                        javascriptreact
+                </div>
+                <!-- //sample11 -->
+                </div>
+                <div id="sample11" class="sample">
+                    <h3>//12. 객체 : 데이터 저장(키와 값) : 표현방법4</h3>
+                    <div class="script">
+<pre><code code class="language-js">{
+    const obj = {a:100, b:200, c:"javascript"};
+
+            console.log(obj.a);
+            onsole.log(obj.b);
+            console.log(obj.c);
+}    
+</code></pre>
+                    </div>
+                    <div class="result">
+                        100<br>
+                        200<br>
+                        javascriptreact
+                </div>
+                <!-- //sample12 -->
+                </div>
+                <div id="sample12" class="sample"></div>
             </div>
         </div>
     </main>
@@ -239,7 +405,7 @@
             // console.log(y);
             // console.log(z);
         }
-        // 변수
+        // 배열 : 데이터 저장(여러개): 표현방법1
         {
             const a = 10000;
             const b = 20000;
