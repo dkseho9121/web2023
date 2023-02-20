@@ -61,10 +61,10 @@
             <div class="main__sample">
                 <div id="sample01" class="sample">
                     <h3>01. 변수 : 데이터 저장</h3>
-                    변수는 데이터를 저장하는 저장소입니다.</br>
-                    변수 X에 숫자 100을 저장함<br>
-                    변수 y에 숫자 200을 저정함<br>
-                    변수 z에 문자 "javascript"를 저장함<br>
+                    변수는 데이터를 저장하는 저장소 입니다.</br>
+                    변수 X에 숫자 100을 저장 합니다.<br>
+                    변수 y에 숫자 200을 저장 합니다.<br>
+                    변수 z에 문자 "javascript"를 저장 합니다.<br>
                     </div>
                     <div class="script">
 <pre><code class="language-js">{
@@ -79,15 +79,21 @@
 </code></pre>
                     </div>
                     <div class="result">
-                        100<br>
-                        200<br>
-                        javascript
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                100<br>
+                                200<br>
+                                "javascript"
+                            </div>
+                        </details>
                 </div>
                 <!-- //sample01 -->
 
                 <div id="sample02" class="sample">
-                    <h3>02. 변수 : 데이터 저장 + 데이터 변경</h3>
-                    변수는 데이터를 저장 할수도 있지만 변경도 가능함</br>
+                    <h3>0터2. 변수 : 데이 저장 + 데이터 변경</h3>
+                    변수는 데이터를 저장 할수도 있지만 변경도 가능 합니다.</br>
+
                     <div class="script">
 <pre><code code class="language-js">{
     let x = 100;
@@ -105,9 +111,9 @@
 </code></pre>
                     </div>
                     <div class="result">
-                        100<br>
+                        300<br>
                         200<br>
-                        javascript
+                        react
                     </div>
                 </div>
                 <!-- //sample02 -->
@@ -346,166 +352,168 @@
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <script>
-        // 01. 변수 : 데이터 저장 
-        {
-            var x = 100;                //변수 X에 숫자 100을 저장함
-            var y = 200;                //변수 y에 숫자 200을 저정함
-            var z = "javascript";       //변수 z에 문자 "javascript"를 저장함
+    {
+        //let x = 100; //숫자,문자,불린,undevined,null,객체,심벌,함수 --> 자료형(typeof)
+        //let y = 200; 
+        //let z = "javascript";
 
-            // console.log(x);
-            // console.log(y);
-            // console.log(z);
-        }
+        //x -= 1000; //100 = 1000 = -900
 
-        // 02. 변수 : 데이터 저장 + 데이터 변경
-        {
-            let x = 100;
-            let y = 200;
-            let z = "javascript";
+        //x += 1000; //-900 + 1000 = 100
 
-            x = 300;
-            y = 200;
-            z = "react";
+        //console.log(x, y, z);
 
-            // console.log(x);
-            // console.log(y);
-            // console.log(z);
-        }
+    }
 
-        // 03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가
-        {
-            let x = 100;
-            let y = 200;
-            let z = "javascript";
+    {  
+        //const x = 100, y = 200, z = "javascript"; 
 
-            x += 300;  // x = x + 300
-            y += 400; 
-            z += "react";
-
-            // console.log(x);
-            // console.log(y);
-            // console.log(z);
-        }
-
-        // 00. 상수 : 데이터 저장 + 데이터 변경(X)
-        // (예제)
-        // 상수는 데이터 저장은 가능하나 변경은 불가능하다.
-        // 상수(const)는 이미 선언한 상수에 대해 중복 선언이 불가능하며
-        // 상수의 값을 재지정 할 수도 없습니다.
-        {
-            const x = 100;
-            const y = 200;
-            const z = "javascript";
-
-            //x = 300;    
-            //y = 400;
-            //z = "react";
-
-            // console.log(x);
-            // console.log(y);
-            // console.log(z);
-        }
-        // 배열 : 데이터 저장(여러개): 표현방법1
-        {
-            const a = 10000;
-            const b = 20000;
-
-            //연산자
-            //console. log(a + b) //a에서 b를 더하고
-            //console. log(a - b) //a에서 b를 빼고
-            //console. log(a > b) //a보다 b가 크다
-            //console. log(a * b) //a에서 b를 곱하다
-            //console. log(a / b) //a에서 b를 나누다
-            //console. log(a % b) //나누기할떄 나머지 값
-
-            //let c = 10; // c를 숫자 10으로 지정하고
-            //c = "100" //c를 문자 100으로 지정하고
-            //c = 1000; // c를 숫자 1000으로 지정하고
-            //c += 1000; // c에 100을 더하기
-
-            //console.log(c) // 결과값
-        }
-        //05. 배열 : 데이터 저장(여러개): 표현방법1
-        {
-            const arr = new Array();
-            arr[0] = 100;
-            arr[1] = 200;
-            arr[2] = "javascript";
-
-            console.log(arr[0]);
-            // console.log(arr[1]);
-            console.log(arr[2]);
-        }
-        //06. 배열 : 데이터 저장(여러개): 표현방법2
-        {
-            const arr = new Array(100, 200, "javascript");
-
-            console.log(arr[0]);
-            console.log(arr[1]);
-            console.log(arr[2]);
-        }
-        //07. 배열 : 데이터 저장(여러개): 표현방법3
-        {
-            const arr = [];
-            arr[0] = 100;
-            arr[1] = 200;
-            arr[2] = "javscript"
-
-            console.log(arr[0]);
-            console.log(arr[1]);
-            console.log(arr[2]);
-        }
-        //08. 배열 : 데이터 저장(여러개): 표현방법4
-        {
-            const arr = [100, 200, "javascript"];
-
-            console.log(arr[0]);
-            console.log(arr[1]);
-            console.log(arr[2]);
-        }
-        //09. 객체 : 데이터 저장(키와 값) : 표현방법1
-        {
-            const obj = new Object();
-            obj [0] = 100;
-            obj [1] = 200;
-            obj [2] = "javascript"
-            
-            console.log(obj[0]);
-            console.log(obj[1]);
-            console.log(obj[2]);
         
-        }
-        // 10. 객체 : 데이터 저장(키와 값) : 표현방법2
+
+        //console. log(x, y, z);
+    }
+    {
+        //배열
+        //const brr = new Array();
+        //const crr = new Array(200, "react", false); 
+        //const drr = [[100,200],[400],[200,300],500];
+        //const err = [300, "arrat", true];
+
+        //brr[0][3] = 100;
+        //brr[1] = "javascript";
+        //brr[2] = true;        
+        //drr[0] = 100;
+        //drr[1] = "javascript";
+        //drr[2] = true;
+
+
+        //console.log(brr[0],brr[1],brr[2]);
+        //console.log(crr[0],crr[1],crr[2]);
+        //console.log(drr[0],drr[1],drr[2]);
+        //console.log(err[0],err[1],err[2]);
+
+            //답
+        //100 'javascript' true
+        //200 'react' false
+        //100 'javascript' true
+        //300 'arrat' true
+
+    }
+    
+        //객체: 데이터 저장 (키와값) : 표현방법1
+        //객체는 배열 방식을 그대로 사용할 수 있다.
         {
             const obj = new Object();
+
+            obj[0] = 100;
+            obj[1] = 200;
+            obj[2] = "javascript";
+
+            //console.log(obj[0]);
+            //console.log(obj[1]);
+            //console.log(obj[2]);
+        }
+
+        //객체: 데이터 저장 (키와값) : 표현방법2
+        {
+            const obj = new Object();
+
             obj.a = 100;
             obj.b = 200;
-            obj.c = "javascript";   
-            
-            console.log(obj.a);
-            console.log(obj.b);
-            console.log(obj.c);
+            obj.c = "javascript";
+
+            //console.log(obj.a);
+            //console.log(obj.b);
+            //console.log(obj.c);
+
         }
-        // 11. 객체 : 데이터 저장(키와 값) : 표현방법3
+        //객체: 데이터 저장 (키와값) : 표현방법3
         {
             const obj = {};
+
             obj.a = 100;
             obj.b = 200;
-            obj.c = "javascript"
+            obj.c = "javascript";
 
-            console.log(obj.a);
-            console.log(obj.b);
-            console.log(obj.c);
-
+            //console.log(obj.a);
+            //console.log(obj.b);
+            //console.log(obj.c);
         }
-        // 12. 객체 : 데이터 저장(키와 값) : 표현방법4
+        //객체: 데이터 저장 (키와값) : 표현방법4
         {
             const obj = {a:100, b:200, c:"javascript"};
 
-            console.log(obj.a);
-            console.log(obj.b);
-            console.log(obj.c);
+            //console.log(obj.a);
+            //console.log(obj.b);
+            //console.log(obj.c);
         }
+        //객체: 데이터 저장 (키와값) : 표현방법5 : 배열 안에 객체가 있을경우
+        {
+            const obj = [
+                {a:100, b:200},
+                {c:"javascript"}
+            ];
+
+            //console.log(obj[0].a);
+            //console.log(obj[0].b);
+            //console.log(obj[1].c);
+
+        }
+        //객체: 데이터 저장 (키와값) : 표현방법6 : 객체 안에 배열
+        {
+            const obj = {
+                a: 100,
+                b: [200, 300],
+                c: {x: 400, y: 500},
+                d: "javascript"
+            };
+
+            //console.log(obj.a); 
+            //console.log(obj.b[0]);
+            //console.log(obj.b[1]);
+            //console.log(obj.c.x);
+            //console.log(obj.c.y);
+            //console.log(obj.d);
+
+            
+        }
+        //객체: 데이터 저장 (키와값) : 표현방법7
+        {
+            const a = 100;
+            const b = 200;
+            const c = "javascript";
+
+            const obj = {a, b, c};
+
+            //console.log(a);
+            //console.log(b);
+            //console.log(c);
+
+        }
+        //객체: 데이터 저장 (키와값) : 표현방법8
+        {
+            const obj = {
+                a: 100,
+                b: [200,300],
+                c: "javascript",
+                d: function(){
+                    console.log("javascript가 실행되었습니다.");
+                }
+            }
+
+            console.log(obj.a);
+            console.log(obj.b[0]);
+            console.log(obj.b[1]);
+            console.log(obj.b[2]); //undifined
+            console.log(obj.c);
+            console.log(obj.d); // (X)
+            obj.d();
+        }
+        // 변수 : 저장문
+        // 상수 : 저장문
+        // 배열 : 저장문
+        // 객체 : 저장문
+
     </script>
 </body>
 </html>
