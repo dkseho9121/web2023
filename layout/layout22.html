@@ -1,49 +1,53 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃1 - grid</title>
+    <title>레이아웃2 - grid</title>
     <style>
         * {
             margin: 0;
             padding: 0;
-            display: grid;
-            grid-template-areas: 
-                "header header"
-                "nav nav"
-                "aside section"
-                "footer footer"
-            ;
-            grid-template-columns: 400px 800px; 
-            grid-template-rows: 100px 100px 780px 100px;
         }
         body {
-            background-color: #FFF3E0;
+            background-color: #E8F5E9;
         }
+
         #wrap {
-            width: 1200px;
             margin: 0 auto;
+            display: grid;
+            grid-template-areas: 
+                "header header header"
+                "nav nav nav"
+                "aside section article"
+                "footer footer footer"
+            ;
+            grid-template-columns: 300px 600px 300px;
+            grid-template-rows: 100px 100px 780px 100px;
         }
         #header {
-            background-color: #FFE0B2;
+            background-color: #C8E6C9;
             grid-area: header;
         }
         #nav {
-            background-color: #FFCC80;
+            background-color: #A5D6A7;
             grid-area: nav;
         }
         #aside {
-            background-color: #FFB74D;
+            background-color: #81C784;
             grid-area: aside;
         }
         #section {
-            background-color: #FFA726;
+            background-color: #66BB6A;
             grid-area: section;
         }
+        #article {
+            background-color: #4CAF50;
+            grid-area: article;
+        }
         #footer {
-            background-color: #FF9800;
+            background-color: #43A047;
             grid-area: footer;
         }
     </style>
@@ -54,8 +58,8 @@
         <nav id="nav"></nav>
         <aside id="aside"></aside>
         <section id="section"></section>
+        <article id="article"></article>
         <footer id="footer"></footer>
-
     </div>
 </body>
 </html>
