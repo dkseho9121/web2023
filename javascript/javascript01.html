@@ -477,7 +477,8 @@
                                         <pre class="line-numbers"><code code class="language-js">{
     const obj = [
         {a:100, b:200},
-        {c:"javascript"}];
+        {c:"javascript"}
+    ];
                                      
     console.log(obj[0].a);
     console.log(obj[0].b);
@@ -496,9 +497,10 @@
                                         </details>
                                     </div>
                                     <div class="notice">
-                                        새로운 객체를 생성하여 따로따로 값을 지정하는것이 아닌,<br>
-                                        애초에 객체를 생성할때 바로 키에 값을 지정하는 표현방법입니다.<br>
-                                        다른 <b>표현방법들에 비해 굉장히 짧고 간단한 방법</b>입니다.
+                                        obj라는 배열안에 {a:100, b:200} {c:"javascript"}라는 <b>2개의 객체</b>가 있다.<br>
+                                        consol.log(obj[0].a)는 <b>첫번째 객체</b>에 <b>a의 값</b>을 출력하도록하는것이고<br>
+                                        consol.log(obj[0].b)는 <b>첫번째 객체</b>에 <b>b의 값</b>을 출력하도록하는것이고<br>
+                                        consol.log(obj[1].c)는 <b>두번째 객체</b>에 <b>c의 값</b>을 출력하도록하는것이다.
                                     </div>
                                     <!-- //sample11 -->
                                 </div>
@@ -508,10 +510,10 @@
                                     <div class="script">
                                         <pre class="line-numbers"><code code class="language-js">{
     const obj = {
-    a: 100,
-    b: [200,300],
-    c: {x: 400, y: 500},
-    d: "javacscript"
+        a: 100,
+        b: [200,300],
+        c: {x: 400, y: 500},
+        d: "javacscript"
 }
                                         
     console.log(obj.a);
@@ -535,6 +537,12 @@
                                                 javascript
                                             </div>
                                         </details>
+                                    </div>
+                                    <div class="notice">
+                                        obj라는 객체안에 a:100, b:[200] {c:"javascript"}라는 <b>2개의 객체</b>가 있다.<br>
+                                        consol.log(obj[0].a)는 <b>첫번째 객체</b>에 <b>a의 값</b>을 출력하도록하는것이고<br>
+                                        consol.log(obj[0].b)는 <b>첫번째 객체</b>에 <b>b의 값</b>을 출력하도록하는것이고<br>
+                                        consol.log(obj[1].c)는 <b>두번째 객체</b>에 <b>c의 값</b>을 출력하도록하는것이다.
                                     </div>
                                     <!-- //sample12 -->
                                 </div>
@@ -565,29 +573,32 @@
                                         </div>
                                     </details>
                                 </div>
+                                
                                 <!-- //sample11 -->
                             </div>
                             <div id="sample12" class="sample"></div>
                             <h3>16. 객체 : 데이터 저장(키와 값) : 표현방법8</h3>
                             <div class="script">
                                 <pre class="line-numbers"><code code class="language-js">{
-    const obj = {
+const obj = {
     a: 100,
     b: [200, 300],
     c: "javascript",
     d: function(){
-    console.log("javascript가 실행되었습니다.");
-}
-                                
-}
+    document.write("javascript가 실행되었습니다.");
+    }
+    e: function(){
+        console.log(obj.c + "가 실행되었습니다."")
+    }
+};
                                 
     console.log(obj.a);
     console.log(obj.b[0]);
     console.log(obj.b[1]);
-    console.log(obj.b[2]);  //undefind
     console.log(obj.c);
-    console.log(obj.d);     //(X)
+    console.log(obj.d); //이렇게 하면 문자가 써지는 것이 아니라 console로 인식되어 console창에 써짐
     obj.d();
+    obj.e();
 }
 </code></pre>
                             </div>
