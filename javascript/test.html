@@ -1,0 +1,60 @@
+<script>
+{
+    for(let i=1; i<=8; i++){
+        document.write(i);
+    }
+}
+document.write("<br>");
+document.write("<br>");
+
+{
+    for(let i=1; i<=100; i++){
+        if(i % 2 == 0){
+            document.write(i);
+        }
+    }
+}
+
+document.write("<br>");
+document.write("<br>");
+
+{
+    for(let i=1; i<=100; i++){
+        if( i % 4 == 0){
+            document.write(i);
+        }
+    }
+}
+document.write("<br>");
+document.write("<br>");
+{
+    for(let i=8; i<=8; i++){
+        document.write(i + "단","<br>")
+
+        for(let j=1; j<=9; j++){
+        document.write(i + "*" + j + "=" + i*j);
+        document.write("<br>")
+    }
+    
+    
+    }
+}
+document.write("<br>");
+document.write("<br>");
+{
+    let table = "<table border='1'>";
+
+for(let i=1; i<=15; i++){
+    table += "<tr>";
+
+    for(let j=1; j<=15; j++){
+        table += "<td>"+ j +"</td>";
+    }
+
+    table += "</tr>";
+}
+table += "</table>";
+
+document.write(table);
+}
+</script>
