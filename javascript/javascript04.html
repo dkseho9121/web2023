@@ -8,13 +8,15 @@
     <title>JavaScript : 데이터 저장하기</title>
     
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
     <link rel="shortcut icon" href="assets/ico/javascript.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/javascript192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/ico/javascript192x192.png">
 </head>
 <body>
     <header id="header">
-      <h1><a href="index.html">javascript : 데이터 제어하기</a></h1>
+      <h1><a href="index.html">javascript</a></h1>
      <nav>
         <ul>
             <li><a href="javascript01.html">데이터 저장하기</a></li>
@@ -49,21 +51,301 @@
             <div class="main__menu">
                 <ul>
                     <li><a href="#">01. if문</a></li>
-                    <li><a href="#">01. if문 생략</a></li>
-                    <li><a href="#">01. 다중 if</a></li>
-                    <li><a href="#">01. 중첩 if</a></li>
-                    <li><a href="#">01. 삼항 연산자</a></li>
-                    <li><a href="#">01. switch문</a></li>
-                    <li><a href="#">01. while문</a></li>
-                    <li><a href="#">01. do while문</a></li> //그렇게 자주사용하진않지만 가끔씩 나옮
-                    <li><a href="#">01. for문</a></li> //웹에선 90% for문 사용
-                    <li><a href="#">01. 중첩 for문</a></li>
-                    <li><a href="#">01. break문</a></li>
-                    <li><a href="#">01. continue문</a></li>
+                    <li><a href="#">02. if문 생략</a></li>
+                    <li><a href="#">03. 삼항 연산자</a></li>
+                    <li><a href="#">04. 다중 if</a></li>
+                    <li><a href="#">05. 중첩 if</a></li>
+
+                    <li><a href="#">06. switch문</a></li>
+                    <li><a href="#">07. while문</a></li>
+                    <li><a href="#">08. do while문</a></li> 
+                    <li><a href="#">09. for문</a></li>
+                    <li><a href="#">10. 중첩 for문</a></li>
+                    <li><a href="#">11. break문</a></li>
+                    <li><a href="#">12. continue문</a></li>
 
 
                 </ul>
              </div>
+             <div class="main__sample">
+             <div id="sample01" class="sample"style="padding-top: 40px;">
+                    <h3>01. if문</h3>
+                    if문은 프로그래밍에서 조건을 검사하여, 해당 조건이 참(true)인 경우에만 특정 코드 블록을 실행시키는 제어 구조입니다.</br>
+                </div>
+                <div class="script">
+                    <pre class="line-numbers"><code class="language-js">if(null){
+    document.write("실행되었습니다.(ture)");
+} else {
+    document.write("실행되었습니다.(false)");
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다.(false)
+                        </div>
+                    </details>
+                </div>
+                <div class="notice">
+                    true :<b> 1 , 2, "0" , "1" , "ABC" , "배열" , "객체" , true </b><br>
+                    false :<b> null, 0 , u nndefined , false , " "(빈문자열) </b><br>
+                    if(null) 구문에서 <b>null은 거짓(false) 값으로 간주</b>됩니다.<br>
+                    따라서 <b>if문의 조건식이 거짓</b>이므로 else 블록 안에 있는 document.write 문장이 실행됩니다.
+                </div>
+                <!-- //sample01 -->
+                <div id="sample02" class="sample">
+                    <h3>02. if문 생략</h3>
+                    변수는 데이터를 저장 할수도 있지만 변경도 가능 합니다.
+                    <div class="script">
+                        <pre class="line-numbers"><code code class="language-js">const num = 100;
+if(num) document.write("실행되었습니다.(ture)");
+else document.write("실행되었습니다.(ture)"); //(이렇게 생략가능) 
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.(false)
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <h4>var대신 let을 사용했습니다.</h4>
+                        let과 var는 데이터 저장은 물론, 데이터 변경이 가능합니다
+                        보통, <b>변경해야할 데이터가 있을때 let을 사용하면 됩니다.</b>
+                    </div>
+                    <!-- //sample02 -->
+                    <div id="sample02" class="sample">
+                        <h3>03. 삼항 연산자</h3>
+                        삼항 연산자(ternary operator)는 조건 연산자(conditional operator)로 불리며,<br>
+                        조건식 ? 참일때의 값 : 거짓일때의 값의 형태를 가지고 있습니다.
+                        <div class="script">
+                            <pre class="line-numbers"><code code class="language-js">const num = 100;
+
+if(num == 100){
+    document.write("true");
+} else {
+    documnet.write("false");
+}
+                        
+(num == 100) ? document.write("true") : documnet.write("false"); //(이렇게 생략가능)
+    </code></pre>
+                        </div>
+                        <div class="result">
+                            <details>
+                                <summary>결과 확인하기</summary>
+                                <div>
+                                    실행되었습니다.(false)
+                                </div>
+                            </details>
+                        </div>
+                        <div class="notice">
+                            위 코드는 num 변수의 값이 100일 때 "true"를 출력하고, 그렇지 않으면 "false"를 출력하는 삼항 연산자입니다.<br>
+                            <b>생략해서 사용할수있습니다.</b>
+                        </div>
+                        <!-- //sample03 -->
+                        <div id="sample02" class="sample">
+                            <h3>04. 다중 if</h3>
+                            다중 if 문(multiple if statement)은 하나 이상의 if 조건문을 중첩하여 사용하는 것을 의미합니다
+                            <div class="script">
+                                <pre class="line-numbers"><code code class="language-js">const num = 90;
+
+if (num == 90) {
+    document.write("실행되었습니다(num == 90)");
+} else if(num == 100){
+    document.write("실행되었습니다(num == 100)");
+    
+} else if(num == 110){
+    document.write("실행되었습니다(num == 110)");
+    
+} else if(num == 120){
+    document.write("실행되었습니다(num == 120)");
+
+} else {
+    document.write("실행되었습니다");
+    
+    }
+        </code></pre>
+                            </div>
+                            <div class="result">
+                                <details>
+                                    <summary>결과 확인하기</summary>
+                                    <div>
+                                        실행되었습니다(num == 90)
+                                    </div>
+                                </details>
+                            </div>
+                            <div class="notice">
+                                위 코드는 num 변수의 값에 따라 실행되는 if 문과 else if 문의 예시입니다.<br>
+
+변수 num의 값이 90이므로 첫 번째 조건인 if (num == 90)이 참이 되어 "실행되었습니다(num == 90)"가 출력됩니다.<br>
+다른 조건문은 실행되지 않습니다.<br>
+else if 문은 if 문과 함께 사용하여 여러 조건을 검사하고, 각 조건에 맞게 실행할 코드를 작성할 수 있습니다.<br>
+이 경우 <b>if 문이 참이 아닐 때 해당 else if 조건문을 검사합니다.</b><br>
+만약 이전의 if 문이 참이라면 다음 조건은 검사되지 않고, 바로 실행문이 실행됩니다.<br>
+마지막 else는 모든 조건에 해당하지 않을 경우 실행되는 부분입니다.
+                            </div>
+                            <!-- //sample03 -->
+                            <div id="sample02" class="sample">
+                                <h3>05. 중첩 if문</h3>
+                                중첩 if 문은 if 문 안에 또 다른 if 문을 포함하는 것을 말합니다. 이렇게 중첩된 if 문은 복잡한 조건문을 처리할 때 유용하게 사용됩니다.
+                                <div class="script">
+                                    <pre class="line-numbers"><code code class="language-js">{
+const  num = 100;
+                                
+if(num == 100){
+    document.write("실행되었습니다.(1)");
+if(num == 100) {
+    document.write("실행되었습니다.(2)");
+if(num == 100){
+    document.write("실행되었습니다.(3)")
+    }
+}
+} else {
+    document.write("실행되었습니다.(4)")
+    }
+            </code></pre>
+                                </div>
+                                <div class="result">
+                                    <details>
+                                        <summary>결과 확인하기</summary>
+                                        <div>
+                                            실행되었습니다(num == 90)
+                                        </div>
+                                    </details>
+                                </div>
+                                <div class="notice">
+이 코드는 중첩 if 문을 사용하여 구성된 예시입니다.<br>
+코드를 간단히 설명하면, <b>num 변수가 100인 경우에 대해 if 문을 사용하여 3개의 문자열을 출력</b>하고,<br>
+그렇지 <b>않은 경우에는 하나의 문자열을 출력</b>합니다.<br>
+여기서 주목할 점은, <b>if(num == 100) 문장이 3번 중첩</b>되어 있다는 것입니다.<br>
+이렇게 중첩된 if 문은 코드의 가독성을 떨어뜨릴 수 있으므로, <b>필요한 경우에 한해서 사용</b>해야 합니다.
+                                </div>
+                                <!-- //sample03 -->
+                                <div id="sample01" class="sample"></div>
+                                <h3>06. switch문</h3>
+                                약간의 설명
+                                <div class="script">
+                                    <pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">코드
+            </code></pre>
+                                </div>
+                                <div class="result">
+                                    <details>
+                                        <summary>결과 확인하기</summary>
+                                        <div>
+                                            실행되었습니다(num == 90)
+                                        </div>
+                                    </details>
+                                </div>
+                                <div class="notice">
+                                설명
+                                </div>
+                                <!-- //sample03 -->
+                                <div id="sample01" class="sample"></div>
+                                <h3>06. switch문</h3>
+                                약간의 설명
+                                <div class="script">
+                                    <pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">코드
+            </code></pre>
+                                </div>
+                                <div class="result">
+                                    <details>
+                                        <summary>결과 확인하기</summary>
+                                        <div>
+                                            실행되었습니다(num == 90)
+                                        </div>
+                                    </details>
+                                </div>
+                                <div class="notice">
+                                설명
+                                </div>
+                                <!-- //sample03 -->
+                                <div id="sample01" class="sample"></div>
+                                <h3>07. while문</h3>
+                                약간의 설명
+                                <div class="script">
+                                    <pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">코드
+            </code></pre>
+                                </div>
+                                <div class="result">
+                                    <details>
+                                        <summary>결과 확인하기</summary>
+                                        <div>
+                                            실행되었습니다(num == 90)
+                                        </div>
+                                    </details>
+                                </div>
+                                <div class="notice">
+                                설명
+                                </div>
+                                <!-- //sample03 -->
+                                <div id="sample01" class="sample"></div>
+                                <h3>08. do while문</h3>
+                                약간의 설명
+                                <div class="script">
+                                    <pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">코드
+            </code></pre>
+                                </div>
+                                <div class="result">
+                                    <details>
+                                        <summary>결과 확인하기</summary>
+                                        <div>
+                                            실행되었습니다(num == 90)
+                                        </div>
+                                    </details>
+                                </div>
+                                <div class="notice">
+                                설명
+                                </div>
+                                <!-- //sample03 -->
+                                <div id="sample01" class="sample"></div>
+                                <h3>09. for문</h3>
+                                약간의 설명
+                                <div class="script">
+                                    <pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
+                                        const arr = [1,2,3,4,5,6,7,8,9];
+                                         
+                                         for(let i=0; i<arr.length; i++){
+                                             if(i % 2 ==1){
+                                                 document.write("<span style='color:red'>" +i+ "</span>");
+                                             } else {
+                                                 document.write(`<span style='color:blue'>${i}</span>`);
+                                             }
+                                         }
+                                 
+                                         document.write("<br>");
+                                 
+                                         for(let i=0; i<arr.length; i++){
+                                             if(i % 2 == 0){
+                                             document.write(arr[i]);
+                                             }
+                                         }
+                                 
+                                         document.write("<br>");
+                                 
+                                         for(let i=1; i<arr.length; i+=2){
+                                             document.write(arr[i]);
+                                             
+                                         }
+                                     }
+            </code></pre>
+                                </div>
+                                <div class="result">
+                                    <details>
+                                        <summary>결과 확인하기</summary>
+                                        <div>
+                                            실행되었습니다(num == 90)
+                                        </div>
+                                    </details>
+                                </div>
+                                <div class="notice">
+                                설명
+                                </div>
+                                <!-- //sample03 -->
+                        
         </div>
     </main>
     <!-- //main -->
@@ -71,8 +353,74 @@
     <footer id="footer">
     </footer>
     <!-- //footer -->
-
     <script>
+
+
+   
+        //09. for문
+        //1-100까지 출력
+        //for(let i=1; i<=100; i++){
+            //document.write(i);
+        //}
+        //document.write("<br>");
+    {
+       //const arr = [1,2,3,4,5,6,7,8,9];
+       // 
+       // for(let i=0; i<arr.length; i++){
+       //     if(i % 2 ==1){
+       //         document.write("<span style='color:red'>" +i+ "</span>");
+       //     } else {
+       //         document.write(`<span style='color:blue'>${i}</span>`);
+       //     }
+       // }
+//
+       // document.write("<br>");
+//
+       // for(let i=0; i<arr.length; i++){
+       //     if(i % 2 == 0){
+       //     document.write(arr[i]);
+       //     }
+       // }
+//
+       // document.write("<br>");
+//
+       // for(let i=1; i<arr.length; i+=2){
+       //     document.write(arr[i]);
+       //     
+       // }
+       // document.write("<br>");
+//
+       // for(let i=0; i<arr.length; i+=2){
+       //     document.write(arr[i]);
+       // }
+    }
+
+    //테이블
+{
+    let table = "<table border='1'";
+        
+      for(let i=0; i<5; i++){
+        table += "<tr>";
+            //for(let j=0;);
+      
+
+        table += "</table>";
+
+   document.write(table);
+
+        }
+    //1부터 25까지 출력
+}
+
+    let num = 0;
+    for(let i=1; i<=25; i++){
+        document.write(i);
+        num++;
+    }
+        document.write("<br>");
+        document.write(num);
+
+    
 
     </script>
 
@@ -81,6 +429,7 @@
             <a href="mailto:dlscks0930@naver.com">dlscks0930@naver.com</a>
         </footer>
         <!-- //footer -->
+        <script src="assets/js/prism.js"></script>
 
     </body>
 
