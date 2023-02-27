@@ -84,6 +84,229 @@
 
                 </ul>
             </div>
+            <div class="main__sample">
+                <div id="sample01" class="sample"style="padding-top: 40px;">
+                    <h3>01.선언적 함수</h3>
+                    선언적 함수(declarative function)는 자바스크립트에서 함수를 정의하는 방법 중 하나입니다.</br>
+                <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+function func () {
+document.write("실행되었습니다.!<br>");
+}
+func();
+}
+</code></pre>
+                </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.!
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        함수를 선언할 때 function 키워드를 사용하여 정의하는 방법입니다. 함수 선언문 이라고도합니다.</br>
+                        선언적 함수는 함수를 정의하는 시점에서 함수 객체가 생성되며, <b>호이스팅(hoisting)이 가능</b>합니다.</br>
+                <b>호이스팅이 가능하다는 것은 함수가 정의되기 이전에 함수를 호출할 수 있다</b>는 것을 의미합니다.</br>
+                    따라서, 함수를 선언문으로 정의하면 코드의 가독성과 유지보수성을 높일 수 있습니다.
+                    </div>
+                </div>
+                <!-- //sample01 -->
+                <div class="main__sample">
+                <div id="sample02" class="sample"style="padding-top: 40px;">
+                    <h3>02. 익명 함수</h3>
+                    변수는 데이터를 저장하는 "저장소" 이며 이 저장소에는 숫자, 문자, 함수, 객체 등을 저장할수 있습니다.</br>
+                <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+const func = function() {
+document.write("실행되었습니다.!<br>");
+}
+func();
+}
+</code></pre>
+                </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.!
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                    익명 함수는 함수 표현식(function expression)이나 콜백 함수(callback function) 등에서 주로 사용됩니다.<br>
+                    <b>함수를 변수에 할당하거나, 객체의 속성 값으로 함수를 할당할 때 사용됩니다.</b>
+                    </div>
+                </div>
+                <!-- //sample02 -->
+                <div class="main__sample">
+                <div id="sample03" class="sample"style="padding-top: 40px;">
+                    <h3>03. 매개변수 함수</h3>
+                    매개변수 함수(parameter function)는 자바스크립트에서 함수의 인자로 전달되는 함수를 말합니다
+                <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+function func(str) {
+document.write(str);
+}
+func("실행되었습니다.!");
+}
+</code></pre>
+                </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.!
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        매개변수 함수를 이용하면 함수의 재사용성과 확장성을 높일 수 있습니다.<br>
+                        함수의 로직 중 일부를 매개변수 함수로 분리하여, 함수 호출 시에 동적으로 로직을 변경하거나 확장할 수 있기 때문입니다.
+                    </div>
+                </div>
+                <!-- //sample03 -->
+                <div class="main__sample">
+                <div id="sample04" class="sample"style="padding-top: 40px;">
+                    <h3>04. 리턴값 함수</h3>
+                    리턴값 함수(return function)는 자바스크립트에서 함수가 실행된 결과를 반환하는 함수를 말합니다.</br>
+                <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+function func() {
+const str = "실행되었습니다.!";
+return str;
+}
+document.write(func());
+}
+</code></pre>
+                </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.!
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        함수 내부에서 <b>연산, 조작, 처리한 결과를 반환하여, 이를 다른 변수나 함수에서 활용</b>할 수 있습니다.
+                    </div>
+                </div>
+                <!-- //sample04 -->
+                <div class="main__sample">
+                <div id="sample05" class="sample"style="padding-top: 40px;">
+                    <h3>05. 화살표함수: 선언적함수</h3>
+                    화살표 선언적 함수(arrow function declaration)는 자바스크립트에서 함수를 정의하는 방법 중 하나입니다.</br>
+                <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+func = () => {
+document.write("실행되었습니다.<br>");
+}
+func ();
+}
+</code></pre>
+                </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        일반적인 함수 선언문과 달리, <b>화살표 함수를 이용하여 간결하고 명확한 함수를 작성</b>할 수 있습니다.
+                        화살표 함수는 함수의 인자와 로직을 괄호로 묶어 화살표 표기법(=>)으로 구성됩니다.<br>
+                        화살표 함수는 일반적으로 함수 표현식(function expression)으로 사용되며,<br>
+                        <b>변수에 할당되어 다른 함수의 인자로 전달되거나 콜백 함수(callback function)로 사용</b>됩니다.
+                    </div>
+                </div>
+                <!-- //sample05 -->
+                <div class="main__sample">
+                <div id="sample06" class="sample"style="padding-top: 40px;">
+                    <h3>06. 화살표함수 : 익명 함수</h3>
+                    화살표 익명 함수(arrow anonymous function)는 자바스크립트에서 익명 함수를 작성할 때, 화살표 함수를 이용하는 것을 말합니다</br>
+                <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+const func = () => {
+document.write("실행되었습니다.<br>")
+}
+func();
+}
+</code></pre>
+                </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <b>함수 이름이 없는 익명 함수를 작성할 때,</b><br>
+                        화살표 함수를 이용하여 간결하고 명확한 함수를 작성할 수 있습니다.<br>
+                        화살표 익명 함수는 함수의 인자와 로직을 괄호로 묶어 화살표 표기법(=>)으로 구성됩니다.<br>
+                        화살표 함수는 일반적으로 함수 표현식(function expression)으로 사용되며,<br>
+                        변수에 할당되어 다른 함수의 인자로 전달되거나 콜백 함수(callback function)로 사용됩니다.
+                    </div>
+                </div>
+                <!-- //sample06 -->
+                <div class="main__sample">
+                <div id="sample07" class="sample"style="padding-top: 40px;">
+                    <h3>07. 화살표함수 : 매개변수</h3>
+                    화살표 매개변수(arrow function parameters)는 자바스크립트에서 화살표 함수를 작성할 때, 함수 인자를 지정하는 방법을 말합니다.</br>
+                <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+func = (str) => {
+document.write(str);
+}
+func("실행되었습니다.<br>");
+}
+</code></pre>
+                </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                    일반적인 함수 선언문과 달리, 화살표 함수는 매개변수 선언부가 괄호로 묶이며, 매개변수가 하나일 경우 괄호를 생략할 수 있습니다.
+                    </div>
+                </div>
+                <!-- //sample07 -->
+                <div class="main__sample">
+                <div id="sample08" class="sample"style="padding-top: 40px;">
+                    <h3>08. 화살표 함수 : 리턴값 함수</h3>
+                    화살표 리턴값 함수(arrow function with return value)는 자바스크립트에서 화살표 함수를 작성할 때, 함수의 반환 값을 지정하는 방법을 말합니다.</br>
+                <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+func = () => {
+const str = "실행되었습니다.<br>";
+return str;
+}
+document.write(func());
+}
+</code></pre>
+                </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                    화살표 함수는 함수 본문 내부의 문장이 하나일 경우에는 중괄호와 return 키워드를 생략할 수 있으며,<br>
+                    이때는 해당 문장의 결과값이 함수의 반환 값으로 자동 지정됩니다.
+                    </div>
+                </div>
+                <!-- //sample08 -->
         </div>
     </main>
     <!-- //main -->
@@ -94,75 +317,6 @@
 
     <script>
 
-        //변수, 상수, 배열, 객체 : 데이터 저장
-        //함수 : 데이터 실행
-
-        //선언적 함수
-//        {
-//            function func () {
-//                document.write("실행되었습니다.!<br>");
-//            }
-//            func();
-//        }
-//
-//        //익명 함수
-//        {
-//            const func = function() {
-//                document.write("실행되었습니다.!<br>");
-//            }
-//            func();
-//        }
-//
-//        //매개변수 함수 -- 매개변수 = 인자값 (같은말) (★필수★)
-//        {
-//            function func(str) {
-//                document.write(str);
-//            }
-//            func("실행되었습니다.!<br>");
-//        }
-//
-//        // 리턴값(여기서 리턴은 결과/끝을 의미) 함수
-//        {
-//            function func() {
-//                const str = "실행되었습니다.!";
-//                return str;
-//            }
-//            document.write(func());
-//        }
-//
-//        document.write("<br><br>");
-//
-//            //화살표 함수란 일반 함수를 약식으로 만들어놓은것이다.
-//        //05. 화살표함수 (선언적함수)
-//        {
-//            func = () => {
-//                document.write("실행되었습니다.<br>");
-//            }
-//            func ();
-//        }
-//        //06. 화살표함수 (익명함수)
-//        {
-//            const func = () => {
-//                document.write("실행되었습니다.<br>")
-//            }
-//            func();
-//        }
-//        //07. 화살표함수 (매개변수)
-//        {
-//            func = (str) => {
-//                document.write(str);
-//            }
-//            func("실행되었습니다.<br>");
-//        }
-//        //08. 화살표함수 (리턴값 함수) 
-//        {
-//            func = () => {
-//                const str = "실행되었습니다.<br>";
-//                return str;
-//            }
-//            document.write(func());
-//        }
-        
     </script>
 
     <body>
