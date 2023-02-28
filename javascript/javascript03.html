@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript : 데이터 저장하기</title>
+    <title>Javascript : 데이터 실행하기</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
     <link rel="shortcut icon" href="assets/ico/javascript.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/ico/javascript192x192.png">
@@ -81,7 +83,6 @@
 
                     <li><a href="#">01. 클래스</a></li>
                     <li><a href="#">01. 클래스 상속</a></li>
-
                 </ul>
             </div>
             <div class="main__sample">
@@ -302,7 +303,7 @@ document.write(func());
                 <!-- //sample08 -->
                 <div id="sample09" class="sample"style="padding-top: 40px;">
                     <h3>09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</h3>
-                    위 코드는 화살표 함수 익명 함수와 매개변수 리턴함수를 사용한 예제입니다</br>
+                    화살표 함수 익명 함수와 매개변수 리턴함수를 사용한 예제입니다</br>
                 <div class="script">
 <pre class="line-numbers"><code class="language-js">{
 a = () => {
@@ -336,14 +337,19 @@ document.write(d(1,2,3));
                         </details>
                     </div>
                     <div class="notice">
-                    위 순대로 코드는 익명 화살표 함수 a를 선언하고, 이를 호출하여 "실행1"을 출력합니다.<br>
-                    
+                    위 순대로 익명 화살표 함수 a를 선언하고, 이를 호출하여 "실행1"을 출력합니다.<br>
+                    상수(const) b에 익명 화살표 함수를 할당하고, 이를 호출하여 "실행2"를 출력합니다.<br>
+                    세 개의 문자열 매개변수를 받는 익명 화살표 함수 c를 선언하고, 이를 호출하여 "실행3실행4실행5"를 출력합니다.<br>
+                    매개변수와 인자는 쉼표로 구분되며, 여기서는 인자를 쉼표 없이 나열하였습니다.<br>
+                    세 개의 숫자 매개변수를 받는 익명 화살표 함수 d를 선언하고, 이를 호출하여 1, 2, 3을 더한 결과인 6을 출력합니다.<br>
+                    함수 내에서 return 키워드를 사용하여 값을 반환합니다.
+
                     </div>
                 </div>
                 <!-- //sample09 -->
                 <div id="sample10" class="sample"style="padding-top: 40px;">
-                    <h3>10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</h3>
-                    설명</br>
+                    <h3>10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</h3>
+                    화살표 함수 익명 함수와 매개변수 리턴함수로 사용한 예제이며 괄호는 생략하여 표현하는 방법 입니다</br>
                 <div class="script">
 <pre class="line-numbers"><code class="language-js">{
 func = () => {
@@ -363,20 +369,18 @@ document.write(func());
                         </details>
                     </div>
                     <div class="notice">
-                    설명
+                    9번과 같지만, 9번에서 괄호를 생략해주었습니다.
                     </div>
                 </div>
                 <!-- //sample010 -->
                 <div id="sample11" class="sample"style="padding-top: 40px;">
-                    <h3>11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</h3>
-                    설명</br>
+                    <h3>11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
+                    화살수표 함수 익명 함수와 매개변수 리턴함로 사용한 예제이며 괄호와 리턴을 생략하여 표현하는 방법 입니다</br>
                 <div class="script">
 <pre class="line-numbers"><code class="language-js">{
-func = () => {
-const str = "실행되었습니다.<br>";
-return str;
-}
-document.write(func());
+const func = str => str;    //리턴생략, 중괄호 생략 동시에 생략가능
+
+document.write(func("실행되었습니다."));
 }
 </code></pre>
                 </div>
@@ -389,20 +393,19 @@ document.write(func());
                         </details>
                     </div>
                     <div class="notice">
-                    설명
+                    10번과 같지만, 10번에서 리턴을 생략해주었습니다. <br>
+                    리턴생략할때 중괄호도 같이 생략가능합니다.
                     </div>
                 </div>
                 <!-- //sample11 -->
                 <div id="sample12" class="sample"style="padding-top: 40px;">
-                    <h3>12. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</h3>
-                    설명</br>
+                    <h3>12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
+                    화살수표 함수 익명 함수와 매개변수 리턴함로 사용한 예제이며 괄호와 리턴을 생략하여 표현하는 방법 입니다</br>
                 <div class="script">
 <pre class="line-numbers"><code class="language-js">{
-func = () => {
-const str = "실행되었습니다.<br>";
-return str;
-}
-document.write(func());
+func = str => str;
+
+document.write(func("실행되었습니다."));
 }
 </code></pre>
                 </div>
@@ -415,7 +418,8 @@ document.write(func());
                         </details>
                     </div>
                     <div class="notice">
-                    설명
+                    11번에서 한번더 생략할수있습니다. <br>
+                    익명함수를 선언적 함수로 바꿔주는것입니다.
                     </div>
                 </div>
                 <!-- //sample12 -->
@@ -423,73 +427,11 @@ document.write(func());
     </main>
     <!-- //main -->
 
-    <script>
-        //09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값
-        {
-            a = () => {
-                document.write("실행1");
-            }
-            a();
-
-            const b = () => {
-                document.write("실행2");
-            }
-            b();
-
-            const c = (str1, str2, str3,) => {
-                document.write(str1, str2, str3,); //선언적 함수를 화살표 함수로 바꾸는 것은 함수처럼 안보이기도하며 가독성이 떨어지기에 익명함수로 바꿔서 많이 사용함
-            }
-            c("실행3","실행4","실행5");
-            
-            d = (x, y, z) => {
-                return x+y+z;
-            }
-            document.write(d(1,2,3));
-        }
-
-        //09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값
-        {
-            const func = (str) => { // 익명함수
-                document.write(str);//결과값 함수
-                return str;         //리턴함수 
-            }
-            func("실행되었습니다."); //매개변수
-            document.write(func("실행되었습니다."));
-        }
-
-        //10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략
-        {
-            const func = str => {
-                return str;
-            }
-            document.wr
-            document.write(func("실행되었습니다."));
-        }
-
-        //11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략
-        {
-            const func = str => str;    //리턴생략, 중괄호 생략 동시에 생략가능
-
-            document.write(func("실행되었습니다."));
-        }
-
-        //12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략
-            //11번 에서 한번더 생략할수있다.
-            // 그것은 바로! 익명 함수를 선언적 함수로 바꿔주는것
-        {
-            func = str => str;
-
-            document.write(func("실행되었습니다."));
-        }
-
-    </script>
-
-    <body>
-        <footer id="footer">
-            <a href="mailto:dlscks0930@naver.com">dlscks0930@naver.com</a>
-        </footer>
-        <!-- //footer -->
-
-    </body>
+    <footer id="footer">
+        <a href="dlscks0930@naver.com">dlscks0930@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="assets/js/prism.js"></script>
+</body>
 
 </html>

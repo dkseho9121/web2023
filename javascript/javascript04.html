@@ -228,64 +228,83 @@ if(num == 100){
                                 <!-- //sample03 -->
                                 <div id="sample01" class="sample"></div>
                                 <h3>06. switch문</h3>
-                                약간의 설명
+                                자바스크립트에서 사용되는 switch문 입니다.
                                 <div class="script">
-                                    <pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">코드
+                                    <pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
+const num = 100;
+
+switch(num) {
+case 90:
+document.write("실행90");
+break;
+case 80:
+document.write("실행80");
+break;
+case 70:
+document.write("실행70");
+break;
+case 60:
+document.write("실행60");
+break;
+case 50:
+document.write("실행50");
+break;
+case 40:
+document.write("실행40");
+break; //무한에 빠지지 않기위해선 브레이크문을 걸어준다.
+default:
+document.write("0");
+}
+}
             </code></pre>
                                 </div>
                                 <div class="result">
                                     <details>
                                         <summary>결과 확인하기</summary>
                                         <div>
-                                            실행되었습니다(num == 90)
+                                            0
                                         </div>
                                     </details>
                                 </div>
                                 <div class="notice">
-                                설명
-                                </div>
-                                <!-- //sample03 -->
-                                <div id="sample01" class="sample"></div>
-                                <h3>06. switch문</h3>
-                                약간의 설명
-                                <div class="script">
-                                    <pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">코드
-            </code></pre>
-                                </div>
-                                <div class="result">
-                                    <details>
-                                        <summary>결과 확인하기</summary>
-                                        <div>
-                                            실행되었습니다(num == 90)
-                                        </div>
-                                    </details>
-                                </div>
-                                <div class="notice">
-                                설명
+                                    switch문은 if-else문과 비슷한 역할을 수행합니다.<br>
+                                    switch문의 조건식으로 사용될 수 있는 값은 다양한 타입의 데이터입니다.<br>
+                                    switch문은 특정 값에 대한 여러 가지 경우(case)를 검사하고, 해당하는 경우에 실행할 코드 블록을 실행합니다.
                                 </div>
                                 <!-- //sample03 -->
                                 <div id="sample01" class="sample"></div>
                                 <h3>07. while문</h3>
-                                약간의 설명
+                                웹에선 잘 사용하진않지만, 정보처리 기능사 시험에선 자주출시되는 문법
                                 <div class="script">
-                                    <pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">코드
-            </code></pre>
+<pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
+    for(let i=0; i&lt;5; i++){
+        document.write(i);
+    }
+    
+    let num = 0;
+    while(num&lt;5){   //num빼고 그냥 5만쓰면 무한에빠짐
+        document.write(num);
+        num++;
+    }
+}
+</code></pre>
                                 </div>
                                 <div class="result">
                                     <details>
                                         <summary>결과 확인하기</summary>
                                         <div>
-                                            실행되었습니다(num == 90)
+                                            0123401234
                                         </div>
                                     </details>
                                 </div>
                                 <div class="notice">
-                                설명
+                                    while문과 do-while문은 JavaScript에서 반복문을 구현하는 데 사용되는 키워드입니다.<br>
+                                    while문은 조건식이 참인 동안 반복하여 실행하는 반복문입니다
                                 </div>
                                 <!-- //sample03 -->
                                 <div id="sample01" class="sample"></div>
-                                <h3>08. do while문</h3>
-                                약간의 설명
+                                <h3>08.do while문</h3>
+                                웹에선 잘 사용하진않지만, 정보처리 기능사 시험에선 자주출시되는 문법
                                 <div class="script">
                                     <pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">코드
             </code></pre>
@@ -294,151 +313,149 @@ if(num == 100){
                                     <details>
                                         <summary>결과 확인하기</summary>
                                         <div>
-                                            실행되었습니다(num == 90)
+                                            01234
                                         </div>
                                     </details>
                                 </div>
                                 <div class="notice">
-                                설명
+                                    while문과 do-while문은 JavaScript에서 반복문을 구현하는 데 사용되는 키워드입니다.<br>
+                                    do-while문은 while문과 유사하지만, 조건식의 평가를 코드 블록 이후에 수행합니다
                                 </div>
                                 <!-- //sample03 -->
-                        
+                                <div id="sample01" class="sample"></div>
+                                <h3>09. for문</h3>
+                                for문은 초기식, 조건식, 증감식을 한번에 정의할 수 있으며, 조건식이 참인 동안 코드 블록을 반복 실행하는 반복문입니다.
+                                <div class="script">
+<pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
+for(let i=1; i&lt;100; i++) {  //1~99까지 출력하는 for문
+document.write(i)
+}
+
+document.write("<br>")
+
+let num = [1,2,3,4,5,6,7,8,9];      
+let sum = 0; 1234
+
+for(let i=0; i&lt;num.length; i++){
+document.write(num[i]);
+sum = sum + num[i];
+}
+document.write("<br>");
+document.write(sum);        //sum을 이용해서 합계를 구할수 있다.
+}
+            </code></pre>
+                                </div>
+                                <div class="result">
+                                    <details>
+                                        <summary>결과 확인하기</summary>
+                                        <div>
+                                            12345~99 <br>
+                                            123456789 <br>
+                                            45
+                                        </div>
+                                    </details>
+                                </div>
+                                <div class="notice">
+                                    위 코드에서는 1부터 99까지의 숫자를 출력하는 for문이 첫 번째로 나옵니다.<br>
+                                    i 변수는 1부터 시작하여 99까지 1씩 증가하면서 코드 블록을 반복 실행합니다.<br>
+                                    document.write(i)는 현재 i값을 웹 페이지에 출력하는 코드입니다.<br>
+                                    그 다음으로는 배열을 이용한 for문이 나옵니다.<br>
+                                    num 변수는 1부터 9까지의 숫자가 들어있는 배열입니다.<br>
+                                    이 배열을 for문으로 반복하면서 num 배열의 각 요소를 웹 페이지에 출력하고, sum 변수에 누적하여 더합니다.<br>
+                                    마지막으로 document.write(sum)을 실행하여 sum 값을 출력하면 num 배열의 합계가 출력됩니다.
+                                </div>
+                                <!-- //sample03 -->
+                                <div id="sample01" class="sample"></div>
+                                <h3>10. 중첩 for문</h3>
+                                JavaScript로 작성된 이중 for문 예시입니다.
+                                <div class="script">
+<pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
+for(let i = 1; i&lt;= 10; i++){
+document.write(i,"<br>")
+for( let j=1; j&lt;=10; j++){
+document.write(j);
+}
+}
+</code></pre>
+                                </div>
+                                <div class="result">
+                                    <details>
+                                        <summary>결과 확인하기</summary>
+                                        <div>
+                                            12345~9899 <br>
+                                            123456789 <br>
+                                            45 <br>
+                                        </div>
+                                    </details>
+                                </div>
+                                <div class="notice">
+                                for문은 초기식, 조건식, 증감식을 한번에 정의할 수 있으며, 조건식이 참인 동안 코드 블록을 반복 실행하는 반복문입니다.<br>                                
+                                위 코드에서는 바깥쪽 for문에서 i 변수는 1부터 시작하여 10까지 1씩 증가하면서 코드 블록을 반복 실행합니다.<br>
+                                이 때 document.write(i,"&lt;br>") 코드는 i값을 웹 페이지에 출력하고 줄바꿈합니다.<br>
+                                안쪽 for문에서 j 변수는 1부터 시작하여 10까지 1씩 증가하면서 document.write(j) 코드를 반복 실행합니다.<br>
+                                이 때 j값을 웹 페이지에 출력합니다.
+                                </div>
+                                <!-- //sample03 -->
+                                <div id="sample01" class="sample"></div>
+                                <h3>11. break문</h3>
+                                break문은 프로그래밍에서 자주 사용되는 제어문 중 하나로, 반복문이나 switch문에서 사용하여 해당 반복문이나 switch문을 즉시 종료할 때 사용됩니다.
+                                <div class="script">
+<pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
+for(let i=1; i&lt;100; i++) {  //100까지 출력할뻔 했지만 10에서 break문이 있어서 10까지만출력
+if( i == 10) {
+break;
+}
+document.write(i);
+}
+}
+</code></pre>
+                                </div>
+                                <div class="result">
+                                    <details>
+                                        <summary>결과 확인하기</summary>
+                                        <div>
+                                            123456789
+                                        </div>
+                                    </details>
+                                </div>
+                                <div class="notice">
+                                    반복문에서는 보통 조건이 충족되면 반복을 종료하게 되는데, 반복문 내에서 break문을 사용하면 해당 반복문을 즉시 종료할 수 있습니다.<br>
+                                    이를 통해 반복문 내에서 특정 조건을 만족하면 반복을 빠르게 종료할 수 있습니다.
+                                </div>
+                                <!-- //sample03 -->
+                                <div id="sample01" class="sample"></div>
+                                <h3>12. continue문</h3>
+                                continue문은 프로그래밍에서 자주 사용되는 제어문 중 하나로, 반복문에서 사용하여 해당 반복 회차에서 남은 코드를 실행하지 않고 다음 회차로 넘어가게 합니다.
+                                <div class="script">
+<pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
+for(let i=1; i&lt;20; i++) {   //10은 뛰어넘고 20까지 출력하는 continue문
+if( i == 10) {
+continue;
+}
+document.write(i);
+}
+}
+</code></pre>
+                                </div>
+                                <div class="result">
+                                    <details>
+                                        <summary>결과 확인하기</summary>
+                                        <div>
+                                            123456789111213141516171819
+                                        </div>
+                                    </details>
+                                </div>
+                                <div class="notice">
+                                    반복문에서 특정 조건을 만족하는 경우에는 반복문 내부의 일부 코드를 실행하지 않고,<br>
+                                    다음 회차에서 반복문을 계속 실행하고 싶을 때 continue문을 사용합니다.<br>
+                                    이를 통해 반복문에서 조건에 맞지 않는 경우에는 건너뛰고 다음 회차를 실행할 수 있습니다.
+                                </div>
         </div>
     </main>
     <!-- //main -->
 
     <script>
-//        //06. switch문
-//        {
-//            const num = 100;
-//
-//            switch(num) {
-//                case 90:
-//                    document.write("실행90");
-//                    break;
-//                case 80:
-//                    document.write("실행80");
-//                    break;
-//                case 70:
-//                    document.write("실행70");
-//                    break;
-//                case 60:
-//                    document.write("실행60");
-//                    break;
-//                case 50:
-//                    document.write("실행50");
-//                    break;
-//                case 40:
-//                    document.write("실행40");
-//                    break; //무한에 빠지지 않기위해선 브레이크문을 걸어준다.
-//                default:
-//                    document.write("0");
-//            }
-//        }
 
-        //07. while문 //반복문임    //웹에선 거의 안씀 기능사 시험엔 나옴
-//        {
-//            for(let i=0; i<5; i++){
-//                document.write(i);
-//            }
-//            
-//            let num = 0;
-//            while(num<5){   //num빼고 그냥 5만쓰면 무한에빠짐
-//                document.write(num);
-//                num++;
-//            }
-//        }
-
-//       //08. do while문    //웹에선 거의 안씀 기능사 시험엔 나옴 // 이런게있다고 정리만 해놓으면됨
-//       {
-//           let num2 = 0;
-//           do {
-//               document.write(num2);
-//               num2++;
-//           } while (num2<5);
-//       }
-
-        //09. for문
-//        {
-//            for(let i=1; i<100; i++) {  //1~99까지 출력하는 for문
-//                document.write(i)
-//            }
-//
-//            document.write("<br>")
-//
-//            let num = [1,2,3,4,5,6,7,8,9];      
-//            let sum = 0;
-//
-//            for(let i=0; i<num.length; i++){
-//                document.write(num[i]);
-//                sum = sum + num[i];
-//            }
-//            document.write("<br>");
-//            document.write(sum);        //sum을 이용해서 합계를 구할수 있다.
-//        }
-
-        //10. 중첩for문
-//        {
-//            for(let i = 1; i<= 10; i++){
-//                document.write(i,"<br>")
-//                for( let j=1; j<=10; j++){
-//                    document.write(j);
-//                }
-//            }
-//        }
-        
-        //테이블 만들때 먼저 이렇게 해놓고
-//        {
-//            let table= "<table border='1'>";
-//
-//            table += "<tr>";
-//            
-//            table += "</tr>";
-//
-//            table += "</table>";
-//
-//            document.write(table)
-//        }
-        //이렇게 해야함 (자바스크립트 12번 8번에 정리)
-//        //숙제 1~25 (3의배수 25칸 나오게하는데 (5의 배수는 빨간색)
-//        {
-//        let table = "<table border='1'>";
-//        let count = 0;
-//        for(let i=0; i<5; i++){
-//            table += "<tr>";
-//            for(let j=0; j<5; j++){
-//                count++;
-//                if(count % 2 == 0){
-//                    table += "<td style='color:red'>"+count+"</td>";
-//                } else {
-//                    table += "<td style='color:blue'>"+count+"</td>";
-//                }
-//            }
-//            table += "</tr>";
-//        }
-//        table += "</table>";
-//        document.write(table);
-//        }
-
-    //11. break문
-    {
-        for(let i=1; i<100; i++) {  //100까지 출력할뻔 했지만 10에서 break문이 있어서 10까지만출력
-            if( i == 10) {
-                break;
-            }
-            document.write(i);
-        }
-    }
-    document.write("<br>");
-    //12. continue문
-    {
-        for(let i=1; i<20; i++) {   //10은 뛰어넘고 20까지 출력하는 continue문
-            if( i == 10) {
-                continue;
-            }
-            document.write(i);
-        }
-    }
     </script>
 
     <body>

@@ -1,23 +1,19 @@
 <script>
 {
-a = () => {
-document.write("실행1");
-}
-a();
+            for(let i=1; i<100; i++) {  //1~99까지 출력하는 for문
+                document.write(i)
+            }
 
-const b = () => {
-document.write("실행2");
-}
-b();
+            document.write("<br>")
 
-const c = (str1, str2, str3,) => {
-document.write(str1, str2, str3,); //선언적 함수를 화살표 함수로 바꾸는 것은 함수처럼 안보이기도하며 가독성이 떨어지기에 익명함수로 바꿔서 많이 사용함
-}
-c("실행3","실행4","실행5");
+            let num = [1,2,3,4,5,6,7,8,9];      
+            let sum = 0;
 
-d = (x, y, z) => {
-return x+y+z;
-}
-document.write(d(1,2,3));
-}
+            for(let i=0; i<num.length; i++){
+                document.write(num[i]);
+                sum = sum + num[i];
+            }
+            document.write("<br>");
+            document.write(sum);        //sum을 이용해서 합계를 구할수 있다.
+        }
 </script>
