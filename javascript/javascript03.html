@@ -113,7 +113,6 @@ func();
                     </div>
                 </div>
                 <!-- //sample01 -->
-                <div class="main__sample">
                 <div id="sample02" class="sample"style="padding-top: 40px;">
                     <h3>02. 익명 함수</h3>
                     변수는 데이터를 저장하는 "저장소" 이며 이 저장소에는 숫자, 문자, 함수, 객체 등을 저장할수 있습니다.</br>
@@ -140,7 +139,6 @@ func();
                     </div>
                 </div>
                 <!-- //sample02 -->
-                <div class="main__sample">
                 <div id="sample03" class="sample"style="padding-top: 40px;">
                     <h3>03. 매개변수 함수</h3>
                     매개변수 함수(parameter function)는 자바스크립트에서 함수의 인자로 전달되는 함수를 말합니다
@@ -167,7 +165,6 @@ func("실행되었습니다.!");
                     </div>
                 </div>
                 <!-- //sample03 -->
-                <div class="main__sample">
                 <div id="sample04" class="sample"style="padding-top: 40px;">
                     <h3>04. 리턴값 함수</h3>
                     리턴값 함수(return function)는 자바스크립트에서 함수가 실행된 결과를 반환하는 함수를 말합니다.</br>
@@ -194,7 +191,6 @@ document.write(func());
                     </div>
                 </div>
                 <!-- //sample04 -->
-                <div class="main__sample">
                 <div id="sample05" class="sample"style="padding-top: 40px;">
                     <h3>05. 화살표함수: 선언적함수</h3>
                     화살표 선언적 함수(arrow function declaration)는 자바스크립트에서 함수를 정의하는 방법 중 하나입니다.</br>
@@ -223,7 +219,6 @@ func ();
                     </div>
                 </div>
                 <!-- //sample05 -->
-                <div class="main__sample">
                 <div id="sample06" class="sample"style="padding-top: 40px;">
                     <h3>06. 화살표함수 : 익명 함수</h3>
                     화살표 익명 함수(arrow anonymous function)는 자바스크립트에서 익명 함수를 작성할 때, 화살표 함수를 이용하는 것을 말합니다</br>
@@ -253,7 +248,6 @@ func();
                     </div>
                 </div>
                 <!-- //sample06 -->
-                <div class="main__sample">
                 <div id="sample07" class="sample"style="padding-top: 40px;">
                     <h3>07. 화살표함수 : 매개변수</h3>
                     화살표 매개변수(arrow function parameters)는 자바스크립트에서 화살표 함수를 작성할 때, 함수 인자를 지정하는 방법을 말합니다.</br>
@@ -279,7 +273,6 @@ func("실행되었습니다.<br>");
                     </div>
                 </div>
                 <!-- //sample07 -->
-                <div class="main__sample">
                 <div id="sample08" class="sample"style="padding-top: 40px;">
                     <h3>08. 화살표 함수 : 리턴값 함수</h3>
                     화살표 리턴값 함수(arrow function with return value)는 자바스크립트에서 화살표 함수를 작성할 때, 함수의 반환 값을 지정하는 방법을 말합니다.</br>
@@ -307,15 +300,187 @@ document.write(func());
                     </div>
                 </div>
                 <!-- //sample08 -->
+                <div id="sample09" class="sample"style="padding-top: 40px;">
+                    <h3>09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</h3>
+                    위 코드는 화살표 함수 익명 함수와 매개변수 리턴함수를 사용한 예제입니다</br>
+                <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+a = () => {
+document.write("실행1");
+}
+a();
+
+const b = () => {
+document.write("실행2");
+}
+b();
+
+const c = (str1, str2, str3,) => {
+document.write(str1, str2, str3,); //선언적 함수를 화살표 함수로 바꾸는 것은 함수처럼 안보이기도하며 가독성이 떨어지기에 익명함수로 바꿔서 많이 사용함
+}
+c("실행3","실행4","실행5");
+
+d = (x, y, z) => {
+return x+y+z;
+}
+document.write(d(1,2,3));
+}
+</code></pre>
+                </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행1<br>실행2<br>실행3<br>실행4<br>실행56
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                    위 순대로 코드는 익명 화살표 함수 a를 선언하고, 이를 호출하여 "실행1"을 출력합니다.<br>
+                    
+                    </div>
+                </div>
+                <!-- //sample09 -->
+                <div id="sample10" class="sample"style="padding-top: 40px;">
+                    <h3>10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</h3>
+                    설명</br>
+                <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+func = () => {
+const str = "실행되었습니다.<br>";
+return str;
+}
+document.write(func());
+}
+</code></pre>
+                </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                    설명
+                    </div>
+                </div>
+                <!-- //sample010 -->
+                <div id="sample11" class="sample"style="padding-top: 40px;">
+                    <h3>11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</h3>
+                    설명</br>
+                <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+func = () => {
+const str = "실행되었습니다.<br>";
+return str;
+}
+document.write(func());
+}
+</code></pre>
+                </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                    설명
+                    </div>
+                </div>
+                <!-- //sample11 -->
+                <div id="sample12" class="sample"style="padding-top: 40px;">
+                    <h3>12. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</h3>
+                    설명</br>
+                <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+func = () => {
+const str = "실행되었습니다.<br>";
+return str;
+}
+document.write(func());
+}
+</code></pre>
+                </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                    설명
+                    </div>
+                </div>
+                <!-- //sample12 -->
         </div>
     </main>
     <!-- //main -->
 
-    <footer id="footer">
-    </footer>
-    <!-- //footer -->
-
     <script>
+        //09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값
+        {
+            a = () => {
+                document.write("실행1");
+            }
+            a();
+
+            const b = () => {
+                document.write("실행2");
+            }
+            b();
+
+            const c = (str1, str2, str3,) => {
+                document.write(str1, str2, str3,); //선언적 함수를 화살표 함수로 바꾸는 것은 함수처럼 안보이기도하며 가독성이 떨어지기에 익명함수로 바꿔서 많이 사용함
+            }
+            c("실행3","실행4","실행5");
+            
+            d = (x, y, z) => {
+                return x+y+z;
+            }
+            document.write(d(1,2,3));
+        }
+
+        //09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값
+        {
+            const func = (str) => { // 익명함수
+                document.write(str);//결과값 함수
+                return str;         //리턴함수 
+            }
+            func("실행되었습니다."); //매개변수
+            document.write(func("실행되었습니다."));
+        }
+
+        //10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략
+        {
+            const func = str => {
+                return str;
+            }
+            document.wr
+            document.write(func("실행되었습니다."));
+        }
+
+        //11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략
+        {
+            const func = str => str;    //리턴생략, 중괄호 생략 동시에 생략가능
+
+            document.write(func("실행되었습니다."));
+        }
+
+        //12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략
+            //11번 에서 한번더 생략할수있다.
+            // 그것은 바로! 익명 함수를 선언적 함수로 바꿔주는것
+        {
+            func = str => str;
+
+            document.write(func("실행되었습니다."));
+        }
 
     </script>
 
