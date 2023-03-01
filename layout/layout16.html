@@ -1,12 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃 16 - flex 유형 - 반응형</title>
+    <title>레이아웃16 - flex 유형 - 반응형</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
@@ -44,10 +45,15 @@
             height: 100px;
             background-color: #FF9800;
         }
-        @media (max-width: 1220px) {
+        @media (max-width: 1220px){
             #wrap {
-                width:100%
-            } 
+                width: 96%;
+            }
+        }
+        @media (max-width: 768px){
+            #wrap {
+                width: 100%;
+            }
         }
         @media (max-width: 480px){
             #aside {

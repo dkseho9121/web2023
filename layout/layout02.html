@@ -1,67 +1,102 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃 2 - float 유형</title>
+    <title>레이아웃 2 - float방식</title>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
-        body {
-            background-color: #E8F5E9;
-        }
         #wrap {
             width: 1200px;
-            height: 1080px;
-            margin: 0 auto;
+            margin: 0 auto; 
         }
         #header {
-            width: 1200px;
+            width: 100%;
             height: 100px;
-            background-color: #C8E6C9;
+            background: #C8E6C9;
         }
         #nav {
-            width: 1200px;
+            width: 100%;
             height: 100px;
             background-color: #A5D6A7;
         }
-        #side1 {
-            width: 300px;
+        #aside {
+            width: 30%;
             height: 780px;
             background-color: #81C784;
             float: left;
-        } 
-        #side2 {
-            width: 600px;
+        }
+        #section {
+            width: 40%;
             height: 780px;
             background-color: #66BB6A;
             float: left;
-        } 
-        #side3 {
-            width: 300px;
+        }
+        #article {
+            width: 30%;
             height: 780px;
             background-color: #4CAF50;
             float: left;
         }
         #footer {
-            width: 1200px;
+            width: 100%;
             height: 100px;
             background-color: #43A047;
             clear: both;
         }
+        @media (max-width:1300px){
+            #wrap{
+                width: 96%;
+            }
+        }
+        @media (max-width:768px){
+            #wrap{
+                width: 100%;
+            }
+        }
+        @media (max-width:768px){
+            #wrap{
+                width: 100%;
+            }
+            #aside{
+                width: 40%;
+                height: 630px;
+            }
+            #section{
+                width: 60%;
+                height: 630px;
+            }
+            #article{
+                width: 100%;
+                height: 150px;
+            }
+        }
+        @media (max-width:480px){
+            #aside{
+                width: 100%;
+                height: 200px;
+            }
+            #section{
+                width: 100%;
+                height: 430px;
+            }
+        }
+
     </style>
 </head>
 <body>
     <div id="wrap">
-        <div id="header"></div>
-        <div id="nav"></div>
-        <div id="side1"></div>
-        <div id="side2"></div>
-        <div id="side3"></div>
-        <div id="footer"></div>
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <aside id="aside"></aside>
+        <section id="section"></section>
+        <article id="article"></article>
+        <footer id="footer"></footer>
     </div>
 </body>
 </html>
