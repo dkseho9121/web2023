@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript : 데이터 저장하기</title>
-    
+
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/prism.css">
 
@@ -14,35 +14,36 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/ico/javascript192x192.png">
 </head>
+
 <body>
     <header id="header">
-      <h1><a href="index.html">javascript</a></h1>
-     <nav>
-        <ul>
-            <li><a href="javascript01.html">데이터 저장하기</a></li>
-            <li><a href="javascript02.html">데이터 불러오기</a></li>
-            <li><a href="javascript03.html">데이터 실행하기</a></li>
-            <li class="active"><a href="javascript04.html">데이터 제어하기</a></li>
-        </ul>
-        <ul>
-            <li><a href="javascript05.html">문자열 객체</a></li>
-            <li><a href="javascript06.html">배열 객체</a></li>
-            <li><a href="javascript07.html">수학 개체</a></li>
-            <li><a href="javascript08.html">숫자 개체</a></li>
-            <li><a href="javascript09.html">브라우저 객체</a></li>
-            <li><a href="javascript10.html">요소 객체</a></li>
-            <li><a href="javascript11.html">이벤트 객체</a></li>
-        </ul>
-        <ul class="last">
-            <li><a href="javascript12.html">데이터 효과</a></li>
-            <li><a href="javascript13.html">검색 효과</a></li>
-            <li><a href="javascript14.html">퀴즈 효과</a></li>
-            <li><a href="javascript15.html">마우스 효과</a></li>
-            <li><a href="javascript16.html">슬라이드 효과</a></li>
-            <li><a href="javascript17.html">패럴랙스 객체</a></li>
-            <li><a href="javascript18.html">게임 효과</a></li>
-        </ul>
-    </nav>
+        <h1><a href="index.html">javascript</a></h1>
+        <nav>
+            <ul>
+                <li><a href="javascript01.html">데이터 저장하기</a></li>
+                <li><a href="javascript02.html">데이터 불러오기</a></li>
+                <li><a href="javascript03.html">데이터 실행하기</a></li>
+                <li class="active"><a href="javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="javascript05.html">문자열 객체</a></li>
+                <li><a href="javascript06.html">배열 객체</a></li>
+                <li><a href="javascript07.html">수학 개체</a></li>
+                <li><a href="javascript08.html">숫자 개체</a></li>
+                <li><a href="javascript09.html">브라우저 객체</a></li>
+                <li><a href="javascript10.html">요소 객체</a></li>
+                <li><a href="javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="last">
+                <li><a href="javascript12.html">데이터 효과</a></li>
+                <li><a href="javascript13.html">검색 효과</a></li>
+                <li><a href="javascript14.html">퀴즈 효과</a></li>
+                <li><a href="javascript15.html">마우스 효과</a></li>
+                <li><a href="javascript16.html">슬라이드 효과</a></li>
+                <li><a href="javascript17.html">패럴랙스 객체</a></li>
+                <li><a href="javascript18.html">게임 효과</a></li>
+            </ul>
+        </nav>
     </header>
     <!-- //header -->
 
@@ -58,7 +59,7 @@
 
                     <li><a href="#">06. switch문</a></li>
                     <li><a href="#">07. while문</a></li>
-                    <li><a href="#">08. do while문</a></li> 
+                    <li><a href="#">08. do while문</a></li>
                     <li><a href="#">09. for문</a></li>
                     <li><a href="#">10. 중첩 for문</a></li>
 
@@ -67,14 +68,14 @@
 
 
                 </ul>
-             </div>
-             <div class="main__sample">
-             <div id="sample01" class="sample"style="padding-top: 40px;">
+            </div>
+            <div class="main__sample">
+                <div id="sample01" class="sample" style="padding-top: 40px;">
                     <h3>01. if문</h3>
                     if문은 프로그래밍에서 조건을 검사하여, 해당 조건이 참(true)인 경우에만 특정 코드 블록을 실행시키는 제어 구조입니다.</br>
                 </div>
                 <div class="script">
-<pre class="line-numbers"><code class="language-js">if(null){
+                    <pre class="line-numbers"><code class="language-js">if(null){
     document.write("실행되었습니다.(ture)");
 } else {
     document.write("실행되었습니다.(false)");
@@ -182,12 +183,12 @@ if (num == 90) {
                             <div class="notice">
                                 위 코드는 num 변수의 값에 따라 실행되는 if 문과 else if 문의 예시입니다.<br>
 
-변수 num의 값이 90이므로 첫 번째 조건인 if (num == 90)이 참이 되어 "실행되었습니다(num == 90)"가 출력됩니다.<br>
-다른 조건문은 실행되지 않습니다.<br>
-else if 문은 if 문과 함께 사용하여 여러 조건을 검사하고, 각 조건에 맞게 실행할 코드를 작성할 수 있습니다.<br>
-이 경우 <b>if 문이 참이 아닐 때 해당 else if 조건문을 검사합니다.</b><br>
-만약 이전의 if 문이 참이라면 다음 조건은 검사되지 않고, 바로 실행문이 실행됩니다.<br>
-마지막 else는 모든 조건에 해당하지 않을 경우 실행되는 부분입니다.
+                                변수 num의 값이 90이므로 첫 번째 조건인 if (num == 90)이 참이 되어 "실행되었습니다(num == 90)"가 출력됩니다.<br>
+                                다른 조건문은 실행되지 않습니다.<br>
+                                else if 문은 if 문과 함께 사용하여 여러 조건을 검사하고, 각 조건에 맞게 실행할 코드를 작성할 수 있습니다.<br>
+                                이 경우 <b>if 문이 참이 아닐 때 해당 else if 조건문을 검사합니다.</b><br>
+                                만약 이전의 if 문이 참이라면 다음 조건은 검사되지 않고, 바로 실행문이 실행됩니다.<br>
+                                마지막 else는 모든 조건에 해당하지 않을 경우 실행되는 부분입니다.
                             </div>
                             <!-- //sample03 -->
                             <div id="sample02" class="sample">
@@ -219,11 +220,11 @@ if(num == 100){
                                     </details>
                                 </div>
                                 <div class="notice">
-이 코드는 중첩 if 문을 사용하여 구성된 예시입니다.<br>
-코드를 간단히 설명하면, <b>num 변수가 100인 경우에 대해 if 문을 사용하여 3개의 문자열을 출력</b>하고,<br>
-그렇지 <b>않은 경우에는 하나의 문자열을 출력</b>합니다.<br>
-여기서 주목할 점은, <b>if(num == 100) 문장이 3번 중첩</b>되어 있다는 것입니다.<br>
-이렇게 중첩된 if 문은 코드의 가독성을 떨어뜨릴 수 있으므로, <b>필요한 경우에 한해서 사용</b>해야 합니다.
+                                    이 코드는 중첩 if 문을 사용하여 구성된 예시입니다.<br>
+                                    코드를 간단히 설명하면, <b>num 변수가 100인 경우에 대해 if 문을 사용하여 3개의 문자열을 출력</b>하고,<br>
+                                    그렇지 <b>않은 경우에는 하나의 문자열을 출력</b>합니다.<br>
+                                    여기서 주목할 점은, <b>if(num == 100) 문장이 3번 중첩</b>되어 있다는 것입니다.<br>
+                                    이렇게 중첩된 if 문은 코드의 가독성을 떨어뜨릴 수 있으므로, <b>필요한 경우에 한해서 사용</b>해야 합니다.
                                 </div>
                                 <!-- //sample03 -->
                                 <div id="sample01" class="sample"></div>
@@ -276,7 +277,7 @@ document.write("0");
                                 <h3>07. while문</h3>
                                 웹에선 잘 사용하진않지만, 정보처리 기능사 시험에선 자주출시되는 문법
                                 <div class="script">
-<pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
+                                    <pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
     for(let i=0; i&lt;5; i++){
         document.write(i);
     }
@@ -326,7 +327,7 @@ document.write("0");
                                 <h3>09. for문</h3>
                                 for문은 초기식, 조건식, 증감식을 한번에 정의할 수 있으며, 조건식이 참인 동안 코드 블록을 반복 실행하는 반복문입니다.
                                 <div class="script">
-<pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
+                                    <pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
 for(let i=1; i&lt;100; i++) {  //1~99까지 출력하는 for문
 document.write(i)
 }
@@ -369,7 +370,7 @@ document.write(sum);        //sum을 이용해서 합계를 구할수 있다.
                                 <h3>10. 중첩 for문</h3>
                                 JavaScript로 작성된 이중 for문 예시입니다.
                                 <div class="script">
-<pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
+                                    <pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
 for(let i = 1; i&lt;= 10; i++){
 document.write(i,"<br>")
 for( let j=1; j&lt;=10; j++){
@@ -389,18 +390,19 @@ document.write(j);
                                     </details>
                                 </div>
                                 <div class="notice">
-                                for문은 초기식, 조건식, 증감식을 한번에 정의할 수 있으며, 조건식이 참인 동안 코드 블록을 반복 실행하는 반복문입니다.<br>                                
-                                위 코드에서는 바깥쪽 for문에서 i 변수는 1부터 시작하여 10까지 1씩 증가하면서 코드 블록을 반복 실행합니다.<br>
-                                이 때 document.write(i,"&lt;br>") 코드는 i값을 웹 페이지에 출력하고 줄바꿈합니다.<br>
-                                안쪽 for문에서 j 변수는 1부터 시작하여 10까지 1씩 증가하면서 document.write(j) 코드를 반복 실행합니다.<br>
-                                이 때 j값을 웹 페이지에 출력합니다.
+                                    for문은 초기식, 조건식, 증감식을 한번에 정의할 수 있으며, 조건식이 참인 동안 코드 블록을 반복 실행하는 반복문입니다.<br>
+                                    위 코드에서는 바깥쪽 for문에서 i 변수는 1부터 시작하여 10까지 1씩 증가하면서 코드 블록을 반복 실행합니다.<br>
+                                    이 때 document.write(i,"&lt;br>") 코드는 i값을 웹 페이지에 출력하고 줄바꿈합니다.<br>
+                                    안쪽 for문에서 j 변수는 1부터 시작하여 10까지 1씩 증가하면서 document.write(j) 코드를 반복 실행합니다.<br>
+                                    이 때 j값을 웹 페이지에 출력합니다.
                                 </div>
                                 <!-- //sample03 -->
                                 <div id="sample01" class="sample"></div>
                                 <h3>11. break문</h3>
-                                break문은 프로그래밍에서 자주 사용되는 제어문 중 하나로, 반복문이나 switch문에서 사용하여 해당 반복문이나 switch문을 즉시 종료할 때 사용됩니다.
+                                break문은 프로그래밍에서 자주 사용되는 제어문 중 하나로, 반복문이나 switch문에서 사용하여 해당 반복문이나 switch문을 즉시 종료할 때
+                                사용됩니다.
                                 <div class="script">
-<pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
+                                    <pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
 for(let i=1; i&lt;100; i++) {  //100까지 출력할뻔 했지만 10에서 break문이 있어서 10까지만출력
 if( i == 10) {
 break;
@@ -425,9 +427,10 @@ document.write(i);
                                 <!-- //sample03 -->
                                 <div id="sample01" class="sample"></div>
                                 <h3>12. continue문</h3>
-                                continue문은 프로그래밍에서 자주 사용되는 제어문 중 하나로, 반복문에서 사용하여 해당 반복 회차에서 남은 코드를 실행하지 않고 다음 회차로 넘어가게 합니다.
+                                continue문은 프로그래밍에서 자주 사용되는 제어문 중 하나로, 반복문에서 사용하여 해당 반복 회차에서 남은 코드를 실행하지 않고 다음 회차로 넘어가게
+                                합니다.
                                 <div class="script">
-<pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
+                                    <pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
 for(let i=1; i&lt;20; i++) {   //10은 뛰어넘고 20까지 출력하는 continue문
 if( i == 10) {
 continue;
@@ -450,7 +453,7 @@ document.write(i);
                                     다음 회차에서 반복문을 계속 실행하고 싶을 때 continue문을 사용합니다.<br>
                                     이를 통해 반복문에서 조건에 맞지 않는 경우에는 건너뛰고 다음 회차를 실행할 수 있습니다.
                                 </div>
-        </div>
+                            </div>
     </main>
     <!-- //main -->
 
