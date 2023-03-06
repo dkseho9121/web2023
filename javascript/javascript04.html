@@ -102,8 +102,14 @@
                     변수는 데이터를 저장 할수도 있지만 변경도 가능 합니다.
                     <div class="script">
                         <pre class="line-numbers"><code code class="language-js">const num = 100;
-if(num) document.write("실행되었습니다.(ture)");
-else document.write("실행되었습니다.(ture)"); //(이렇게 생략가능) 
+if(num == 100){
+    document.write("실행되었습니다.(True)");
+} else {
+    document.write("실행되었습니다.(False)")
+}
+    
+if(num) document.write("실행되었습니다.(True)");
+else document.write("실행되었습니다.(False)");
 </code></pre>
                     </div>
                     <div class="result">
