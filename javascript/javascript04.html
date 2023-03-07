@@ -75,10 +75,10 @@
                     if문은 프로그래밍에서 조건을 검사하여, 해당 조건이 참(true)인 경우에만 특정 코드 블록을 실행시키는 제어 구조입니다.</br>
                 </div>
                 <div class="script">
-                    <pre class="line-numbers"><code class="language-js">if(null){
-    document.write("실행되었습니다.(ture)");
-} else {
-    document.write("실행되었습니다.(false)");
+<pre><code class="language-js">if("a") {
+    document.write("실행되었습니다.(true)")
+    } else {
+    document.write("실행되었습니다.(false)")
 }
 </code></pre>
                 </div>
@@ -101,15 +101,16 @@
                     <h3>02. if문 생략</h3>
                     변수는 데이터를 저장 할수도 있지만 변경도 가능 합니다.
                     <div class="script">
-                        <pre class="line-numbers"><code code class="language-js">const num = 100;
-if(num == 100){
-    document.write("실행되었습니다.(True)");
-} else {
-    document.write("실행되었습니다.(False)")
-}
-    
-if(num) document.write("실행되었습니다.(True)");
-else document.write("실행되었습니다.(False)");
+<pre><code class="language-js">const num = 100;
+if(num){
+    document.write("실행됐나?")
+    } else { document.write("실행되겠냐?");
+    }
+    //일반적인 if문
+----------------------------------------------------------------
+if(num) document.write("실행됐나?");
+else document.write("되겠냐?")
+    // if 문 생략 예제
 </code></pre>
                     </div>
                     <div class="result">
