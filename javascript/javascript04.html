@@ -75,10 +75,12 @@
                     if문은 프로그래밍에서 조건을 검사하여, 해당 조건이 참(true)인 경우에만 특정 코드 블록을 실행시키는 제어 구조입니다.</br>
                 </div>
                 <div class="script">
-<pre><code class="language-js">if("a") {
-    document.write("실행되었습니다.(true)")
+<pre><code class="language-js">{
+    if("a") {
+        document.write("실행되었습니다.(true)")
     } else {
-    document.write("실행되었습니다.(false)")
+        document.write("실행되었습니다.(false)")
+    };
 }
 </code></pre>
                 </div>
@@ -101,17 +103,19 @@
                     <h3>02. if문 생략</h3>
                     변수는 데이터를 저장 할수도 있지만 변경도 가능 합니다.
                     <div class="script">
-<pre><code class="language-js">const num = 100;
-if(num){
-    document.write("실행됐나?")
-    } else { document.write("실행되겠냐?");
-    }
-    //일반적인 if문
-----------------------------------------------------------------
-if(num) document.write("실행됐나?");
-else document.write("되겠냐?")
-    // if 문 생략 예제
-</code></pre>
+<pre><code class="language-js">{
+    const num = 100;
+
+    // if(num){
+    //     document.write("실행되었습니다.(true)");
+    // } else {
+    //     document.write("실행되었습니다(false)");
+    // };
+
+    if(num) document.write("실행되었습니다.(true)");
+    else document.write("실행되었습니다(false)");
+}
+</code></pre>     
                     </div>
                     <div class="result">
                         <details>
@@ -128,28 +132,32 @@ else document.write("되겠냐?")
                     </div>
                     <!-- //sample02 -->
                     <div id="sample02" class="sample">
-                        <h3>03. 삼항 연산자</h3>
-                        삼항 연산자(ternary operator)는 조건 연산자(conditional operator)로 불리며,<br>
-                        조건식 ? 참일때의 값 : 거짓일때의 값의 형태를 가지고 있습니다.
-                        <div class="script">
-                            <pre class="line-numbers"><code code class="language-js">const num = 100;
+                        <h3>03. 삼항 연산자(조건 연산자)</h3>
+                    <p>삼항 연산자는 else if문 대신에 간단한 조건식을 사용할 수 있게 해줍니다.<br>
+                        이 연산자는 조건이 참(true)인 경우에는 처음에 나오는 값(참)을 반환하고, 거짓(false)인 경우에는 두 번째 값(거짓)을 반환합니다.<br>
+                        기존 if문보다 더 효율적으로 사용이 가능합니다.
+                    </p>
+                    <div class="script">
+<pre><code class="language-js">{
+    const num = 100;
 
-if(num == 100){
-    document.write("true");
-} else {
-    documnet.write("false");
+    // if(num == 100){
+    //     document.write("true");
+    // } else {
+    //     document.write("false");
+    // };
+
+    (num == 100) ? document.write("true") : document.write("false");
 }
-                        
-(num == 100) ? document.write("true") : documnet.write("false"); //(이렇게 생략가능)
-    </code></pre>
-                        </div>
-                        <div class="result">
-                            <details>
-                                <summary>결과 확인하기</summary>
-                                <div>
-                                    실행되었습니다.(false)
-                                </div>
-                            </details>
+</code></pre>                        
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                               true
+                            </div>
+                        </details>
                         </div>
                         <div class="notice">
                             위 코드는 num 변수의 값이 100일 때 "true"를 출력하고, 그렇지 않으면 "false"를 출력하는 삼항 연산자입니다.<br>
@@ -157,35 +165,35 @@ if(num == 100){
                         </div>
                         <!-- //sample03 -->
                         <div id="sample02" class="sample">
-                            <h3>04. 다중 if</h3>
-                            다중 if 문(multiple if statement)은 하나 이상의 if 조건문을 중첩하여 사용하는 것을 의미합니다
-                            <div class="script">
-                                <pre class="line-numbers"><code code class="language-js">const num = 90;
+                            <h3>04. 다중 if(else if문)</h3>
+                    <p>if문 이후에 여러 개의 조건을 검사해야 할 경우 else if문을 사용할 수 있습니다.<br>
+                        여러 개의 조건 중 하나가 참(true)인 경우 해당하는 값을 실행하고 전체 if문을 종료합니다.
+                    </p>
+                    <div class="script">
+<pre><code class="language-js">{
+    const num = 100;
 
-if (num == 90) {
-    document.write("실행되었습니다(num == 90)");
-} else if(num == 100){
-    document.write("실행되었습니다(num == 100)");
-    
-} else if(num == 110){
-    document.write("실행되었습니다(num == 110)");
-    
-} else if(num == 120){
-    document.write("실행되었습니다(num == 120)");
-
-} else {
-    document.write("실행되었습니다");
-    
-    }
-        </code></pre>
+    if(num == 90){
+        document.write("실행되었습니다.(num == 90)");
+    } else if(num == 100){
+        document.write("실행되었습니다.(num == 100)");
+    } else if(num == 110){
+        document.write("실행되었습니다.(num == 110)");
+    } else if(num == 120){
+        document.write("실행되었습니다.(num == 120)");
+    } else {
+        document.write("실행되었습니다.");
+    };
+}
+</code></pre>                        
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.(num == 100)
                             </div>
-                            <div class="result">
-                                <details>
-                                    <summary>결과 확인하기</summary>
-                                    <div>
-                                        실행되었습니다(num == 90)
-                                    </div>
-                                </details>
+                        </details>
                             </div>
                             <div class="notice">
                                 위 코드는 num 변수의 값에 따라 실행되는 if 문과 else if 문의 예시입니다.<br>
@@ -200,31 +208,32 @@ if (num == 90) {
                             <!-- //sample03 -->
                             <div id="sample02" class="sample">
                                 <h3>05. 중첩 if문</h3>
-                                중첩 if 문은 if 문 안에 또 다른 if 문을 포함하는 것을 말합니다. 이렇게 중첩된 if 문은 복잡한 조건문을 처리할 때 유용하게 사용됩니다.
-                                <div class="script">
-                                    <pre class="line-numbers"><code code class="language-js">{
-const  num = 100;
-                                
-if(num == 100){
-    document.write("실행되었습니다.(1)");
-if(num == 100) {
-    document.write("실행되었습니다.(2)");
-if(num == 100){
-    document.write("실행되었습니다.(3)")
-    }
+                    <p>중첩 if문은 if문 안에 if문을 추가하는 것입니다.</p>
+                    <div class="script">
+<pre><code class="language-js">{
+    const num = 100;
+
+    if(num == 100){
+        document.write("실행되었습니다.(1)");
+        if(num == 100){
+            document.write("실행되었습니다.(2)");
+            if(num == 100){
+                document.write("실행되었습니다.(3)");
+            };
+        };
+    } else {
+        document.write("실행되었습니다.(4)");
+    };
 }
-} else {
-    document.write("실행되었습니다.(4)")
-    }
-            </code></pre>
-                                </div>
-                                <div class="result">
-                                    <details>
-                                        <summary>결과 확인하기</summary>
-                                        <div>
-                                            실행되었습니다(num == 90)
-                                        </div>
-                                    </details>
+</code></pre>                        
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.(1)실행되었습니다.(2)실행되었습니다.(3)
+                            </div>
+                        </details>
                                 </div>
                                 <div class="notice">
                                     이 코드는 중첩 if 문을 사용하여 구성된 예시입니다.<br>
@@ -236,43 +245,44 @@ if(num == 100){
                                 <!-- //sample03 -->
                                 <div id="sample01" class="sample"></div>
                                 <h3>06. switch문</h3>
-                                자바스크립트에서 사용되는 switch문 입니다.
-                                <div class="script">
-                                    <pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
-const num = 100;
+                    <p>다중 if문과 비슷하며 다중 if문으로 변경이 가능합니다.<br>
+                        조건에 맞으면 break 키워드에 맞으면 그 실행문에서 끝납니다.<br>
+                        break 키워드를 안쓰게 되면 무한으로 빠지면서 모든 case 키워드를 실행합니다.<br>
+                        defalut 키워드는 switch문의 값과 일치하는 값이 없을 때 실행합니다.
+                    </p>
+                    <div class="script">
+<pre><code class="language-js">{
+    const num = 100;
 
-switch(num) {
-case 90:
-document.write("실행90");
-break;
-case 80:
-document.write("실행80");
-break;
-case 70:
-document.write("실행70");
-break;
-case 60:
-document.write("실행60");
-break;
-case 50:
-document.write("실행50");
-break;
-case 40:
-document.write("실행40");
-break; //무한에 빠지지 않기위해선 브레이크문을 걸어준다.
-default:
-document.write("0");
+    switch(num){
+        case 90:
+            document.write("실행90");
+            break;
+        case 80:
+            document.write("실행80");
+            break;
+        case 70:
+            document.write("실행70");
+            break;
+        case 60:
+            document.write("실행60");
+            break;
+        case 50:
+            document.write("실행50");
+            break;
+        default:
+            document.write("0");
+    };
 }
-}
-            </code></pre>
-                                </div>
-                                <div class="result">
-                                    <details>
-                                        <summary>결과 확인하기</summary>
-                                        <div>
-                                            0
-                                        </div>
-                                    </details>
+</code></pre>                        
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                0
+                            </div>
+                        </details>
                                 </div>
                                 <div class="notice">
                                     switch문은 if-else문과 비슷한 역할을 수행합니다.<br>
@@ -282,28 +292,26 @@ document.write("0");
                                 <!-- //sample03 -->
                                 <div id="sample01" class="sample"></div>
                                 <h3>07. while문</h3>
-                                웹에선 잘 사용하진않지만, 정보처리 기능사 시험에선 자주출시되는 문법
-                                <div class="script">
-                                    <pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
-    for(let i=0; i&lt;5; i++){
-        document.write(i);
-    }
-    
+                    <p>while문은 조건이 참인 동안 반복적으로 코드를 실행하는 루프를 생성합니다.<br>
+                        for문과 비슷하며 for문으로 변경이 가능합니다.<br>
+                        조건식에 맞지 않으면 한번도 실행 안될 수 있습니다. 또한 무한으로 빠질 수 있습니다.</p>
+                    <div class="script">
+<pre><code class="language-js">{
     let num = 0;
-    while(num&lt;5){   //num빼고 그냥 5만쓰면 무한에빠짐
+    while(num&lt;5){    // 조건에 맞지 않으면 한번도 실행 안될 수 있습니다.
         document.write(num);
-        num++;
-    }
+        num++;          // 증가값 입력
+    };
 }
-</code></pre>
-                                </div>
-                                <div class="result">
-                                    <details>
-                                        <summary>결과 확인하기</summary>
-                                        <div>
-                                            0123401234
-                                        </div>
-                                    </details>
+</code></pre>                        
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                01234
+                            </div>
+                        </details>
                                 </div>
                                 <div class="notice">
                                     while문과 do-while문은 JavaScript에서 반복문을 구현하는 데 사용되는 키워드입니다.<br>
@@ -311,19 +319,29 @@ document.write("0");
                                 </div>
                                 <!-- //sample03 -->
                                 <div id="sample01" class="sample"></div>
-                                <h3>08.do while문</h3>
-                                웹에선 잘 사용하진않지만, 정보처리 기능사 시험에선 자주출시되는 문법
-                                <div class="script">
-                                    <pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">코드
-            </code></pre>
-                                </div>
-                                <div class="result">
-                                    <details>
-                                        <summary>결과 확인하기</summary>
-                                        <div>
-                                            01234
-                                        </div>
-                                    </details>
+                                <h3>08. do while문</h3>
+                    <p>do-while문은 조건식을 마지막에 평가하는 반복문입니다.<br>
+                        do-while문은 코드 블록이 최소한 한 번은 실행되어야 할 때 유용합니다.<br>
+                        do-while문은 일반적으로 조건이 참이거나 거짓일 때 반복문을 실행해야 할 경우에 사용됩니다.<br>
+                        while문과 달리, 먼저 코드 블록을 실행한 다음에 조건식을 검사하여 조건이 참이면 코드 블록을 다시 실행하고, 조건이 거짓이면 반복문을 종료합니다.
+                    </p>
+                    <div class="script">
+<pre><code class="language-js">{
+    let num2 = 0;
+    do {            // 조건에 맞지 않아도 한번은 실행됩니다.
+        document.write(num2);
+        num2++;
+    } while(num2&lt;5);
+}
+</code></pre>                        
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                01234
+                            </div>
+                        </details>
                                 </div>
                                 <div class="notice">
                                     while문과 do-while문은 JavaScript에서 반복문을 구현하는 데 사용되는 키워드입니다.<br>
@@ -332,26 +350,20 @@ document.write("0");
                                 <!-- //sample03 -->
                                 <div id="sample01" class="sample"></div>
                                 <h3>09. for문</h3>
-                                for문은 초기식, 조건식, 증감식을 한번에 정의할 수 있으며, 조건식이 참인 동안 코드 블록을 반복 실행하는 반복문입니다.
-                                <div class="script">
-                                    <pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
-for(let i=1; i&lt;100; i++) {  //1~99까지 출력하는 for문
-document.write(i)
-}
+                    <p>for문과 if문을 사용해서 배열에 있는 값 1부터 9까지 짝수 : 빨간색, 홀수 : 파란색을 실행하는 예제입니다.</p>
+                    <div class="script">
+<pre><code class="language-js">{
+    const arr = [1,2,3,4,5,6,7,8,9];
 
-document.write("<br>")
-
-let num = [1,2,3,4,5,6,7,8,9];      
-let sum = 0; 1234
-
-for(let i=0; i&lt;num.length; i++){
-document.write(num[i]);
-sum = sum + num[i];
+    for(let i=1; i&lt;=arr.length; i++){
+        if(i % 2 ==0){
+            document.write("&lt;span style='color:red'&gt;" + i + "&lt;/span&gt;");
+        } else {
+            document.write(`&lt;span style='color:blue'&gt;${i}&lt;/span&gt;`);
+        };
+    };
 }
-document.write("<br>");
-document.write(sum);        //sum을 이용해서 합계를 구할수 있다.
-}
-            </code></pre>
+</code></pre>
                                 </div>
                                 <div class="result">
                                     <details>
@@ -375,20 +387,31 @@ document.write(sum);        //sum을 이용해서 합계를 구할수 있다.
                                 <!-- //sample03 -->
                                 <div id="sample01" class="sample"></div>
                                 <h3>10. 중첩 for문</h3>
-                                JavaScript로 작성된 이중 for문 예시입니다.
-                                <div class="script">
-                                    <pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
-for(let i = 1; i&lt;= 10; i++){
-document.write(i,"<br>")
-for( let j=1; j&lt;=10; j++){
-document.write(j);
+                    <p>중첩 for문을 이용해서 테이블 1~25의 숫자가 나오고 칸 만들기 예제입니다.</p>
+                    <div class="script">
+<pre><code class="language-js">{
+    let table = "&lt;table border='1'&gt;";
+    let count = 0;
+
+    for(let i=0; i&lt;5; i++){
+        table += "&lt;tr&gt;";
+        for(let j=0; j&lt;5; j++){
+            count++;
+            table += "&lt;td&gt;" + count + "&lt;/td&gt;";                    
+        };
+        table += "&lt;/tr&gt;";
+    };
+
+    table += "&lt;/table&gt;";
+    
+    document.write(table);
+
 }
-}
-</code></pre>
-                                </div>
-                                <div class="result">
-                                    <details>
-                                        <summary>결과 확인하기</summary>
+</code></pre>                        
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
                                         <div>
                                             12345~9899 <br>
                                             123456789 <br>
@@ -409,15 +432,15 @@ document.write(j);
                                 break문은 프로그래밍에서 자주 사용되는 제어문 중 하나로, 반복문이나 switch문에서 사용하여 해당 반복문이나 switch문을 즉시 종료할 때
                                 사용됩니다.
                                 <div class="script">
-                                    <pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
-for(let i=1; i&lt;100; i++) {  //100까지 출력할뻔 했지만 10에서 break문이 있어서 10까지만출력
-if( i == 10) {
-break;
+<pre><code class="language-js">{
+    for(let i=1; i&lt;20; i++){
+        if(i == 10){
+            break;
+        }
+        document.write(i);
+    }
 }
-document.write(i);
-}
-}
-</code></pre>
+</code></pre> 
                                 </div>
                                 <div class="result">
                                     <details>
@@ -437,15 +460,15 @@ document.write(i);
                                 continue문은 프로그래밍에서 자주 사용되는 제어문 중 하나로, 반복문에서 사용하여 해당 반복 회차에서 남은 코드를 실행하지 않고 다음 회차로 넘어가게
                                 합니다.
                                 <div class="script">
-                                    <pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
-for(let i=1; i&lt;20; i++) {   //10은 뛰어넘고 20까지 출력하는 continue문
-if( i == 10) {
-continue;
+<pre><code class="language-js">{
+    for(let i=1; i&lt;20; i++){
+        if(i == 10){
+            continue;
+        }                
+        document.write(i);
+    }
 }
-document.write(i);
-}
-}
-</code></pre>
+</code></pre>  
                                 </div>
                                 <div class="result">
                                     <details>

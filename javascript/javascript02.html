@@ -57,28 +57,23 @@
                     <li><a href="#">03. 배열 : 데이터 불러오기 : 기본</a></li>
                     <li><a href="#">04. 배열 : 데이터 불러오기 : 2차 배열</a></li>
                     <li><a href="#">05. 배열 : 데이터 불러오기 : 갯수 구하기</a></li>
-                    <li><a href="#">06. 배열 : 데이터 불러오기 : for()문</a></li>
-                    <li><a href="#">07. 배열 : 데이터 불러오기 : 중첩 for()문</a></li>
-                    <li><a href="#">08. 배열 : 데이터 불러오기 : foreach()</a></li>
+                    <li><a href="#">06. 배열 : 데이터 불러오기 : for( )문</a></li>
+                    <li><a href="#">07. 배열 : 데이터 불러오기 : 중첩 for( )문</a></li>
+                    <li><a href="#">08. 배열 : 데이터 불러오기 : forEarch( )</a></li>
                     <li><a href="#">09. 배열 : 데이터 불러오기 : for of</a></li>
                     <li><a href="#">10. 배열 : 데이터 불러오기 : for in</a></li>
-                    <li><a href="#">11. 배열 : 데이터 불러오기 : map()</a></li>
-                    <li><a href="#">12. 배열 : 데이터 불러오기 : 배열 펼침 연산자</a></li>
-                    <li><a href="#">13. 배열 : 데이터 불러오기 : 배열 구조분해할당</a></li>
-
-
+                    <li><a href="#">11. 배열 : 데이터 불러오기 : map( )</a></li>
+                    <li><a href="#">12. 배열 : 데이터 불러오기 : 배열 펼침 연산자(Spread Operator)</a></li>
+                    <li><a href="#">13. 배열 : 데이터 불러오기 : 배열 구조분해할당(Destructuring assignment)</a></li>
 
                     <li><a href="#">14. 객체 : 데이터 불러오기 : 기본</a></li>
-                    <li><a href="#">15. 객체 : 데이터 불러오기 : object</a></li>
+                    <li><a href="#">15. 객체 : 데이터 불러오기 : Object</a></li>
                     <li><a href="#">16. 객체 : 데이터 불러오기 : 변수</a></li>
-                    <li><a href="#">17. 객체 : 데이터 불러오기 : fort in</a></li>
-                    <li><a href="#">18. 객체 : 데이터 불러오기 : map()</a></li>
-                    <li><a href="#">19. 객체 : 데이터 불러오기 : hasOwnProperty()</a></li>
-                    <li><a href="#">20. 객체 : 데이터 불러오기 : 객체 펼침연산자</a></li>
-                    <li><a href="#">21. 객체 : 데이터 불러오기 : 객체 구조분해할당</a></li>
-                </ul>
-                <ul>
-                    <li>형변화, typeof()</li>
+                    <li><a href="#">17. 객체 : 데이터 불러오기 : for in</a></li>
+                    <li><a href="#">18. 객체 : 데이터 불러오기 : map( )</a></li>
+                    <li><a href="#">19. 객체 : 데이터 불러오기 : hasOwnProperty( )</a></li>
+                    <li><a href="#">20. 객체 : 데이터 불러오기 : 객체 펼침 연산자(Spread Operator)</a></li>
+                    <li><a href="#">21. 객체 : 데이터 불러오기 : 객체 구조분해할당(Destructuring assignment)</a></li>
                 </ul>
             </div>
             <div class="main__sample">
@@ -228,51 +223,14 @@
                                 <h3>06. 배열 : 데이터 불러오기 : for()문</h3>
                                 <p>for문을 이용하여 데이터를 불러오는방법</p>
                                 <div class="script">
-                                    <pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
+<pre><code class="language-js">{
     const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 
-    //for (초기값 i=0 ; 조건식 0i&lt;9 ; 증감식 i++;)    
-
-    for(let i = 0; i&lt;9; i++){
-    console.log(arr[i]);
-    }  
-
-    //for문 실행순서
-    // let i = 0;▶ 1번
-    // i &lt; 9; ▶ 2번
-    // console.log(arr[i]) ▶ 3번
-    // i++ ▶4번
-
-    //01. let i = 0;                                                
-    // 변수 i 선언 및 값을 0으로 선언                                    
-    //02. i&lt;9;                                                   
-    // 조건 실행, i가 9보다 작을동안 명령문을 실행 ,현재 0      
-    //03. console.log(arr[i]); 
-    // 2번에서 조건실행 하므로 콘솔창에 100출력
-    //04. i++ 
-    // 증감식을 실행하므로 i값은 0에서 1로 변경
-    //05. let i = 1; 
-    // 증감식을 실행하므로 0 에서 1로 변경
-    //06. i&lt;9;
-    // 조건실행, i가 9부도 작을동안 명령문을 실행 , 현재 1
-    //07. console.log(arr[i]); 
-    // 05번에서 조건실행 하므로 콘솔창에 200출력
-    //08. i++ 
-    // 증감식을 실행하므로 i값은 1에서 2로 변경
-    //09. (반복)
-
-    // i=0; 0&lt;9; console.log(arr[0]); i++   //100
-    // i=1; 1&lt;9; console.log(arr[0]); i++   //200
-    // i=2; 2&lt;9; console.log(arr[0]); i++   //300
-    // i=3; 3&lt;9; console.log(arr[0]); i++   //400
-    // i=4; 4&lt;9; console.log(arr[0]); i++   //500
-    // i=5; 5&lt;9; console.log(arr[0]); i++   //600
-    // i=6; 6&lt;9; console.log(arr[0]); i++   //700
-    // i=7; 7&lt;9; console.log(arr[0]); i++   //800
-    // i=8; 8&lt;9; console.log(arr[0]); i++   //900
-    // i=9; 9&lt;9; END
-]                    
-</code></pre>
+    for(let i=0; i&lt;9; i++){
+        console.log(arr[i]);
+    }
+}
+</code></pre> 
                                 </div>
                                 <div class="result">
                                     <details>
@@ -299,21 +257,30 @@
                                 <h3>07. 배열: 데이터 불러오기 : 중첩 for()문</h3>
                                 for문 안에 for문이 들어가있는 구조
                                 <div class="script">
-                                    <pre class="line-numbers"><code code class="language-js" style="padding-top: 40px;">{
-    for( let i=1; i&lt;=10; i++ ){ //let은 생략이 가능하나 자바스크립트에서는 써주는편
-    console.log("i : " + i);  //https://webzz.tistory.com/68
-    for( let j=1; j&lt;=10; j++){
-    console.log("j : " + j);
+<pre><code class="language-js">{
+    for(let i=1; i&lt;=10; i++){
+        console.log("i : " + i);
+        for(let j=1; j&lt;=10; j++){
+            console.log("j : " + j);
         }
-    } 
+    }
 }
-            </code></pre>
+</code></pre>
                                 </div>
                                 <div class="result">
                                     <details>
                                         <summary>결과 확인하기</summary>
                                         <div>
-                                            실행되었습니다(num == 90)
+                                            i : 1 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                            i : 2 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                            i : 3 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                            i : 4 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                            i : 5 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                            i : 6 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                            i : 7 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                            i : 8 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                            i : 9 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
+                                            i : 10 , j : 1 , j : 2 , j : 3 , j : 4 , j : 5 , j : 6 , j : 7 , j : 8 , j : 9 , j : 10<br>
                                         </div>
                                     </details>
                                 </div>
@@ -324,116 +291,40 @@
                                     <h3>08. 배열 : 데이터 불러오기 : foreach()</h3>
                                     <p>forEach를 사용해서 배열의 데이터를 불러오는 방법이다.</p>
                                     <div class="script">
-                                        <pre class="line-numbers"><code code class="language-js">{
+<pre><code class="language-js">{
     const num = [100, 200, 300, 400, 500];
 
-    document.write(num[0],"<br>");
-    document.write(num[1],"<br>");
-    document.write(num[2],"<br>");
-    document.write(num[3],"<br>");
-    document.write(num[4],"<br>");   
-
-    document.write("<br><br>");
-
-    //for문으로 간단히 출력
-    for(let i=0; i&lt;num.length; i++) {
-        document.write(num[i],"<br>");
-    }
-
-    document.write("<br><br>");
-
-    //forEach로 출력 (배열에 있는데이터 반복시킬때 사용함)
-    num.forEach(function(el){
-        document.write(el, "<br>")
+    num.forEach(function(element, index, array){
+        document.write(element, "&lt;br&gt;");
+        document.write(index, "&lt;br&gt;");
+        document.write(array, "&lt;br&gt;");
     });
-
-    document.write("<br><br>");
-
-    //forEach : 화살표함수
-    num.forEach((el)=&lt;{
-        document.write(el, "<br>");
-    });
-
-    document.write("<br><br>");
-
-    //forEach : 화살표함수 : 괄호 생략
-    num.forEach(el => {
-        document.write(el, "<br>");
-    });
-
-    document.write("<br><br>");
-
-
-    //forEach : 화살표함수 : 괄호 생략 : 중괄호생략
-    num.forEach(el => document.write(el, "<br>"));
-
-    document.write("<br><br>");
-
-    //forEach (값, 인덱스, 배열 )
-    num.forEach(function(element, index, array) {
-        document.write(element,"<br>");
-        document.write(index,"<br>");
-        document.write(array,"<br>");
-    })
 }
-    </code></pre>
+</code></pre> 
                                     </div>
                                     <div class="result">
                                         <details>
                                             <summary>결과 확인하기</summary>
                                             <div>
-                                                100
-                                                200<br>
-                                                300<br>
-                                                400<br>
-                                                500<br>
-                                                <br>
                                                 100<br>
-                                                200<br>
-                                                300<br>
-                                                400<br>
-                                                500<br>
-                                                <br>
-                                                100<br>
-                                                200<br>
-                                                300<br>
-                                                400<br>
-                                                500<br>
-                                                <br>
-                                                100<br>
-                                                200<br>
-                                                300<br>
-                                                400<br>
-                                                500<br>
-                                                <br>
-                                                100<br>
-                                                200<br>
-                                                300<br>
-                                                400<br>
-                                                500<br>
-                                                <br>
-                                                100<br>
-                                                200<br>
-                                                300<br>
-                                                400<br>
-                                                500<br>
-                                                <br>
-                                                100<br>
-                                                0<br>
-                                                100,200,300,400,500<br>
-                                                200<br>
-                                                1<br>
-                                                100,200,300,400,500<br>
-                                                300<br>
-                                                2<br>
-                                                100,200,300,400,500<br>
-                                                400<br>
-                                                3<br>
-                                                100,200,300,400,500<br>
-                                                500<br>
-                                                4<br>
-                                                100,200,300,400,500<br>
+0<br>
+[100, 200, 300, 400, 500]<br>
 
+200<br>
+1<br>
+[100, 200, 300, 400, 500]<br>
+
+300<br>
+2<br>
+[100, 200, 300, 400, 500]<br>
+
+400<br>
+3<br>
+[100, 200, 300, 400, 500]<br>
+
+500<br>
+4<br>
+[100, 200, 300, 400, 500]<br>
                                             </div>
                                         </details>
                                     </div>
@@ -457,15 +348,14 @@
                                         <h3>09. 배열 : 데이터 불러오기 : for of</h3>
                                         <p>배열에서 데이터의 갯수를 구할때 length를 사용하면 된다.</p>
                                         <div class="script">
-                                            <pre class="line-numbers"><code code class="language-js">{
+<pre><code class="language-js">{
     const arr = [100, 200, 300, 400, 500];
 
-    for(let i of arr){ //arr의 값을 변수 i라고 지정해준것
-        document.write(i,"<br>"); 
-    }
+    for(let i of arr){
+        document.write(i);
+    };
 }
-document.write("<br><br>");
-        </code></pre>
+</code></pre>  
                                         </div>
                                         <div class="result">
                                             <details>
@@ -496,21 +386,14 @@ document.write("<br><br>");
                                             <h3>10. 배열 : 데이터 불러오기 : for in</h3>
                                             <p>배열에서 데이터의 갯수를 구할때 length를 사용하면 된다.</p>
                                             <div class="script">
-                                                <pre class="line-numbers"><code code class="language-js">{
-    const arr = [100, 200, 300, 400, 500]; //자릿수 출력해주는
-
-    for(let i in arr){      //왜 만들었을까? 객체는 배열이 변해서 생긴것임 for in은 객체를 위해 존재하는 문법, 그래서 배열에 써도 가능함 
-    document.write(i,"<br>"); 
-    }
-    }
-    {
+<pre><code class="language-js">{
     const arr = [100, 200, 300, 400, 500];
 
-    for(let i in arr){       
-    document.write(arr[i],"<br>");  //arr[] 추가해주면 자릿수가 아닌 배열의 값을 출력해줌
-    }
+    for(let i in arr){
+        document.write(i);
+    };
 }
-</code></pre>
+</code></pre>   
                                             </div>
                                             <div class="result">
                                                 <details>
@@ -521,11 +404,6 @@ document.write("<br><br>");
                                                         2<br>
                                                         3<br>
                                                         4<br>
-                                                        100<br>
-                                                        200<br>
-                                                        300<br>
-                                                        400<br>
-                                                        500<br>
                                                     </div>
                                                 </details>
                                             </div>
@@ -548,29 +426,16 @@ document.write("<br><br>");
                                                 <h3>11. 배열 : 데이터 불러오기 : map()</h3>
                                                 <p>배열에서 데이터의 갯수를 구할때 length를 사용하면 된다.</p>
                                                 <div class="script">
-                                                    <pre class="line-numbers"><code code class="language-js">{
-    const num= [100, 200,300, 400, 500];
+<pre><code class="language-js">{
+    const arr = [100, 200, 300, 400, 500];
 
-    num.forEach(function(el){
-    document.write(el , "<br>")
-    });
-    }
-    {
-    const num= [100, 200,300, 400, 500]; //콘솔에 출력
-
-    num.forEach(function(el ,i ,a){
-    console.log(el)
-    console.log(i)
-    console.log(a)
-    });
-
-    num.map(function(el ,i ,a){   //겉보기엔 결과 값은 똑같음
-    console.log(el)
-    console.log(i)
-    console.log(a)  //차이점은 검색
+    num.map(function(el, i, a){
+        document.write(el);
+        document.write(i);
+        document.write(a);
     });
 }
-</code></pre>
+</code></pre> 
                                                 </div>
                                                 <div class="result">
                                                     <details>
@@ -599,15 +464,15 @@ document.write("<br><br>");
                                                     <h3>12. 배열: 데이터 불러오기 : 배열 펼침연산자(spread operator)</h3>
                                                     <p>펼침 연산자는 자바스크립트에서 배열, 객체,문자열 등의 요소를 펼쳐서 개별오소로 분리하는 연산자입니다.</p>
                                                     <div class="script">
-                                                        <pre class="line-numbers"><code code class="language-js">{
+<pre><code class="language-js">{
     let arr1 = [100, 200, 300, 400, 500];
-    let arr2 = [600,700]; 
+    let arr2 = [600, 700];
 
     console.log(arr1);
-    console.log(...arr1,)   // 배열 불러올때의 펼침연산자
-    console.log(...arr1,...arr2) //배열을 합치는 방법
+    console.log(...arr1);                // ... 은 반복문(for문)이 포함되어 있어 값이 출력됩니다.
+    console.log(...arr1, ...arr2);
 }
-    </code></pre>
+</code></pre> 
                                                     </div>
                                                     <div class="result">
                                                         <details>
@@ -635,16 +500,16 @@ document.write("<br><br>");
                                                         <h3>13. 배열: 데이터 불러오기 : 배열 구조분해할당 (destructuring assignment)</h3>
                                                         <p>배열 구조 분해 할당은 배열의 요소를 개별 변수에 할당하는 방법입니다. 이를 통해 배열의 각 요소를 개별 변수로 분리하여 사용할 수 있습니다.</p>
                                                         <div class="script">
-                                                            <pre class="line-numbers"><code code class="language-js">{
-    let a, b, c;    //배열 구조분해할당의 대표적인 예
+<pre><code class="language-js">{
+    let a, b, c;
 
     [a, b, c] = [100, 200, "javascript"];
 
-    console.log(a)
-    console.log(b)
-    console.log(c)
+    console.log(a);
+    console.log(b);
+    console.log(c);
 }
-        </code></pre>
+</code></pre>
                                                         </div>
                                                         <div class="result">
                                                             <details>
@@ -668,17 +533,18 @@ document.write("<br><br>");
                                                             <h3>14. 객체 : 데이터 불러오기 : 기본</h3>
                                                             <p>객체의 데이터를 불러오는 기본문법입니다.</p>
                                                             <div class="script">
-                                                                <pre class="line-numbers"><code code class="language-js">{
+<pre><code class="language-js">{
     const obj = {
-    a: 100,
-    b: 200,
-    c: "javascript"
-    }
+        a: 100,
+        b: 200,
+        c: "javascript"
+    };
+
     console.log(obj.a);
     console.log(obj.b);
     console.log(obj.c);
 }
-            </code></pre>
+</code></pre>
                                                             </div>
                                                             <div class="result">
                                                                 <details>
@@ -700,17 +566,18 @@ document.write("<br><br>");
                                                                 <h3>15. 객체 : 데이터 불러오기 : object</h3>
                                                                 <p>객체의 데이터를 불러오는 방법중 object를 이용하여 불러오는 방법입니다.</p>
                                                                 <div class="script">
-                                                                    <pre class="line-numbers"><code code class="language-js">{
+<pre><code class="language-js">{
     const obj = {
-    a: 100,
-    b: 200,
-    c: "javascript"
-    }
-    console.log(Object.keys(obj));  //키값을 불러오는 원초적인 방법 (잘사용하지않음)
-    console.log(Object.values(obj));    
-    console.log(Object.entries(obj));
+        a: 100,
+        b: 200,
+        c: "javascript"
+    };
+
+    console.log(Object.keys(obj));          // 키 불러오는 방법
+    console.log(Object.values(obj));        // 값 불러오는 방법
+    console.log(Object.entries(obj));       // 키, 값 불러오는 방법
 }
-                </code></pre>
+</code></pre>       
                                                                 </div>
                                                                 <div class="result">
                                                                     <details>
@@ -734,21 +601,22 @@ document.write("<br><br>");
                                                                     <h3>16.객체 테이터 불러오기 : 변수(spread operator)</h3>
                                                                     <p>변수에 저장시켜서 객체를 불러오는 방법,</p>
                                                                     <div class="script">
-                                                                        <pre class="line-numbers"><code code class="language-js">{
+<pre><code class="language-js">{
     const obj = {
-    a: 100,
-    b: 200,
-    c: "javascript"
-    }
-    const name1= obj.a;
-    const name2= obj.b;
-    const name3= obj.b;
+        a: 100,
+        b: 200,
+        c: "javascript"
+    };
+
+    const name1 = obj.a;
+    const name2 = obj.b;
+    const name3 = obj.c;
 
     console.log(name1);
     console.log(name2);
     console.log(name3);
 }
-                    </code></pre>
+</code></pre>
                                                                     </div>
                                                                     <div class="result">
                                                                         <details>
@@ -772,18 +640,19 @@ const name3= obj.c; 구문에서 obj 객체의 c 속성 값을 name3 변수에 �
                                                                         <h3>17. 객체 : 데이터 불러오기 : for in</h3>
                                                                         <p>객체를 for in문을 사용하여 불러오는 방법입니다.</p>
                                                                         <div class="script">
-                                                                            <pre class="line-numbers"><code code class="language-js">{
+<pre><code class="language-js">{
     const obj = {
-    a: 100,
-    b: 200,
-    c: "javascript"
-    }
-    for(let key in obj) {   //object는 배열로 불러오지만 forin문은 배열로 불러오지않음
-    console.log(key)
-    console.log(obj[key]);
+        a: 100,
+        b: 200,
+        c: "javascript"
+    };
+
+    for(let key in obj){
+        console.log(key);           // 키 불러오는 방법
+        console.log(obj[key]);      // 값 불러오는 방법
     }
 }
-                        </code></pre>
+</code></pre>
                                                                         </div>
                                                                         <div class="result">
                                                                             <details>
@@ -810,18 +679,18 @@ for...in 루프는 객체의 속성 이름(key)을 변수로 받아 해당 속�
                                                                             <h3>18. 객체 : 데이터 불러오기 : map()펼침연산자(spread operator)</h3>
                                                                             <p>펼침 연산자는 자바스크립트에서 배열, 객체,문자열 등의 요소를 펼쳐서 개별오소로 분리하는 연산자입니다.</p>
                                                                             <div class="script">
-                                                                                <pre class="line-numbers"><code code class="language-js">{
-    const obj=[
-    {a:100, b:300, c: "javascript"} //객체 메소드로 불러올땐 이렇게 배열로 나열해셔 출력해야함
-    ]
+<pre><code class="language-js">{
+    const obj = [
+        {a: 100, b: 200, c: "javascript"}
+    ];
 
-    obj.map(function(el) {
-    console.log(el.a);
-    console.log(el.b);
-    console.log(el.c);
+    obj.map(function(el){
+        console.log(el.a);
+        console.log(el.b);
+        console.log(el.c);
     });
 }
-                            </code></pre>
+</code></pre>  
                                                                             </div>
                                                                             <div class="result">
                                                                                 <details>
@@ -844,24 +713,20 @@ obj.map 메서드를 이용해 obj 배열의 각 요소(객체)에 대해 함수
                                                                             <div id="sample11" class="sample">
                                                                                 <h3>19. 객체 : 데이터 불러오기 : hasOwnProperty() //데이터가 있는지없는지 알려주는것</h3>
                                                                                 <p>펼침 연산자는 자바스크립트에서 배열, 객체,문자열 등의 요소를 펼쳐서 개별오소로 분리하는 연산자입니다.</p>
-                                                                                <div class="script">
-                                                                                    <pre class="line-numbers"><code code class="language-js">{
+<div class="script">
+<pre><code class="language-js">{
     const obj = {
-    a: 100,
-    b: 200,
-    c: "javascript"
-    }
-    console.log(obj.hasOwnProperty("a")); //a에 데이터가 있는지 없는지 알려돌라는 코드 //true
-    console.log(obj.hasOwnProperty("b")); //b에 데이터가 있는지 없는지 알려돌라는 코드 //true
-    console.log(obj.hasOwnProperty("c")); //c에 데이터가 있는지 없는지 알려돌라는 코드 //true
-    console.log(obj.hasOwnProperty("d")); //d에 데이터가 있는지 없는지 알려돌라는 코드 //false
+        a: 100,
+        b: 200,
+        c: "javascript"
+    };
 
-    console.log("a" in obj); // 위랑 같지만 약식으로 사용
-    console.log("b" in obj); // 위랑 같지만 약식으로 사용
-    console.log("c" in obj); // 위랑 같지만 약식으로 사용
-    console.log("d" in obj); // 위랑 같지만 약식으로 사용
+    console.log(obj.hasOwnProperty("a"));       // true
+    console.log(obj.hasOwnProperty("b"));       // true
+    console.log(obj.hasOwnProperty("c"));       // true
+    console.log(obj.hasOwnProperty("d"));       // false      
 }
-                                </code></pre>
+</code></pre>  
                                                                                 </div>
                                                                                 <div class="result">
                                                                                     <details>
@@ -888,51 +753,19 @@ obj.hasOwnProperty(prop)는 obj 객체가 prop 속성을 직접적으로 갖고 
                                                                                 <h3>20. 객체 : 데이터 불러오기 : 객체 펼침연산자</h3>
                                                                                 <p>객체 펼침연산자를 이용하여 데이터 불러오기 </p>
                                                                                 <div class="script">
-                                                                                    <pre class="line-numbers"><code code class="language-js">{
+<pre><code class="language-js">{
     const obj = {
-    a : 100,
-    b : 200,
-    c : "javascript"
+        a: 100,
+        b: 200,
+        c: "javascript"
     }
-    const spread = {...obj}
+    const spread = {...obj};
 
     console.log(spread.a);
     console.log(spread.b);
     console.log(spread.c);
-    }
-    {
-    const obj = {
-    a : 100,
-    b : 200,
-    c : "javascript"
-    }
-    const spread = {...obj, d:"react"} //이런식으로 추가도 가능함
-
-    console.log(spread.a);
-    console.log(spread.b);
-    console.log(spread.c);
-    console.log(spread.d);
-
 }
-{
-    const obj1 = {
-    a : 100,
-    b : 200,
-    }
-    const obj2 = {
-    c : "javascript",
-    d : "react"
-    }
-
-    const spread = {...obj1,...obj2} //이런식으로 결합도 가능함
-
-    console.log(spread.a);
-    console.log(spread.b);
-    console.log(spread.c);
-    console.log(spread.d);
-
-}
-                                </code></pre>
+</code></pre>    
                                                                                 </div>
                                                                                 <div class="result">
                                                                                     <details>
@@ -964,31 +797,20 @@ obj.hasOwnProperty(prop)는 obj 객체가 prop 속성을 직접적으로 갖고 
                                                                                 <h3>21. 객체 : 데이터 불러오기 : 객체 구조분해할당</h3>
                                                                                 <p>객체 구조분해할당을 이용하여 데이터를 불러오는 방법입니다.</p>
                                                                                 <div class="script">
-                                                                                    <pre class="line-numbers"><code code class="language-js">{
+<pre><code class="language-js">{
     const obj = {
-    a : 100,
-    b : 200,
-    c : "javascript"
+        a: 100,
+        b: 200,
+        c: "javascript"
     }
+
     const {a, b, c} = obj;
 
     console.log(a);
     console.log(b);
     console.log(c);
-    }
-{
-    const obj = {
-    a : 100,
-    b : 200,
-    c : "javascript"
-    }
-    const {a:name1, b:name2, c:name3} = obj;
-
-    console.log(name1);
-    console.log(name2);
-    console.log(name3);
 }
-                                </code></pre>
+</code></pre>
                                                                                 </div>
                                                                                 <div class="result">
                                                                                     <details>
