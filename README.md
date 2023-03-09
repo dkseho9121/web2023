@@ -2,14 +2,15 @@
 
 나의블로그 : https://dlscks0930.tistory.com/
 
-# HTML
-블록구조와 인라인구조
+# Javascript
+데이터 저장하기 : https://dkseho9121.github.io/web2023/javascript/javascript01.html   
+데이터 출력하기 : https://dkseho9121.github.io/web2023/javascript/javascript02.html   
+데이터 실행하기 : https://dkseho9121.github.io/web2023/javascript/javascript03.html   
+데이터 제어하기 : https://dkseho9121.github.io/web2023/javascript/javascript04.html   
+퀴즈 효과 : https://dkseho9121.github.io/web2023/javascript/quiz/quizEffect01.html   
 
-## Class table 코딩
-
-## 레이아웃 연습
-### 레이아웃01
-### 레이아웃02
-
-# JAVASCRIPT
-변수 , 함수 , 배열 , 객체
+# Site
+이미지 유형01 : https://dkseho9121.github.io/web2023/site/imageType/imageType01.html   
+카드 유형01 : https://dkseho9121.github.io/web2023/site/cardType/cardType01.html   
+텍스트 유형01 : https://dkseho9121.github.io/web2023/site/textType/textType01.html   
+슬라이드 유형01 : https://dkseho9121.github.io/web2023/site/slideType/slideType01.html   
