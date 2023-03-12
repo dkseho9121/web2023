@@ -158,10 +158,10 @@
                         <!-- //sample03 -->
                         <div id="sample02" class="sample">
                             <h3>04. 배열 : 데이터 불러오기 : 2차 배열</h3>
-                            <p>배열 안에 배열이 있는 방식의 2차 배열이며 출력시 arr[2][0] 이런식으로 입력합니다..</p>
+                            <p>2차배열의 기본 표현방법입니다.</p>
                             <div class="script">
                                 <pre class="line-numbers"><code code class="language-js">{
-    const arr = [100, 200, ["javascript","react"]]; //문자열이 2개일떄 큰따옴표를 각각의 문자열마다 붙힌다.
+    const arr = [100, 200, ["javascript","react"]];
 
     console.log(arr[0]);
     console.log(arr[1]);
@@ -182,14 +182,15 @@
                                 </details>
                             </div>
                             <div class="notice">
-                                위 코드는 num 변수의 값에 따라 실행되는 if 문과 else if 문의 예시입니다.<br>
-
-                                변수 num의 값이 90이므로 첫 번째 조건인 if (num == 90)이 참이 되어 "실행되었습니다(num == 90)"가 출력됩니다.<br>
-                                다른 조건문은 실행되지 않습니다.<br>
-                                else if 문은 if 문과 함께 사용하여 여러 조건을 검사하고, 각 조건에 맞게 실행할 코드를 작성할 수 있습니다.<br>
-                                이 경우 <b>if 문이 참이 아닐 때 해당 else if 조건문을 검사합니다.</b><br>
-                                만약 이전의 if 문이 참이라면 다음 조건은 검사되지 않고, 바로 실행문이 실행됩니다.<br>
-                                마지막 else는 모든 조건에 해당하지 않을 경우 실행되는 부분입니다.
+                                2차 배열이란 배열안에 배열이 있는것을 의미 합니다.<br>
+                                위 코드로 예를들면 arr이라는 배열을 생성합니다.<br>
+                                arr배열의 첫 번째 요소는 100, 두번째 요소는 200, 세번째 요소는 또 다른 배열 ["javascript","react"]입니다.<br>
+                                <mark>또다른 배열에 첫번째 요소는 "javascript" 두번째 요소는 "react" 입니다.</mark>
+                                따라서 console.log(arr[0])은 100을 출력하고, console.log(arr[1])은 200을 출력합니다.<br>
+                                console.log(arr[2][0])은 "javascript"를 출력하고, console.log(arr[2][1])은 "react"를 출력합니다.<br>
+                                <br>
+                                <p style="color: red;">✍Tip</p>
+                                배열안에 문자열을 2개이상 표현할때 각각을 구분하는 방법은 <mark>각각의 요소마다 큰따음표("")를 붙히면됩니다.</mark>
                             </div>
                             <!-- //sample03 -->
                             <div id="sample02" class="sample">
@@ -212,12 +213,17 @@
                                     </details>
                                 </div>
                                 <div class="notice">
-                                    이 코드는 중첩 if 문을 사용하여 구성된 예시입니다.<br>
-                                    코드를 간단히 설명하면, <b>num 변수가 100인 경우에 대해 if 문을 사용하여 3개의 문자열을 출력</b>하고,<br>
-                                    그렇지 <b>않은 경우에는 하나의 문자열을 출력</b>합니다.<br>
-                                    여기서 주목할 점은, <b>if(num == 100) 문장이 3번 중첩</b>되어 있다는 것입니다.<br>
-                                    이렇게 중첩된 if 문은 코드의 가독성을 떨어뜨릴 수 있으므로, <b>필요한 경우에 한해서 사용</b>해야 합니다.
-                                </div>
+                                    위 코드는  arr이라는 배열을 생성하여 배열안에 요소들이 할당되어있습니다.<br>
+                                    데이터를 출력하는 것이 아닌, 배열안에 요소들의 갯수를 구할떄는 arr[0]같이 index를 입력하는것이아닌<br>
+                                    <mark>length를 사용하면 해당배열안에 할당되어있는 데이터의 갯수가 출력</mark>이 됩니다.<br>
+                                    <br>
+                                    <p style="color: red;">✍length란?</p>
+                                    length는 자바스크립트에서 배열(Array)이나 문자열(String)의 길이를 나타내는 속성입니다.<br>
+                                    이 속성은 해당 배열 또는 문자열이 포함하고 있는 요소의 개수를 반환합니다.<br>
+                                    배열은 위 코드를 참고하면 됩니다. 문자열같은경우는 예를들어,다음과 같은 무자열이 있다면<br>
+                                    <b>const str = "Hello, inchan!";</b> <br>
+                                <mark>str문자열의 length 속성은 13이 됩니다. 이는 문자열이 "H" 부터 "!" 까지 13개의 문자를 포함</mark>하고 있기 때문입니다.
+                                    </div>
                                 <!-- //sample03 -->
                                 <div id="sample01" class="sample"></div>
                                 <h3>06. 배열 : 데이터 불러오기 : for()문</h3>
