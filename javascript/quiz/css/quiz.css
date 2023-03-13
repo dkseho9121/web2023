@@ -113,6 +113,7 @@
   font-weight: bold;
   line-height: 1.5;
   border-bottom: 6px ridge #cacaca;;
+  background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210902/pngtree-blue-sky-and-white-clouds-pure-sky-image_786707.jpg); width:100%; height:100%;
 }
 .quiz__question em {
   color: rgb(246, 5, 5);
@@ -264,7 +265,7 @@
 .card-container::after {
   top: 5.5%;
   width: 85%;
-  background-image: url(https://image.utoimage.com/preview/cp872655/2017/08/201708004472_500.jpg); width:340px; height:370px;
+  background-image: url(https://image.utoimage.com/preview/cp872655/2017/08/201708004472_500.jpg); width:100%; height:100%;
 }
 /* dog */
 .dog .head,
