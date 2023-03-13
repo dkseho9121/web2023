@@ -88,11 +88,13 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 .quiz__wrap .quiz {
   width: 500px;
   background-color: #fff;
   border: 8px ridge #cacaca;
+  margin:10px;
 }
 .quiz__title {
   background-color: #262626;
@@ -123,15 +125,15 @@
   font-size: 24px;
 }
 .quiz__answer .confirm {
-  background-color: #6d6a6a;
-  border: 6px ridge #cacaca;
+  background-color: #dbffd8;
+  border: 6px ridge #6d6a6a;
   width: 100%;
   font-family: 'MYArirangGothic';
   padding: 10px 20px;
   font-size: 22px;
   cursor: pointer;
   transition: all 0.3s;
-  text-shadow: 2px 2px 0px #afbbe6;
+  text-shadow: 2px 2px 0px #ffffff;
   font-weight: bold;
 }
 .quiz__answer .confirm:hover{
@@ -158,19 +160,17 @@
   border-bottom: 6px ridge #cacaca;
   overflow: hidden;
 }
-.quiz__footer {
+
+.quiz__desc {
   border-top: 6px ridge #cacaca;
   padding: 20px;
   font-family: 'MYArirangGothic';
-  background-color: #ffffff;
+  background-color: #f5f5f5;
 }
-.quiz__footer::before {
-  content: "💋Tip";
+.quiz__desc::before {
+  content: "💋Tip ";
   color: #F5534F;
   font-weight: bold;
-}
-.quiz__desc {
-  padding-top: 5px;
 }
 /* dog__wrap */
 .dog .tail,
@@ -186,7 +186,57 @@
 .dog .ears::before, 
 .dog .ears::after, 
 .dog__wrap {
-  transition: 0.2s ease-in;
+  position: relative;
+}
+.dog__wrap .true {
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  background-color: #3300ffd9;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  left: 70%;
+  top: 100px;
+  font-family: 'MYArirangGothic';
+  z-index: 2;
+  opacity: 0;
+}
+.dog__wrap .false {
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  background-color: #ff0000b9;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  right: 70%;
+  top: 100px;
+  font-family: 'MYArirangGothic';
+  z-index: 2;
+  opacity: 0;
+}
+.dog__wrap.like .true {
+  opacity: 1;
+  animation: wobble 0.6s;
+}
+.dog__wrap.dislike .false {
+  opacity: 1;
+  animation: wobble 0.6s;
+}
+@keyframes wobble {
+  0% {transform: translateX(0) rotate(0deg);}
+  15% {transform: translateX(-25%) rotate(-5deg);}
+  30% {transform: translateX(20%) rotate(3deg);}
+  45% {transform: translateX(-15%) rotate(-3deg);}
+  60% {transform: translateX(-5%) rotate(-1deg);}
+  100% {transform: translateX(0) rotate(0deg);}
+
+
+
+
 }
 .card-container {
   position: relative;
@@ -210,12 +260,11 @@
 .card-container::before {
   top: 3%;
   width: 93%;
-  background: rgba(0, 0, 0, 0.7);
 }
 .card-container::after {
   top: 5.5%;
   width: 85%;
-  background: rgba(0, 0, 0, 0.35);
+  background-image: url(https://image.utoimage.com/preview/cp872655/2017/08/201708004472_500.jpg); width:340px; height:370px;
 }
 /* dog */
 .dog .head,
@@ -239,10 +288,10 @@
   top: 0;
   width: 35px;
   height: 70px;
-  background: #CB7A1D;
-  border-top: 11px solid #F7AA2B;
-  border-left: 7px solid #F7AA2B;
-  border-right: 7px solid #F7AA2B;
+  background: #eb8987;
+  border-top: 11px solid #999999;
+  border-left: 7px solid #999999;
+  border-right: 7px solid #999999;
 }
 .dog .ears::before {
   left: 0;
@@ -254,7 +303,7 @@
 }
 .dog .face {
   position: absolute;
-  background: #F7AA2B;
+  background: #a4a4a4;
   width: 100%;
   height: 100%;
   border-radius: 50% 50% 0 0;
@@ -395,7 +444,7 @@
   display: block;
   width: 100%;
   margin: auto;
-  background: #F7AA2B;
+  background: #999999;
 }
 .dog .body::after {
   top: -2px;
@@ -407,7 +456,7 @@
   position: absolute;
   left: -60%;
   bottom: 1px;
-  background: #F7AA2B;
+  background: #555555;
   width: 93px;
   height: 15px;
   transform: rotate(45deg);
@@ -421,14 +470,14 @@
   left: -10%;
   width: 120%;
   height: 15%;
-  background: #F7AA2B;
+  background: #777777;
   border-radius: 10px 10px 0 0;
 }
 .dog .legs::before, .dog .legs::after {
   content: "";
   position: absolute;
   bottom: 1px;
-  background: #CB7A1D;
+  background: #666666;
   z-index: -1;
 }
 .dog .legs::before {
@@ -462,7 +511,7 @@
   }
 }
 .like {
-  background: #F0754A;
+  background: #ffffff;
 }
 .like .face::before {
   margin-top: 10px;
@@ -504,7 +553,7 @@
   animation: movetail 0.1s linear infinite alternate forwards;
 }
 .dislike {
-  background: #747499;
+  
 }
 .dislike .ears::before {
   transform: rotate(-50deg) translate(-7px, 2px);
