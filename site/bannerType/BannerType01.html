@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 텍스트 유형01</title>
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style> 
+        /* fonts */
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal; /*제목 글 굵기 기본설정 해제*/
+        } 
+        li {
+            list-style: none;
+        }
+        img {
+            vertical-align: top;
+        }
+        /* common */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section > h2 {
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section > p {
+            font-size: 22px;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 70px;
+            color: #666;
+        }
+        .gray {
+            background-color: #ffffff;;
+        }
+        /* imageTextType */
+        .imgText__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        .imgText__inner > div {
+            width: 32%;
+            height: 500px;
+        }
+        .imgText__txt span{
+            font-size: 16px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        .imgText__txt h3 {
+            font-size: 50px;
+            font-weight: 300;
+            /* 문단에서 끊어지기 */
+            word-break: keep-all;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+        .imgText__txt p {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.5;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .imgText__txt ul {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+        .imgText__txt ul li {
+            position: relative; 
+            padding-left: 20px;
+        }
+        .imgText__txt ul li a {
+            color: #666;
+        }
+        .imgText__txt ul li::before{
+            content:'';
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            position: absolute;
+            left: 5px;
+            top: 9px;
+            background: #ffffff;
+        }
+        .imgText__img {
+            border-radius: 10px;
+            position: relative;
+        }
+        .imgText__img a {
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+            background-color: #7c2b39;
+            font-size: 18px;
+            padding: 10px 30px;
+            border-radius: 30px;
+            display: inline-block;
+        }
+        .imgText__img a.blue {
+            background-color: #2b387c;
+        }
+        
+        .section__small {
+            font-size: 14px;
+            padding: 1px 23px;
+            border-radius: 10px;
+            background-color: #684D43;
+            text-transform: uppercase;
+            color: #ffffff;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .card {
+            display: inline-flex;
+
+        }
+    </style>
+</head>
+<body>
+    <section id="imageTextType" class="imageText__wrap nexon section gray">
+        <div class="imgText__inner container">
+            <div class="imgText__txt">
+                <span class="section__small">notice</span>
+                <h3>다양한 커피의 종류</h3>
+                <p>세계적으로 수천가지 이상의 커피의 종류가 있습니다. 일부 인기 있는 커피의 종류는 다음과 같습니다.</p>
+                <ul>
+                    <li>에스프레소(Espresso)</li>
+                    <li>아메리카노(Americano)</li>
+                    <li>라떼 (Latte)</li>
+                    <li>카푸치노 (Cappuccino)</li>
+                    <li>모카 (Mocha)</li>
+                    <li>콜드 브루 (Cold Brew)</li>
+                    <li>프렌치 프레스 (French Press)</li>
+                    <li>터키 커피 (Turkish Coffee)</li>
+                    <li>카페 모카 (Caffe Mocha)</li>
+                    <li>아이스 커피 (Iced Coffee)</li>
+                </ul>
+            </div>
+            <article class="card">
+                <figure style="padding:10px;">
+                    <img src="../asset/img/ImgtextType01.jpg" alt="coffee">
+                </figure>
+                <figure style="padding:10px;">
+                    <img src="../asset/img/ImgtextType02.jpg" alt="coffee">
+                </figure>
+                </article>
+            </div>     
+    </section>
+</body>
+</html>
