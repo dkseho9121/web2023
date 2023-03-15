@@ -48,7 +48,7 @@
         <div class="container">
             <div class="main__menu">
                 <ul>
-                    <li><a href="#">배열 메서드 : join()</a></li>
+                    <li><a href="#">배열 메서드 : join() : 배열 요소 문자열 결합</a></li>
                     <li><a href="#">배열 메서드 : push() : 배열 마지막 요소에 요소를 추가</a>★</li>
                     <li><a href="#">배열 메서드 : pop() : 배열 마지막 요소를 삭제</a></li>
                     <li><a href="#">배열 메서드 : unshift() : 배열 처음 요소에 요소를 추가</a></li>
@@ -101,15 +101,14 @@ console.log(arrNum2)
     <!-- //main -->
 
     <script>
-const arrNum1 = [100, 200, 300, 400, 500];
-const arrPush1 = arrNum1.unshift(600);
+        const arrNum1 = [100, 200, 300, 400, 500];
+        const text1 = arrNum1.join(''); //100200300400500
+        const text2 = arrNum1.join(' ');    //100 200 300 400 500
+        const text3 = arrNum1.join('*');    //100*200*300*400*500
+        const text4 = arrNum1.join('-');    //100-200-300-400-500
+        const text5 = arrNum1.join('★');    //100★200★300★400★500
 
-console.log(arrNum1) 
-
-const arrNum2 = [600,100, 200, 300, 400, 500];
-const arrPush2 = arrNum2.shift();//[100, 200, 300, 400, 500]
-
-console.log(arrNum2) //[200, 300, 400, 500]
+        console.log(text2)
     </script>
 
     <body>

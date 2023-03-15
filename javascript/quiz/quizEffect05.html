@@ -167,11 +167,25 @@
                 },
                 infoAnswer: "3",
                 infoDesc: "디스크 팩이 6장으로 구성되었을 때 사용하여 기록할 수 있는 면 수는 10입니다."
-            }
+            },//{
+            //     infoType: "정보처리 기능사",
+            //     infoTime: "2010년 1회",
+            //     infoNumber: "20050206",
+            //     infoQuestion: "디스크 팩이 6장으로 구성되었을 때 사용하여 기록할 수 있는 면 수는?<br><img style='width:300px' src='깃허브주소 사진있는'",
+            //     infoChoice: {
+            //         1: "6",
+            //         2: "8",
+            //         3: "10",
+            //         4: "12",
+            //     },
+            //     infoAnswer: "3",
+            //     infoDesc: "디스크 팩이 6장으로 구성되었을 때 사용하여 기록할 수 있는 면 수는 10입니다."
+            // }
         ];
 
         // 선택자
         const quizWrap = document.querySelector(".quiz__wrap");
+        let quizScore = 0;
         // 문제 출력
         const updateQuiz = () => {
             const exam = [];
@@ -227,15 +241,19 @@
                                     <span>${question.infoChoice[4]}</span>
                                 </label>
                             </div>
-                            <div class="quiz__desc">${question.infoDesc}</div>
+                            <div class="quiz__desc">정답은 <em>${question.infoAnswer}</em>번 입니다.<br>${question.infoDesc}</div>
                         </div>
                     </div>
                 `);
             });
             exam.push(`
+                <div class="quiz__info">??점</div>
                 <div class="quiz__check linear_gradient">정답 확인!</div>
             `);
-            quizWrap.innerHTML = exam;
+            quizWrap.innerHTML = exam.join("🌳");
+
+            //설명 숨기기
+            document.querySelectorAll(".quiz__desc").forEach(el => el.style.display = "none");
         }
         updateQuiz();
         // 정답 확인
@@ -250,11 +268,20 @@
                 if(userAnswer == question.infoAnswer){
                     console.log("정답");
                     dogWrap[number].classList.add("like");
+                    quizScore++;
                 } else {
                     console.log("오답");
                     dogWrap[number].classList.add("dislike");
+                    //
                 }
             });
+            //설명 보이기
+            document.querySelectorAll(".quiz__desc").forEach(el => el.style.display = "block");
+
+            alert(quizScore + "개 맞았습니다.");
+
+            //점수보이기
+            document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore/quizInfo.length) * 100)  + "점";
         }
         // 정답 클릭
         document.querySelector(".quiz__check").addEventListener("click", answerQuiz);
