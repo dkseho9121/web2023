@@ -1,133 +1,122 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEST</title>
+    <title>JavaScript : 데이터 효과</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
+    <link rel="shortcut icon" href="assets/ico/javascript.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/ico/javascript192x192.png">
 </head>
+
 <body>
+    <header id="header">
+        <h1><a href="index.html">javascript</a></h1>
+        <nav>
+            <ul>
+                <li><a href="javascript01.html">데이터 저장하기</a></li>
+                <li><a href="javascript02.html">데이터 불러오기</a></li>
+                <li><a href="javascript03.html">데이터 실행하기</a></li>
+                <li><a href="javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="javascript05.html">문자열 객체</a></li>
+                <li><a href="javascript06.html">배열 객체</a></li>
+                <li><a href="javascript07.html">수학 개체</a></li>
+                <li><a href="javascript08.html">숫자 개체</a></li>
+                <li><a href="javascript09.html">브라우저 객체</a></li>
+                <li><a href="javascript10.html">요소 객체</a></li>
+                <li><a href="javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="last">
+                <li class="active"><a href="javascript12.html">데이터 효과</a></li>
+                <li><a href="javascript13.html">검색 효과</a></li>
+                <li><a href="javascript14.html">퀴즈 효과</a></li>
+                <li><a href="javascript15.html">마우스 효과</a></li>
+                <li><a href="javascript16.html">슬라이드 효과</a></li>
+                <li><a href="javascript17.html">패럴랙스 객체</a></li>
+                <li><a href="javascript18.html">게임 효과</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="container">
+            <div class="main__menu">
+                <ul>
+                    <li><a href="#">배열 메서드 : join()</a></li>
+                    <li><a href="#">배열 메서드 : push()</a></li>
+                    <li><a href="#">배열 메서드 : pop()</a></li>
+                    <li><a href="#">배열 메서드 : unshift()</a></li>
+                    <li><a href="#">배열 메서드 : shift()</a></li>
+                    <li><a href="#">배열 메서드 : reverse()</a></li>
+                    <li><a href="#">배열 메서드 : sort()</a>★</li>
+                    <li><a href="#">배열 메서드 : concat()</a></li>
+                    <li><a href="#">배열 메서드 : reduce()</a></li>
+                    <li><a href="#">배열 메서드 : reduceRight()</a></li>
+                    <li><a href="#">배열 메서드 : slice()</a>★★</li>
+                    <li><a href="#">배열 메서드 : splice()</a>★★</li>
+                    <li><a href="#">배열 메서드 : indexOf()</a>★</li>
+                    <li><a href="#">배열 메서드 : lastindexOf()</a></li>
+                    <li><a href="#">배열 메서드 : includes()</a></li>
+                    <li><a href="#">배열 메서드 : findIndex()</a></li>
+                    <li><a href="#">배열 메서드 : filter()</a></li>
+                    <li><a href="#">배열 메서드 : map()</a></li>
+                </ul>
+            </div>
+            <div class="main__sample">
+                <div id="sample01" class="sample"style="padding-top: 40px;">
+                        <h3>배열 메서드 : push()</h3>
+                        <p>push() 메서드는 배열 마지막 요소에 요소를 추가하고, pop() 메서드는 배열 마지막 요소를 삭제합니다.</p>
+                    </div>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">const arrNum1 = [100, 200, 300, 400, 500];
+const arrPush1 = arrNum.push(600);
+
+console.log(arrNum1)    //[100, 200, 300, 400, 500, 600] //push 했으니까 넣어주는거고 pop해줬으니까는 빼주는거 고정도만알면됨
+
+const arrNum2 = [100, 200, 300, 400, 500];
+const arrPush2 = arrNum.pop();
+
+console.log(arrNum2)
+</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100<br>
+                            200<br>
+                            300<br>
+                            400<br>
+                            500<br>
+                        </div>
+                    </details>
+                </div>
+                <!-- //sample01-->
+
+                
+
+    </main>
+    <!-- //main -->
+
+    <script src="assets/js/prism.js"></script>
     <script>
-// 01. 0~100까지 출력
-    {
-        for(let i=0; i<=100; i++){
-        document.write(i);
-        }
-    }
-    document.write("<br><br>");
-    // 02. 100칸 테이블
-    {
-        table = "<table border=1>";
-        for(let i=1; i<=10; i++){
-            table +="<tr>";
-            for(let j=1; j<=10; j++){
-                table +="<td>"+i+"</td>";
-            }
-            table +="</tr>";
-        }
-        table += "</table>";
-        document.write(table);
-    }
-    document.write("<br>");
-    // 03. 구구단 20단만 출력
-    {
-        for(let i=20; i<21; i++){
-            document.write(i+"단"+"<br>")
-            for(let j=1; j<=9; j++){
-                document.write(i+"*"+j+"="+i*j+"<br>");
-            }
-        }
-    }
-    document.write("<br>");
-    // 04. 1부터 100까지 출력(짝수의 합)
-    {
-        num = 0;
-        for(let i=1; i<=100; i++){
-            if(i % 2 == 0){
-                num +=i;
-            }
-        }
-        document.write(num);
-    }
-    document.write("<br><br>");;
-    // 05. 1부터 100까지 출력(짝수는 파란색, 홀수는 빨간색)
-    {
-        for(let i=1; i<=100; i++){
-            if(i % 2==1){
-                document.write("<span style=color:red>"+i+"</span>")
-            } else {
-                document.write("<span style=color:blue>"+i+"</span>")
-            }
-        }
-    }
-    document.write("<br><br>");
-    // 06. 배열안에 1-10까지 데이터가 있음 (forEach문을 통해 출력하시오)
-    {
-        const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-        arr.forEach(function(el){
-            document.write(el);
-        })
-    }
-    document.write("<br><br>");
-    // 07. 함수의 유형 4가지
-    {
-        function func(){
-            document.write("실행");
-        }
-        func();
-    }
-    document.write("<br><br>");
-    {
-        const func = function(){
-            document.write("실행");
-        }
-        func();
-    }
-    document.write("<br><br>");
-    {
-        function func(str){
-            document.write(str);
-        }
-        func("실행");
-    }
-    document.write("<br><br>");
-    {
-        function func(){
-            const str = "실행";
-            return str;
-        }
-        document.write(func());
-    }
-    document.write("<br><br>");
-    //08. 7번을 화살표 함수로
-    {
-        func = () => {
-            document.write("실행");
-        }
-        func();
-    }
-    document.write("<br><br>");
-    {
-        const func = () => {
-            document.write("실행");
-        }
-        func();
-    }
-    document.write("<br><br>");
-    {
-        func = (str) => {
-            document.write(str);
-        }
-        func("실행");
-    }
-    document.write("<br><br>");
-    {
-        func = () => {
-            const str = "실행";
-            return str;
-        }
-        document.write(func());
-    }
+
     </script>
-</body>
+
+    <body>
+        <footer id="footer">
+            <a href="mailto:dlscks0930@naver.com">dlscks0930@naver.com</a>
+        </footer>
+        <!-- //footer -->
+
+    </body>
+
 </html>
