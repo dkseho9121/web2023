@@ -1,122 +1,89 @@
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript : 데이터 효과</title>
-
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/prism.css">
-
-    <link rel="shortcut icon" href="assets/ico/javascript.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/ico/javascript192x192.png">
+    <title>Document</title>
 </head>
-
 <body>
-    <header id="header">
-        <h1><a href="index.html">javascript</a></h1>
-        <nav>
-            <ul>
-                <li><a href="javascript01.html">데이터 저장하기</a></li>
-                <li><a href="javascript02.html">데이터 불러오기</a></li>
-                <li><a href="javascript03.html">데이터 실행하기</a></li>
-                <li><a href="javascript04.html">데이터 제어하기</a></li>
-            </ul>
-            <ul>
-                <li><a href="javascript05.html">문자열 객체</a></li>
-                <li><a href="javascript06.html">배열 객체</a></li>
-                <li><a href="javascript07.html">수학 개체</a></li>
-                <li><a href="javascript08.html">숫자 개체</a></li>
-                <li><a href="javascript09.html">브라우저 객체</a></li>
-                <li><a href="javascript10.html">요소 객체</a></li>
-                <li><a href="javascript11.html">이벤트 객체</a></li>
-            </ul>
-            <ul class="last">
-                <li class="active"><a href="javascript12.html">데이터 효과</a></li>
-                <li><a href="javascript13.html">검색 효과</a></li>
-                <li><a href="javascript14.html">퀴즈 효과</a></li>
-                <li><a href="javascript15.html">마우스 효과</a></li>
-                <li><a href="javascript16.html">슬라이드 효과</a></li>
-                <li><a href="javascript17.html">패럴랙스 객체</a></li>
-                <li><a href="javascript18.html">게임 효과</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- //header -->
-
-    <main id="main">
-        <div class="container">
-            <div class="main__menu">
-                <ul>
-                    <li><a href="#">배열 메서드 : join()</a></li>
-                    <li><a href="#">배열 메서드 : push()</a></li>
-                    <li><a href="#">배열 메서드 : pop()</a></li>
-                    <li><a href="#">배열 메서드 : unshift()</a></li>
-                    <li><a href="#">배열 메서드 : shift()</a></li>
-                    <li><a href="#">배열 메서드 : reverse()</a></li>
-                    <li><a href="#">배열 메서드 : sort()</a>★</li>
-                    <li><a href="#">배열 메서드 : concat()</a></li>
-                    <li><a href="#">배열 메서드 : reduce()</a></li>
-                    <li><a href="#">배열 메서드 : reduceRight()</a></li>
-                    <li><a href="#">배열 메서드 : slice()</a>★★</li>
-                    <li><a href="#">배열 메서드 : splice()</a>★★</li>
-                    <li><a href="#">배열 메서드 : indexOf()</a>★</li>
-                    <li><a href="#">배열 메서드 : lastindexOf()</a></li>
-                    <li><a href="#">배열 메서드 : includes()</a></li>
-                    <li><a href="#">배열 메서드 : findIndex()</a></li>
-                    <li><a href="#">배열 메서드 : filter()</a></li>
-                    <li><a href="#">배열 메서드 : map()</a></li>
-                </ul>
-            </div>
-            <div class="main__sample">
-                <div id="sample01" class="sample"style="padding-top: 40px;">
-                        <h3>배열 메서드 : push()</h3>
-                        <p>push() 메서드는 배열 마지막 요소에 요소를 추가하고, pop() 메서드는 배열 마지막 요소를 삭제합니다.</p>
-                    </div>
-                    <div class="script">
-<pre class="line-numbers"><code class="language-js">const arrNum1 = [100, 200, 300, 400, 500];
-const arrPush1 = arrNum.push(600);
-
-console.log(arrNum1)    //[100, 200, 300, 400, 500, 600] //push 했으니까 넣어주는거고 pop해줬으니까는 빼주는거 고정도만알면됨
-
-const arrNum2 = [100, 200, 300, 400, 500];
-const arrPush2 = arrNum.pop();
-
-console.log(arrNum2)
-</code></pre>
-                <div class="result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div>
-                            100<br>
-                            200<br>
-                            300<br>
-                            400<br>
-                            500<br>
-                        </div>
-                    </details>
-                </div>
-                <!-- //sample01-->
-
-                
-
-    </main>
-    <!-- //main -->
-
-    <script src="assets/js/prism.js"></script>
     <script>
-
-    </script>
-
-    <body>
-        <footer id="footer">
-            <a href="mailto:dlscks0930@naver.com">dlscks0930@naver.com</a>
-        </footer>
-        <!-- //footer -->
-
-    </body>
-
+        //선언적함수
+        //함수가 실행되었습니다.1
+        {
+            function func() {
+                document.write("함수가 실행되었습니다.1<br>")
+            };
+            func();
+        };
+       //익명 함수
+       //함수가 실행되었습니다.2
+       {
+           const func = function () {
+               document.write("함수가 실행되었습니다.2<br>")
+           };
+           func();
+       }
+       //매개변수 함수
+       //함수가 실행되었습니다.3
+       {
+           function func (str) {
+               document.write(str);
+           };
+           func("함수가 실행되었습니다.3<br>")
+       }
+       //리턴값 함수
+       //함수가 실행되었습니다.4
+       {
+           function func () {
+               const str = "함수가 실행되었습니다.4<br>"
+               return str;
+           };
+           document.write(func())
+       }
+       //선언적 함수(화살표함수)
+       //함수가 실행되었습니다.5
+       {
+           func = () => {
+               document.write("함수가 실행되었습니다.5<br>")
+           }
+           func();
+       }
+       //익명함수(화살표함수)
+       //함수가 실행되었습니다.6
+       {
+           const func = () => {
+               document.write("함수가 실행되었습니다.6<br>")
+           };
+       }
+       //매개변수 함수(화살표함수)
+       //함수가 실행되었습니다.7
+       {
+           
+           func = (str) => {
+               document.write(str);
+           };
+           func("함수가 실행되었습니다.7<br>")
+       }
+       //리턴값 함수(화살표함수)
+       //함수가 실행되었습니다.8
+       {
+           func = () => {
+               const str = "함숙"
+           };
+       }
+       //익명함수 + 매개변수 + 리턴값(화살표함수)
+       //함수가 실행되었습니다.9
+       {}
+       //익명함수 + 매개변수 + 리턴값 + 괄호생략(화살표함수)
+       //함수가 실행되었습니다.10
+       {}
+       //익명함수 + 매개변수 + 리턴값 + 괄호생략 + 리턴생략(화살표함수)
+       //함수가 실행되었습니다.11
+       {}
+       //선언적함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략(화살표함수)
+       //함수가 실행되었습니다.12
+       {}
+        </script>
+</body>
 </html>
