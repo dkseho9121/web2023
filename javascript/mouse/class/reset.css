@@ -61,9 +61,6 @@ em {
     border-left: 14px solid transparent;
     border-right: 14px solid transparent;
   }
-#header li.active a{
-    color: rgb(208, 221, 29);
-}
 /* footer */
 #footer {
     position: absolute;
