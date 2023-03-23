@@ -154,7 +154,22 @@ body {
 .main__sample .notice p {
     margin-bottom:0px;
 }
-
+.main__sample ul {
+    margin:  20px 0;
+}
+.main__samle li {
+    position: relative;
+    padding-left: 12px;
+}
+.main__sample li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: #0243f1;
+    position: absolute;
+    left: 0;
+    top: 9px;
+}
 /* 푸터 영역*/
 #footer {
     padding: 40px;
