@@ -3,7 +3,7 @@
   position: fixed;
   left: 0;
   top: 0  ;
-  background-color: #262626;
+  background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
   color: #fff;
   padding: 10px;
   margin-bottom: 100px;
@@ -60,7 +60,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #262626;
+  background-image: linear-gradient(to top, #b1f4cf 0%, #9890e3 100%);
   text-align: center;
 }
 #footer a {
@@ -97,7 +97,7 @@
   margin:10px;
 }
 .quiz__title {
-  background-color: #262626;
+  background-color: #000;
   border: 3px ridge #cacaca;
   border-bottom-width: 6px;
   padding: 5px;
@@ -136,6 +136,21 @@
   transition: all 0.3s;
   text-shadow: 2px 2px 0px #ffffff;
   font-weight: bold;
+}
+.quiz__answer .next {
+  background-color: #dbffd8;
+  border: 6px ridge #ffffff;
+  width: 100%;
+  font-family: 'MYArirangGothic';
+  padding: 10px 20px;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-shadow: 2px 2px 0px #ffffff;
+  font-weight: bold;
+}
+.quiz__answer .next {
+  background-image: linear-gradient(to top, #b1f4cf 0%, #9890e3 100%);
 }
 .quiz__answer .confirm:hover{
   background-color: #74b3eb;

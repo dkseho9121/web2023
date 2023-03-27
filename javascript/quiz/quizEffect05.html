@@ -17,6 +17,7 @@
             <li><a href="quizEffect03.html">3</a></li>
             <li><a href="quizEffect04.html">4</a></li>
             <li class="active"><a href="quizEffect05.html">5</a></li>
+            <li><a href="quizEffect04.html">6</a></li>
         </ul>
     </header>
     <!-- //header-->
@@ -999,7 +1000,7 @@
             alert(quizScore + "개 맞았습니다.");
 
             //점수보이기
-            document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore/quizInfo.length) * 100)  + "점";
+            doicument.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore/quizInfo.length) * 100)  + "점";
         }
         // 정답 클릭
         document.querySelector(".quiz__check").addEventListener("click", answerQuiz);
