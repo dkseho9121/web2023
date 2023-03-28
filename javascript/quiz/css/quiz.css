@@ -701,3 +701,162 @@
   text-align: center;
   font-size: 3vw;
 }
+
+/* cbt 유형 */
+.quiz__wrap__cbt{
+  padding: 0 20px;
+  font-family: SCoreDream;
+}
+.cbt__conts {
+  width: calc(100% - 300px);
+  background-color: #fff;
+}
+.cbt__header {
+  width: calc(100% - 300px);
+  background-color: #fff;
+  border: 8px ridge #cacaca;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  display: flex;
+  text-align: center;
+  padding: 15px;
+}
+.cbt__header > div {
+
+}
+.cbt__time {
+  position: relative;
+  padding-left: 40px !important;
+}
+.cbt__time::before {
+  content: '';
+  position: absolute;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0M3.124 7.5A8.969 8.969 0 015.292 3m13.416 0a8.969 8.969 0 012.168 4.5' /%3E%3C/svg%3E%0A");
+  left: 10px;
+  top: 9px;
+  width: 23px;
+  height: 23px;
+}
+.cbt__submit {
+  position: relative;
+  padding-left: 40px !important;
+}
+.cbt__submit::before{
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 9px;
+  width: 23px;
+  height: 23px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' class='w-6 h-6'%3E%3Cpath d='M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-8.4 8.4a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32l8.4-8.4z' /%3E%3Cpath d='M5.25 5.25a3 3 0 00-3 3v10.5a3 3 0 003 3h10.5a3 3 0 003-3V13.5a.75.75 0 00-1.5 0v5.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5V8.25a1.5 1.5 0 011.5-1.5h5.25a.75.75 0 000-1.5H5.25z' /%3E%3C/svg%3E%0A");
+}
+.cbt__header > div >div {
+  background-color: #ffffff;
+  border: 3px ridge #cacaca;
+  display: inline-block;
+  margin-left: 20px;
+  padding: 10px;
+}
+.cbt__aside {
+  position: absolute;
+  right: 20px;
+  top: 100px;
+  width: 280px;
+  height: 800px;
+  background-color: #faef95;
+  border: 4px ridge #ff5858;
+}
+.cbt__quiz {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cbt__quiz .cbt {
+  width: 49%;
+  border: 8px ridge #cacaca;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.cbt__info {
+  background-color: #faef95;
+  border-bottom: 4px ridge #ff0000;
+  color: #ff0000;
+  font-weight: 600;
+  padding: 20px;
+  text-align: center;
+}
+.cbt__info1 {
+  background-color: #faef95;
+  color: #ff0000;
+  font-weight: 600;
+  padding: 20px;
+  text-align: center;
+}
+.cbt__info .title {
+  display: flex;
+  line-height: 1px;
+  
+}
+.cbt__info .title1 {
+  line-height: 1px;
+}
+.cbt__info span {
+  display: inline-block;
+}
+.cbt__omr {
+  padding: 20px;
+}
+.cbt__omr .omr {
+  margin: 5px 0;
+  display: grid;
+  grid-template-columns: 50px 38px 38px 38px 38px;
+  grid-template-rows: 20px;
+  align-items: center;
+}
+.cbt__omr .omr input {
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.cbt__omr .omr strong {
+  display: inline-block;
+  text-align: center;
+  padding: 2px;
+  background-color: #313E55;
+  color: #fff;
+  font-family: 'Helvetica Neue';
+  margin-right: 10px;
+  font-weight: bold;
+}
+.cbt__omr .omr label {
+  box-shadow: 0 0 0 1px #313E55;
+  cursor: pointer;
+  line-height: 0.4;
+  text-align: center;
+  width: 28px;
+  height: 8px;
+  font-family: 'Helvetica Neue';
+  position: relative;
+}
+.cbt__omr .omr label::after {
+  background-color: #555;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: 1;
+}
+.cbt__omr .omr input[type=radio]:checked + label::after {
+  width: 100%;
+}
+.cbt__omr .omr .label-inner {
+  background-color: #fff;
+  padding: 0.25em 0.13em;
+  transform: translateY(-0.25em);
+  width: 20px;
+  color: #313E55;
+}

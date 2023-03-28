@@ -18,6 +18,7 @@
             <li><a href="quizEffect04.html">4</a></li>
             <li><a href="quizEffect05.html">5</a></li>
             <li class="active"><a href="quizEffect06.html">6</a></li>
+            <li><a href="quizEffect05.html">7</a></li>
         </ul>
     </header>
     <!-- //header-->
@@ -244,6 +245,11 @@
             updateQuiz(quizCount);
         });
 
+
+        if(quizCount == quizInfo.length -1){
+            quizAnswer.sryle.display= "none";
+            dogWrapCount.innerHTML = "문제를 다 풀었습니다. 축하합니다. 점수는 "+countLasat+"점입니다. 합격입니다."
+        }
     </script>
 </body>
 </html>
