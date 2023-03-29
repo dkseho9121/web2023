@@ -111,9 +111,9 @@
     </footer> -->
     <!-- //footer -->
     <script>
-        let questionAll = []; //모든 퀴즈 정보
+        let questionAll = []; //questionAll이라는 배열을 생성합니다.
 
-        const dataQuestion = () => {
+        const dataQuestion = () => {    //dataQuestion이라는 배열을 생성하고
             fetch("json/gisa2020_01.json")
             .then(res => res.json())
             .then(items => {    //
