@@ -703,9 +703,9 @@
 }
 
 /* cbt 유형 */
-.quiz__wrap__cbt{
+.quiz__wrap__cbt {
   padding: 0 20px;
-  font-family: SCoreDream;
+  font-family: 'PyeongChang';
 }
 .cbt__conts {
   width: calc(100% - 300px);
@@ -714,57 +714,61 @@
 .cbt__header {
   width: calc(100% - 300px);
   background-color: #fff;
-  border: 8px ridge #cacaca;
+  border: 8px ridge #CACACA;
   margin-bottom: 20px;
-  justify-content: space-between;
+  padding: 20px;
+  background-color: #E3EDFF;
   display: flex;
-  text-align: center;
-  padding: 15px;
-}
-.cbt__header > div {
-
+  justify-content: space-between;
+  align-items: center;
 }
 .cbt__time {
   position: relative;
   padding-left: 40px !important;
+  margin-bottom: 5px;
+  float: right;
+  margin: 3px 0;
 }
 .cbt__time::before {
   content: '';
   position: absolute;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0M3.124 7.5A8.969 8.969 0 015.292 3m13.416 0a8.969 8.969 0 012.168 4.5' /%3E%3C/svg%3E%0A");
-  left: 10px;
-  top: 9px;
-  width: 23px;
-  height: 23px;
+  left: 16px;
+  top: 3px;
+  width: 22px;
+  height: 22px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23fff' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z' /%3E%3C/svg%3E");
 }
 .cbt__submit {
   position: relative;
   padding-left: 40px !important;
+  float: right;
+  margin: 3px 0;
 }
-.cbt__submit::before{
+.cbt__submit::before {
   content: '';
   position: absolute;
-  left: 10px;
-  top: 9px;
-  width: 23px;
-  height: 23px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' class='w-6 h-6'%3E%3Cpath d='M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-8.4 8.4a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32l8.4-8.4z' /%3E%3Cpath d='M5.25 5.25a3 3 0 00-3 3v10.5a3 3 0 003 3h10.5a3 3 0 003-3V13.5a.75.75 0 00-1.5 0v5.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5V8.25a1.5 1.5 0 011.5-1.5h5.25a.75.75 0 000-1.5H5.25z' /%3E%3C/svg%3E%0A");
+  left: 16px;
+  top: 3px;
+  width: 22px;
+  height: 22px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23fff' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10' /%3E%3C/svg%3E%0A");
 }
-.cbt__header > div >div {
-  background-color: #ffffff;
-  border: 3px ridge #cacaca;
+.cbt__header > div > div {
+  background-color: #546482;
   display: inline-block;
-  margin-left: 20px;
-  padding: 10px;
+  margin-left: 5px;
+  color: #fff;
+  padding: 3px 20px;
+  border-radius: 20px;
 }
 .cbt__aside {
   position: absolute;
   right: 20px;
   top: 100px;
-  width: 280px;
   height: 800px;
-  background-color: #faef95;
-  border: 4px ridge #ff5858;
+  width: 280px;
+  background-color: #fff;
+  border: 8px ridge #CACACA;
 }
 .cbt__quiz {
   display: flex;
@@ -773,32 +777,48 @@
 }
 .cbt__quiz .cbt {
   width: 49%;
-  border: 8px ridge #cacaca;
+  border: 8px ridge #CACACA;
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 20px;
+}
+.cbt__quiz .cbt.good {
+  position: relative;
+}
+.cbt__quiz .cbt.good::after {
+  content: '';
+  background-image: url(../img/o.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.cbt__quiz .cbt.bad {
+  position: relative;
+}
+.cbt__quiz .cbt.bad::after {
+  content: '';
+  background-image: url(../img/x.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .cbt__info {
-  background-color: #faef95;
-  border-bottom: 4px ridge #ff0000;
-  color: #ff0000;
-  font-weight: 600;
-  padding: 20px;
-  text-align: center;
-}
-.cbt__info1 {
-  background-color: #faef95;
-  color: #ff0000;
-  font-weight: 600;
+  background-color: #E3EDFF;
+  border-bottom: 8px ridge #CACACA;
   padding: 20px;
   text-align: center;
 }
 .cbt__info .title {
-  display: flex;
-  line-height: 1px;
-  
-}
-.cbt__info .title1 {
-  line-height: 1px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin-bottom: 5px;
 }
 .cbt__info span {
   display: inline-block;
@@ -835,7 +855,6 @@
   line-height: 0.4;
   text-align: center;
   width: 28px;
-  height: 8px;
   font-family: 'Helvetica Neue';
   position: relative;
 }
@@ -849,6 +868,7 @@
   width: 0;
   height: 100%;
   z-index: 1;
+  transition: width 0.1s linear;
 }
 .cbt__omr .omr input[type=radio]:checked + label::after {
   width: 100%;
@@ -859,4 +879,104 @@
   transform: translateY(-0.25em);
   width: 20px;
   color: #313E55;
+}
+.cbt__question {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+.cbt__question__img img {
+  max-width: 400px;
+}
+.cbt__question__desc {
+  border: 2px solid #CACACA;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+.cbt__selects {
+  margin-bottom: 15px;
+}
+.cbt__selects label {
+  display: flex;
+}
+.cbt__selects label span {
+  font-size: 1rem;
+  padding: 10px 10px 10px 30px;
+  cursor: pointer;
+  color: #444;
+  position: relative;
+}
+.cbt__selects label span::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 1px solid #444;
+  border-radius: 50%;
+  text-align: center;
+  font-family: 'PyeongChang';
+  font-weight: bold;
+  line-height: 1.4;
+  font-size: 0.83em;
+  transition: all 0.25s;
+}
+.cbt__selects label:nth-of-type(1) span::before {
+  content: '1';
+}
+.cbt__selects label:nth-of-type(2) span::before {
+  content: '2';
+}
+.cbt__selects label:nth-of-type(3) span::before {
+  content: '3';
+}
+.cbt__selects label:nth-of-type(4) span::before {
+  content: '4';
+}
+.cbt__selects input {
+  position: absolute;
+  left: -9999px;
+}
+.cbt__selects input:checked + label span::before {
+  color: #fff;
+  box-shadow: inset 0 0 0 10px #000;
+  border-color: #000;
+}
+.cbt__desc {
+  background-color: #8fd991;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+.cbt__keyword {
+  background-color: #fd6262;
+  padding: 10px;
+  border-radius: 10px;
+}
+/* 미디어 쿼리 */
+@media (max-width: 1400px){
+  .cbt__quiz .cbt {
+    width: 100%;
+  }
+}
+@media (max-width: 960px){
+  .cbt__quiz .cbt {
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .cbt__aside {
+    display: none;
+  }
+  .cbt__header {
+    width: 100%;
+    flex-direction: column;
+  }
+  .cbt__header h2{
+    margin-bottom: 10px;
+  }
+  .cbt__conts {
+    width: 100%;
+    display: none;
+  }
 }
