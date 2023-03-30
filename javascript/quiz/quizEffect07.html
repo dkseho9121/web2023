@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>퀴즈 이펙트07</title>
-    <link rel="stylesheet" href="css/reset.css">
+    <title>퀴즈 이펙트05</title>
+
     <link rel="stylesheet" href="css/quiz.css">
-    <link href="https://webfontworld.github.io/score/SCoreDream.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://unpkg.com/pattern.css" rel="stylesheet">
+
 </head>
 <body>
     <header id="header">
-        <h1><a href="../javascript14.html">Quiz</a> <em>객관식 확인 OMR 카드</em></h1>
+        <h1><a href="../javascript14.html">Quiz</a> <em>객관식 CBT 유형</em></h1>
         <ul>
             <li><a href="quizEffect01.html">1</a></li>
             <li><a href="quizEffect02.html">2</a></li>
@@ -22,62 +24,63 @@
             <li class="active"><a href="quizEffect07.html">7</a></li>
         </ul>
     </header>
-    <!-- //header-->
+    <!-- //header -->
+
     <main id="main">
         <div class="quiz__wrap__cbt">
             <div class="cbt__header">
-                <h2>2020년 1회 정보처리 기능사 기출문제</h2>
+                <h2>2020년 1회 정보처리기능사 기출문제</h2>
                 <div>
-                <div class="cbt__time">남은시간 59분 10초</div>
-                <div class="cbt__submit">답안지 제출</div>
+                    <div class="cbt__time">남은 시간 : 59분 10초 남았습니다.</div>
+                    <div class="cbt__submit">답안지 제출하기</div>
                 </div>
             </div>
             <div class="cbt__conts">
                 <div class="cbt__quiz">
                     <div class="cbt good">
-                        <div class="cbt__question"><span>1. </span>객체지향 프로그램에서 데이터를 추상화하는 단위는?</div>
-                        <div class="cbt__question__img"><img src="img/2020-02-01.jpg" alt="기능사"></div>
-                        
+                        <div class="cbt__question"><span>1. </span>객체지향 프로그램에서 데이터를 추상화하는 단위는 ?</div>
+                        <div class="cbt__question__img"><img src="img/gineungsaJC2023_01_01.jpg" alt="기능사"></div>
                         <div class="cbt__selects">
-                                <input type="radio" id="select1">
-                                <label for="select1"><span>클래스</span></label>
-                                <input type="radio" id="select2">
-                                <label for="select2"><span>메소드</span></label>
-                                <input type="radio" id="select3">
-                                <label for="select3"><span>상속</span></label>
-                                <input type="radio" id="select4">
-                                <label for="select4"><span>메시지</span></label>
+                            <input type="radio" id="select1">
+                            <label for="select1"><span>클래스</span></label>
+                            <input type="radio" id="select2">
+                            <label for="select2"><span>메서드</span></label>
+                            <input type="radio" id="select3">
+                            <label for="select3"><span>상속</span></label>
+                            <input type="radio" id="select4">
+                            <label for="select4"><span>메시지</span></label>
                         </div>
-                        <div class="cbt__desc">객체지향언어는 이다.<br>객체지향언어는 이다.<br>객체지향언어는 이다.<br></div>
+                        <div class="cbt__desc">객체지향 언어는 ___입니다.</div>
                         <div class="cbt__keyword">객체지향언어</div>
                     </div>
                     <div class="cbt bad">
-                        <div class="cbt__question"><span>2. </span>다음 빈칸을 채우시오</div>
-                        <div class="cbt__question__desc">객체지향 언어는 ___이다.객체지향 언어는 ___이다.객체지향 언어는 ___이다.객체지향 언어는 ___이다.</div>
+                        <div class="cbt__question"><span>2. </span>다음 빈칸을 채우시오.</div>
+                        <div class="cbt__question__desc">객체지향 언어는 ____ 입니다.객체지향 언어는 ____ 입니다.객체지향 언어는 ____ 입니다.객체지향 언어는 ____ 입니다.객체지향 언어는 ____ 입니다.</div>
                         <div class="cbt__selects">
-                                <input type="radio" id="select1">
-                                <label for="select1"><span>클래스</span></label>
-                                <input type="radio" id="select2">
-                                <label for="select2"><span>메소드</span></label>
-                                <input type="radio" id="select3">
-                                <label for="select3"><span>상속</span></label>
-                                <input type="radio" id="select4">
-                                <label for="select4"><span>메시지</span></label>
+                            <input type="radio" id="select1">
+                            <label for="select1"><span>클래스</span></label>
+                            <input type="radio" id="select2">
+                            <label for="select2"><span>메서드</span></label>
+                            <input type="radio" id="select3">
+                            <label for="select3"><span>상속</span></label>
+                            <input type="radio" id="select4">
+                            <label for="select4"><span>메시지</span></label>
                         </div>
-                        <div class="cbt__desc">객체지향언어는 이다.</div>
+                        <div class="cbt__desc">객체지향 언어는 ___입니다.</div>
                         <div class="cbt__keyword">객체지향언어</div>
                     </div>
-
                 </div>
             </div>
+            <!-- cbt__conts -->
             <div class="cbt__aside">
                 <div class="cbt__info">
-                    <div class="title">수험자 = 신짱구</div>
+                    <div class="title">수험자 : 황인찬</div>
                     <div class="score">
-                        <span>전체 문제수 : 60문항</span>
-                        <span>남은 문제수 : 59문항</span>
+                        <span>전체 문항 : 60 문항</span>
+                        <span>남은 문항 : 59 문항</span>
                     </div>
                 </div>
+                <!-- cbt__info -->
                 <div class="cbt__omr">
                     <div class="omr">
                         <strong>1</strong>
@@ -86,23 +89,24 @@
                             <span class="label-inner">1</span>
                         </label>
                         <input type="radio" id="omr0_2">
-                        <label for="omr0_1">
+                        <label for="omr0_2">
                             <span class="label-inner">2</span>
                         </label>
                         <input type="radio" id="omr0_3">
-                        <label for="omr0_1">
+                        <label for="omr0_3">
                             <span class="label-inner">3</span>
                         </label>
                         <input type="radio" id="omr0_4">
-                        <label for="omr0_1">
+                        <label for="omr0_4">
                             <span class="label-inner">4</span>
                         </label>
-                        <input type="radio" id="omr0_5">
-                        <label for="omr0_1">
                     </div>
                 </div>
+                <!-- cbt__omr -->
             </div>
+            <!-- cbt__aside -->
         </div>
+        <!-- quiz__wrap__cbt -->
     </main>
     <!-- //main -->
 

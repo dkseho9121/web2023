@@ -78,8 +78,8 @@
                     <li><a href="#sample28">26. <strong>string.prototype.toUpperCase()</strong>       메서드는 문자열을 대문자로 설정하고, 대문자 문자열을 반환합니다.</a></li>
                     <li><a href="#sample29">27. <strong>string.prototype.toString()</strong>          메서드는 데이터를 문자열로 변환하고, 문자열을 반환합니다.</a></li>
                     <li><a href="#sample30">28. <strong>string.prototype.trim()</strong>❤              메서드는 문자열의 앞/뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
-                    <li><a href="#sample31">29. <strong>string.prototype.trimEnd()</strong>           메서드는 문자열의 앞 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
-                    <li><a href="#sample32">30. <strong>string.prototype.trimStart()</strong>         메서드는 문자열의 뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample31">29. <strong>string.prototype.trimEnd()</strong>           메서드는 문자열의 뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample32">30. <strong>string.prototype.trimStart()</strong>         메서드는 문자열의 앞 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
                     <li><a href="#sample33">31. <strong>string.prototype.valueOf()</strong>           메서드는 객체의 원시값을 반환합니다.</a></li>
                 </ul>
             </div>
@@ -116,23 +116,23 @@
                     </ul>
                     <div class="script">
 <pre><code class="Language-js">{
-    "javascript reference".indexOf("javascript");        //0
-    "javascript reference".indexOf("javascripts");       //-1           값이 없으면 -1이 나옴
-    "javascript reference".indexOf("j");                 //0
-    "javascript reference".indexOf("J");                 //-1
-    "javascript reference".indexOf("a");                 //1
-    "javascript reference".indexOf("ja");                //0
-    "javascript reference".indexOf("jv");                //-1
-    "javascript reference".indexOf("reference");         //11
-    "javascript reference".indexOf("r");                 //6
-    "javascript reference".indexOf("re");                //11
-    "javascript reference".indexOf("javascript", 0);     //0
-    "javascript reference".indexOf("javascript", 1);     //-1
-    "javascript reference".indexOf("reference", 0);      //11
-    "javascript reference".indexOf("reference", 11);     //11
-    "javascript reference".indexOf("reference", 12);     //-1
-    "javascript reference".indexOf("r", 7);              //11
-    "javascript reference".indexOf("r", 12);             //15
+"javascript reference".indexOf("javascript");        //0
+"javascript reference".indexOf("javascripts");       //-1           값이 없으면 -1이 나옴
+"javascript reference".indexOf("j");                 //0
+"javascript reference".indexOf("J");                 //-1
+"javascript reference".indexOf("a");                 //1
+"javascript reference".indexOf("ja");                //0
+"javascript reference".indexOf("jv");                //-1
+"javascript reference".indexOf("reference");         //11
+"javascript reference".indexOf("r");                 //6
+"javascript reference".indexOf("re");                //11
+"javascript reference".indexOf("javascript", 0);     //0
+"javascript reference".indexOf("javascript", 1);     //-1
+"javascript reference".indexOf("reference", 0);      //11
+"javascript reference".indexOf("reference", 11);     //11
+"javascript reference".indexOf("reference", 12);     //-1
+"javascript reference".indexOf("r", 7);              //11
+"javascript reference".indexOf("r", 12);             //15
 }
 </code></pre>
                     </div>
@@ -158,19 +158,11 @@
     "javascript reference".indexOf("jv");                //-1
     "javascript reference".indexOf("reference");         //11
     "javascript reference".indexOf("r");                 //6
-    "javascript reference".indexOf("re");                //11
-    "javascript reference".indexOf("javascript", 0);     //0
-    "javascript reference".indexOf("javascript", 1);     //-1
-    "javascript reference".indexOf("reference", 0);      //11
-    "javascript reference".indexOf("reference", 11);     //11
-    "javascript reference".indexOf("reference", 12);     //-1
-    "javascript reference".indexOf("r", 7);              //11
-    "javascript reference".indexOf("r", 12);             //15
 }
 </code></pre>
                     </div>
                 </div>
-                <!-- //sample 07 -->
+                <!-- //sample 08 -->
 
                 <div id="sample10" class="sample">
                     <h3>10. match()</h3>
@@ -201,7 +193,7 @@
                 </div>
                 <!-- //sample 10 -->
 
-                <div id="sample018" class="sample">
+                <div id="sample18" class="sample">
                     <h3>18. search()</h3>
                     <div class="notice">"문자열".search(검색값)<br>"문자열".search(정규식표현)</div>
                     <ul>
@@ -214,7 +206,7 @@
     "javascript reference".search("javascript");        //0
     "javascript reference".search("reference");         //11
     "javascript reference".search("r");                 //6
-    "javascript reference".search("a");                 //6
+    "javascript reference".search("a");                 //1
     "javascript reference".search("jv");                //-1
     "javascript reference".search("J");                 //-1
     "javascript reference".search(/reference/);       //11
@@ -227,94 +219,135 @@
                     </div>
                 </div>
                 <!-- //sample 18 -->
+
+                <div id="sample19" class="sample">
+                    <h3>06. slice()</h3>
+                    <div class="notice">"문자열".slice(시작 위치, [끝나는 위치])</div>
+                    <ul>
+                        <li>시작 위치에서 종료 위치 값을 추출하여, 새로운 문자열을 반환합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="Language-js">{
+"javascript".slice(0); //javascript
+"javascript".slice(1); //avascript
+"javascript".slice(2); //vascript
+"javascript".slice(0, 1); //j
+"javascript".slice(1, 2); //a
+"javascript".slice(0, 2); //ja
+"javascript".slice(0, 3); //jav
+"javascript".slice(5, 10); //cript
+"javascript".slice(5, -1); //crip
+"javascript".slice(5, -2); //cri
+"javascript".slice(-1); //t
+"javascript".slice(-2); //pt
+"javascript".slice(-3); //ipt
+"javascript".slice(-3, -1); //ip
+"javascript".slice(-3, -2); //i
+
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample29 -->
+                <h3>22. split()</h3>
+                    <div class="notice">"문자열".slice(구분자)</div>
+                    <ul>
+                        <li>구분자를 이용하여, 여러개의 문자열(배열)을 반환합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="Language-js">{
+"javascript".split(""); //['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't']
+"java script".split(""); //['java','script']
+"java scr ipt".split(""); //['java','scr','ipt']
+
+"javascript".split("", 1); //['j']
+"javascript".split("", 2); //['j','a']
+"javascript".split("", 2); //['j','a','v']
+
+"java script".split("", 1); //['java']
+"java script".split("", 2); //['java','script']
+
+"javascript".split("j"); //['','avascript']
+"javascript".split("a"); //['j','v','script']
+"javascript".split("e"); //['javascript']
+
+"java/scr/ipt".split("/"); //['java','scr','ipt']
+"java&scr!ipt".split("&") //['java','scr!ipt']
+"java&scr!ipt".split("!") //['java&scr','ipt']
+"java&scr!ipt".split(/&|\!/) //['java','scr','ipt']  // 정규식표현
+
+
+"javascript".split("").join(); //j, a, v, a, s, c, r, i, p, t 
+"javascript".split("").join("*"); //j*a*v*a*s*c*r*i*p*t 
+"javascript".split("").reverse().join(); //t,p,i,r,c,s,a,v,a,j
+"javascript".split("").reverse().join(/); //t/p/i/r/c/s/a/v/a/j
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample29 -->
+                <h3>30. trim()</h3>
+                <div class="notice">"문자열".trim()</div>
+                <ul>
+                    <li>문자열의 앞/뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</li>
+                </ul>
+                <div class="script">
+<pre><code class="Language-js">{
+"javascript".trim("") // javascript
+"javascrip ".trim("") // javascript
+" javascrip".trim("") // javascript
+"java scrip".trim("") // java script
+}
+</code></pre>
+                </div>
+            </div>
+            <!-- sample29 -->
+            <h3>31. trimEnd()</h3>
+                <div class="notice">"문자열".trimEnd()</div>
+                <ul>
+                    <li>문자열의 뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</li>
+                </ul>
+                <div class="script">
+<pre><code class="Language-js">{
+" javascrip ".trimEnd("") // javascript
+}
+</code></pre>
+                </div>
+            </div>
+            <!-- sample29 -->
+            <h3>32. trimStart()</h3>
+                <div class="notice">"문자열".trimStrat()</div>
+                <ul>
+                    <li>문자열의 앞 공백을 제거하고, 새로운 문자열을 반환합니다.</li>
+                </ul>
+                <div class="script">
+<pre><code class="Language-js">{
+" javascrip ".trimStart("") // javascript
+}
+</code></pre>
+                </div>
+            </div>
+            <!-- sample29 -->
+
             </div>
         </div>
     </main>
     <!-- //main -->
 
     <footer id="footer">
-        <a href="mailto:ebmdols@naver.com">ebmdols@naver.com</a>
+        <a href="dlscks0930@gmail.com">dlscks0930@gmail.com</a>
     </footer>
     <!-- //footer -->
 
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <script>
-    //    "javascript reference".indexOf("javascript");        //0
-    //    "javascript reference".indexOf("javascripts");       //-1           값이 없으면 -1이 나옴
-    //    "javascript reference".indexOf("j");                 //0
-    //    "javascript reference".indexOf("J");                 //-1
-    //    "javascript reference".indexOf("a");                 //1
-    //    "javascript reference".indexOf("ja");                //0
-    //    "javascript reference".indexOf("jv");                //-1
-    //    "javascript reference".indexOf("reference");         //11
-    //    "javascript reference".indexOf("r");                 //6
-    //    "javascript reference".indexOf("re");                //11
-    //    "javascript reference".indexOf("javascript", 0);     //0
-    //    "javascript reference".indexOf("javascript", 1);     //-1
-    //    "javascript reference".indexOf("reference", 0);     //11
-    //    "javascript reference".indexOf("reference", 11);     //11
-    //    "javascript reference".indexOf("reference", 12);     //-1
-    //    "javascript reference".indexOf("r", 7);              //11
-    //    "javascript reference".indexOf("r", 12);              //15
+        
 
-    //     console.log("javascript reference".indexOf("javascript", 0));
-
-        // "javascript reference".includes("javascript");      //true
-        // "javascript reference".includes("j");               //true
-        // "javascript reference".includes("J");               //false
-        // "javascript reference".includes("a");               //true
-        // "javascript reference".includes("reference");       //true
-        // "javascript reference".includes("reference", 11);   //true
-        // "javascript reference".includes("reference", 12);   //false
-
-        // console.log("javascript reference".includes("javascript"))
-
-        // "javascript reference".search("javascript");        //0
-        // "javascript reference".search("reference");         //11
-        // "javascript reference".search("r");                 //6
-        // "javascript reference".search("a");                 //6
-        // "javascript reference".search("jv");                //-1
-        // "javascript reference".search("J");                 //-1
-        // "javascript reference".search(/reference/);       //11
-        // "javascript reference".search(/Reference/);       //-1
-        // "javascript reference".search(/Reference/i);       //11   대문자를 소문자로 구별
-        // "자바스크립트".search(/[a-z]/);                     //-1
-        // "javascript reference".search(/[a-z]/g);            //0
+        
+        
 
 
-        // console.log("javascript reference".search("javascript");)
-
-        // "javascript reference".match("javascript");         //"javascript"    배열로 반환
-        // "javascript reference".match("reference");          //"reference"    
-        // "javascript reference".match("r");                  //"r"    
-        // "javascript reference".match("R");                  //null    
-        // "javascript reference".match(/reference/);          //reference   
-        // "javascript reference".match(/Reference/);          //null   
-        // "javascript reference".match(/Reference/i);         //reference   
-        // "javascript reference".match(/Reference/g);         //reference   
-        // "javascript reference".match(/r/);                  //r  
-        // "javascript reference".match(/r/g);                 //rrr   
-        // "javascript reference".match(/w/g);                 //null   
-        // "javascript reference".match(/R/ig);                //r r r   
-
-        // console.log("javascript reference".match("javascript"))
-
-        "javascript reference".lastIndexOf("javascript");       //0
-        "javascript reference".lastIndexOf("javascripts");       //-1
-        "javascript reference".lastIndexOf("j");                //0
-        "javascript reference".lastIndexOf("a");                //3
-        "javascript reference".lastIndexOf("jv");                //-1
-        "javascript reference".lastIndexOf("reference");        //11
-        "javascript reference".lastIndexOf("r");                //15
-        "javascript reference".lastIndexOf("javascript", 0);    //0
-        "javascript reference".lastIndexOf("javascript", 1);    //0
-        "javascript reference".lastIndexOf("reference", 0);     //-1
-        "javascript reference".lastIndexOf("reference", 1);     //-1
-        "javascript reference".lastIndexOf("reference", 11);     //11
-        "javascript reference".lastIndexOf("reference", 12);     //11
-
-        console.log("javascript reference".lastIndexOf("javascript"))
     </script>
 
 
