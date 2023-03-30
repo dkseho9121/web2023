@@ -78,24 +78,24 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="sample01_N1">1</td>
-                                <td class="sample01_Q1">2</td>
-                                <td class="sample01_M1">3</td>
-                                <td class="sample01_P1">4</td>
+                                <td class="sample01_N1"></td>
+                                <td class="sample01_Q1"></td>
+                                <td class="sample01_M1"></td>
+                                <td class="sample01_P1"></td>
                                 <td class="sample01_B1"><button>클릭</button></td>
                             </tr>
                             <tr>
-                                <td class="sample01_N2">1</td>
-                                <td class="sample01_Q2">2</td>
-                                <td class="sample01_M2">3</td>
-                                <td class="sample01_P2">4</td>
+                                <td class="sample01_N2"></td>
+                                <td class="sample01_Q2"></td>
+                                <td class="sample01_M2"></td>
+                                <td class="sample01_P2"></td>
                                 <td class="sample01_B2"><button>클릭</button></td>
                             </tr>
                             <tr>
-                                <td class="sample01_N3">1</td>
-                                <td class="sample01_Q3">2</td>
-                                <td class="sample01_M3">3</td>
-                                <td class="sample01_P3">4</td>
+                                <td class="sample01_N3"></td>
+                                <td class="sample01_Q3"></td>
+                                <td class="sample01_M3"></td>
+                                <td class="sample01_P3"></td>
                                 <td class="sample01_B3"><button>클릭</button></td>
                             </tr>
                         </tbody>
@@ -111,7 +111,31 @@
     <!-- //footer -->
 
     <script>
+        //01
+        document.querySelector(".sample01_N1").innerHTML = "1";
+        document.querySelector(".sample01_Q1").innerHTML = "0~1(난수)";
+        document.querySelector(".sample01_M1").innerHTML = "Math.random()";
+        document.querySelector(".sample01_B1").addEventListener("click", () => {
+            document.querySelector(".sample01_P1").innerHTML=Math.random()
+        });
 
+        //02
+        document.querySelector(".sample01_N2").innerHTML = "2";
+        document.querySelector(".sample01_Q2").innerHTML = "0~9(정수)";
+        document.querySelector(".sample01_M2").innerHTML = "Math.random()";
+        document.querySelector(".sample01_B2").addEventListener("click", () => {
+            document.querySelector(".sample01_P2").innerHTML=Math.floor(Math.random()*10);
+        });
+        
+
+        //03
+        document.querySelector(".sample01_N3").innerHTML = "3";
+        document.querySelector(".sample01_Q3").innerHTML = "1~100(정수)";
+        document.querySelector(".sample01_M3").innerHTML = "Math.random()";
+        document.querySelector(".sample01_B3").addEventListener("click", () => {
+            document.querySelector(".sample01_P3").innerHTML=Math.floor(Math.random()*100+1);
+        });
+        
     </script>
 
     <body>
