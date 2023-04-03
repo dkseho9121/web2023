@@ -79,10 +79,10 @@
                 <div>
                 <div class="cbt__info">
                     <div>
-                        <div class="cbt__title">수험자 : <em>황인찬</em></div>
+                        <div class="cbt__title">수험자 : <em></em></div>
                         <div class="cbt__score">
-                            <span>전체 문항 : <em>60</em> 문항</span>
-                            <span>남은 문항 : <em>59</em> 문항</span>
+                            <span>전체 문항 : <em class="total__count"></em> 문항</span>
+                            <span>남은 문항 : <em class="last__count"></em> 문항</span>
                         </div>
                     </div>
                 </div>
@@ -126,31 +126,11 @@
     </footer> -->
     <!-- //footer -->
     <script>
-// let questionAll = [];   //모든 퀴즈 정보
-// const dataQuestion = () => {
-//     fetch("json/EngineerJC2023_01.json")                            // 이 파일을 가져올거야
-//     .then(res => res.json())                                        // 내 파일은 제이슨이야. (형식설정)
-//     .then(items => {                                                // 제이슨 파일을 내가 쓰기 편하게 변수에 넣어줄거야 (이름을 만들어 줘야 해서 아이템스라고 만듬)
-//         // console.log(item);
-//         questionAll = items.map((item, index) => {                  //안에 아이템이 여러개가 있으니 map을 씀(foreach대신, 왜냐 map은 배열에 저장하기 떄문)
-//             const formattedQuestion = {                             //객체로 만듬.
-//                 question: item.question,                            //퀘스쳔이라는 키 값을 만들었음.
-//                 num: index + 1,                                     //숫자 넣기
-//             }
-//             console.log(formattedQuestion);
-//             const answerChoices = [...item.incorrect_answers];      //(오답) answerChoices에는 틀린 답을 불러오게 변수선언함. 그리고 안에 있는 요소를 각 한개씩 따로 가져올 것이기 때문에 item.하고 불러올 값을 씀.
-//             formattedQuestion.answer = Math.floor(Math.random() * answerChoices.length) + 1         //(정답) 정답 랜덤으로 불러오기
-//             answerChoices.splice(formattedQuestion.answer -1, 0, item.incorrect_answers);           //정답, 오답 합치기 (위의 두개)
-//             answerChoices.forEach((choice, index) => {
-//                 formattedQuestion["choice" + (index + 1)] = choice;
-//             });
-//         });
-//     });
-// }
-// dataQuestion();
     const cbtQuiz = document.querySelector(".cbt__quiz");
     const cbtOmr = document.querySelector(".cbt__omr");
     const cbtSubmit = document.querySelector(".cbt__submit");
+    const totalCount = document.querySelector(".total__count");
+    const lastCount = document.querySelector(".last__count");
 
         let questionAll = []; //questionAll이라는 배열을 생성합니다.
         //데이터 가져오기
@@ -182,6 +162,12 @@
                     if(item.hasOwnProperty("desc")){
                         formattedQuestion.desc = item.desc;
                     }
+                    //전체 문항 불러오기
+                    totalCount.innerText=items.length;
+
+                    //남은 문항 불러오기
+                    lastCount.innerText=items.length;
+
                     //console.log(formattedQuestion);
                     return formattedQuestion;
                 });
@@ -238,6 +224,7 @@
         //정답 확인
         const answerQuiz = () => {
             const cbtSelects = document.querySelectorAll(".cbt__selects");
+            let remainingCount = 0;
 
             questionAll.forEach((question, number) => {
                 const quizSelectsWrap = cbtSelects[number];
@@ -267,8 +254,13 @@
         }
 
         const answerSelect = () => {
-
+            const answeredCount = document.querySelectorAll('input[type="radio"]:checked').length;
+            const remainingCount = questionAll.length - answeredCount;
+            lastCount.innerText = remainingCount;
+            return remainingCount;
         };
+
+        
 
         cbtSubmit.addEventListener("click", answerQuiz)
         dataQuestion();
