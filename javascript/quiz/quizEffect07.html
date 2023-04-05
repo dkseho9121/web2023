@@ -285,7 +285,11 @@
             
             //이미지가 없는거 제거
             document.querySelectorAll(".cbt__question__img").forEach(img => {
-                console.log(img)
+                let src = img.querySelector("img").src;
+                
+                if(src.includes("undefined")){
+                    img.classList.add("hide");
+                }
             })
         }
 
