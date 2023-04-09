@@ -50,7 +50,6 @@ body {background:#f1f4fb url(../img/body_bg.gif)}
 }
 
 /* Header  */
-
 #header{
 	background:#a5d5fa center 57px;
 	padding: 10px 0 10px 0px;
@@ -72,8 +71,21 @@ body {background:#f1f4fb url(../img/body_bg.gif)}
 #header.sub .header_tit h2 {
 	display: none;
 }
-#header img {width: 190px; display: block; margin: 0 auto; padding-right: 50px;}
-
+#header img {
+	width: 190px;
+	display: block;
+	margin: 0 auto;
+	padding-right: 50px;
+	animation: beat 0.7s infinite
+}
+@keyframes beat {
+	0% {
+	  transform: scale(1)
+	}
+	50% {
+	  transform: scale(0.5)
+	}
+  }
 #header h1{
 	color: #fff;
 	margin-bottom: 0px;
