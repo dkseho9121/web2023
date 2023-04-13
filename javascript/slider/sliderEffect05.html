@@ -17,24 +17,23 @@
             align-items: center;
             justify-content: center;
         }
-        .slider__img {      /*이미지가 보이는 영역*/
+        .slider__img {      /* 이미지가 보이는 영역 */
             position: relative;
             width: 800px;
             height: 450px;
             overflow: hidden;
         }
-        .slider__inner {    /*이미지 움직이는 영역*/
-            display: flex;
+        .slider__inner {    /* 이미지 움직이는 영역 */
+            /* display: flex; */
             flex-wrap: wrap;
-            width: 4800px;
+            width: 4000px;
             height: 450px;
         }
-        .slider {               /*개별 적인 이미지*/
+        .slider {   /* 개별적인 이미지 */
             position: relative;
             width: 800px;
             height: 450px;
         }
-        
     </style>
 </head>
 <body class="img02 bg01 Jamsil" >
@@ -77,31 +76,58 @@
         const sliderInner = sliderWrap.querySelector(".slider__inner"); //움직이는 영역
         const slider = sliderWrap.querySelectorAll(".slider");          //개별 이미지
 
-        let currentIndex=0;                                 //현재 보이는 이미지
-        let sliderCount = slider.length;                    //이미지 갯수
-        let sliderInterval =3000;                           //이미지 변경 간격 시간
-        let sliderWidth = slider[0].offsetWidth;            //이미지 가로값
-        let sliderClone = sliderInner.firstElementChild.cloneNode(true);    //첫번째 이미지 복사
+        let currentIndex = 0;               //현재 보이는 이미지
+        let sliderCount = slider.length;    //전체 이미지 갯수
+        let sliderInterval = 3000;           //이미지 변경되는 시간&간격
 
-        //복사한 첫 번째 이미지 마지막에 붙여넣기
-        sliderInner.appendChild(sliderClone);
+    </script>
 
-        function sliderEffect() {
-            currentIndex++;
-
-            sliderInner.style.transition = "all 0.6s";
-            sliderInner.style.transform = "translateX(-"+ sliderWidth * currentIndex +"px)";
-        }
-        //마지막 이미지에 위치 했을 때
-        if(currentIndex == sliderCount){
-                setTimeout(() => {
-                    sliderInner.style.transition = "0s";
-                    sliderInner.style.transform = "translateX(0px)";
-                }, 700);
-                currentIndex = 0;
-            }
+    <!-- javascript -->
+    <script>
+        // sliderInner.style.transform = translateX("-0px");
+        // sliderInner.style.transform = translateX("-800px");
+        // sliderInner.style.transform = translateX("-1600px");
+        // sliderInner.style.transform = translateX("-2400px");
+        // sliderInner.style.transform = translateX("-3200px");
+        // sliderInner.style.transform = translateX("-0px");
         
-        setInterval(sliderEffect, sliderInterval);
+        // 트랜지션 설정
+        // sliderInner.style.transition = "all 0.6s"
+        // setInterval (() => {
+        //     currentIndex = (currentIndex + 1) % sliderCount;    //1 2 3 4 0 1 2 3 4 5
+
+        //     sliderInner.style.transform = "translateY("+ -450 * currentIndex + "px)";
+        // }, sliderInterval);
+
+    </script>
+
+
+    <!-- GSAP -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % sliderCount;
+
+            gsap.to(".slider__inner", {
+                y : -450 * currentIndex,
+                duration : 1, 
+                ease : "elastic.out(1, 0.4)"
+            })
+
+        }, sliderInterval);
+    </script> -->
+        
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % $(".slider").length;
+
+            $(".slider__inner").css("position", "relative");
+            $(".slider__inner").animate({top : -450 * currentIndex}, 600, "easeOutElastic");
+            
+        }, sliderInterval);
     </script>
 
 </body>
