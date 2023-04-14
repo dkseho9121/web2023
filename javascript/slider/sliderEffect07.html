@@ -140,16 +140,16 @@
             let thumnailNodes = slider.thumnails.querySelectorAll("img");
             thumnailNodes[currentIndex].classList.add("active");
             // 썸네일 이미지 클릭하기
-            // for(let i=0; i<thumnailNodes.length; i++){
-            //     // 화살표 대신 funtion을 쓰면 this를 쓸 수 있음.
-            //     thumnailNodes[i].addEventListener("click", function(){
-            //         slider.thumnails.querySelector("img.active").classList.remove("active");
-            //         thumnailNodes[i].classList.add("active");
-            //         imageNodes[currentIndex].classList.remove("active");
-            //         currentIndex = i;           // 동시에 값을 읽을 경우,위에 값을 처음에 읽은 후, 해당 커렌트 인덱스를 읽음. 그래서 그 다음 값이 나올 수 있는 것.
-            //         imageNodes[currentIndex].classList.add("active");
-            //     });
-            // }
+            for(let i=0; i<thumnailNodes.length; i++){
+                // 화살표 대신 funtion을 쓰면 this를 쓸 수 있음.
+                thumnailNodes[i].addEventListener("click", function(){
+                    slider.thumnails.querySelector("img.active").classList.remove("active");
+                    thumnailNodes[i].classList.add("active");
+                    imageNodes[currentIndex].classList.remove("active");
+                    currentIndex = i;           // 동시에 값을 읽을 경우,위에 값을 처음에 읽은 후, 해당 커렌트 인덱스를 읽음. 그래서 그 다음 값이 나올 수 있는 것.
+                    imageNodes[currentIndex].classList.add("active");
+                });
+            }
             thumnailNodes.forEach((node, i) => {
                 node.addEventListener("click", function() {
                     slider.thumnails.querySelector("img.active").classList.remove("active");
