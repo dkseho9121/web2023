@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            margin: 0 auto;
+            width: 800px;
+            height: 300px;
+        }
+        .box {
+            padding: 20px;
+            width: 200px;
+            height: 100px;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 100px;
+            border: 3px solid orange;
+            color: black;
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+        .box:hover {
+            color: transparent;
+            transition: 500ms ease;
+        }
+        .numbers1 {
+            padding: 10px 0 0 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>로또 번호 생성기</h1>
+        <div class="box">클릭 하세요</div>
+        <div class="numbers1">번호가 나타납니다.</div>
+    </div>
+</body>
+</html>
+<script>        
+    let numbers = [];
+    let clickBox = document.querySelector(".box")
+    let lottery = document.querySelector(".numbers1")
+
+    clickBox.addEventListener("click", () => {
+        let numberSet = new Set();
+
+        while (numberSet.size < 6) {
+            let number = Math.floor(Math.random() * 45 + 1);
+            numberSet.add(number);
+        }
+
+        numbers = Array.from(numberSet);
+        lottery.innerHTML = numbers.join(",");
+    });
+
+</script>

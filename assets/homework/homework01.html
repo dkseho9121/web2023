@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            width: 1200px;
+            height: 300px;
+            background-color: #ffffff;
+            color: #000000;
+            margin: 0 auto;
+            padding: 50px;
+            position: relative;
+            text-align: center;
+            border: 1px solid #fd34fd;
+        }
+        #main .quote {
+            padding: 20px;
+            text-decoration: underline;
+            color: #5100ff;
+        }
+        .button {
+            display: inline;
+            position: absolute;
+            width: 50px;
+            height: 30px;
+            background-color: rgb(58, 206, 73);
+            color: #fff;
+            text-align: center;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+    	<div class="button">stop</div>
+        <h1 class="result"></h1>
+        <h2 class="quote"></h2>
+    </div>
+</body>
+</html>
+<script>
+    let number = 0;
+
+    fetch("json/dummy01.json")
+        .then(name => name.json())
+        .then(result => {
+            let result1 = document.querySelector(".result")
+            let quote1 = document.querySelector(".quote")
+            let stop = document.querySelector(".button")
+
+            let Interval = setInterval(() => {
+                number = Math.floor(Math.random()*30 + 1)
+
+                result1.innerHTML = result.quotes[number].quote
+                quote1.innerHTML = "- " + result.quotes[number].author
+            }, 1000);
+
+
+            stop.addEventListener("click", () => {
+                if(Interval){
+                    clearInterval(Interval)
+                    Interval = null;
+                } else {
+                    Interval = setInterval(() => {
+                        number = Math.floor(Math.random()*30 + 1)
+
+                        result1.innerHTML = result.quotes[number].quote
+                        quote1.innerHTML = "- " + result.quotes[number].author
+            }, 1000);
+                }
+
+            })
+        })
+</script>
+!
