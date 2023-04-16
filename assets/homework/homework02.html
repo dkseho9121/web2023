@@ -12,34 +12,38 @@
             height: 300px;
         }
         .box {
-            padding: 20px;
+            padding: 100px;
+            padding-left: 300px;
+            padding-top: 100px ;
             width: 200px;
-            height: 100px;
+            height: 200px;
             font-size: 30px;
             font-weight: bold;
             text-align: center;
             line-height: 100px;
-            border: 3px solid orange;
             color: black;
             background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
             background-clip: text;
             -webkit-background-clip: text;
         }
-        .box:hover {
-            color: transparent;
-            transition: 500ms ease;
-        }
         .numbers1 {
-            padding: 10px 0 0 20px;
-            font-size: 20px;
+            padding: 100px 0 0 20px;
+            font-size: 50px;
+        }
+        .lotto {
+            background-image: url(/assets/homework/img/lotto.jpg);
+            width: 500px;
+            height: 400px;
         }
     </style>
 </head>
 <body>
     <div id="main">
-        <h1>로또 번호 생성기</h1>
-        <div class="box">클릭 하세요</div>
-        <div class="numbers1">번호가 나타납니다.</div>
+        <div class="lotto">
+            <h1>로또 번호 생성기</h1>
+            <div class="box"><button>클릭 하세요</button></div>
+            <div class="numbers1">번호가 나타납니다.</div>
+        </div>
     </div>
 </body>
 </html>
