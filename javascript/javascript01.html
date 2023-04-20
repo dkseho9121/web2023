@@ -13,11 +13,37 @@
     <link rel="shortcut icon" href="assets/ico/javascript.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/ico/javascript192x192.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+    #top_btn{
+    position: fixed;
+    left: 0;
+    bottom: -50px;
+    display: inline-block;
+    background-color: #a6ff0099;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    opacity: 0;
+    transition: 0.7s ease;
+    font-size: 19px;
+    z-index: 9999;
+    text-align: center;
+}
+
+    #top_btn.on{
+    opacity: 1;
+    cursor: pointer;
+    bottom: 0;
+}
+    </style>
 </head>
 
 <body>
     <header id="header">
-        <h1><a href="index.html">javascript</a></h1>
+        <h1>
+            <a href="index.html">javascript</a></h1>
         <nav>
             <ul>
                 <li class="active"><a href="javascript01.html">데이터 저장하기</a></li>
@@ -72,7 +98,6 @@
                     <li><a href="#sample19">++ 비트연산자</a></li>
                     <li><a href="#sample20">++ 식별자, 예약자</a></li>
                     <li><a href="#sample21">++ 형변화, typeof( )</a></li>
-
                 </ul>
             </div>
             <div class="main__sample">
@@ -271,7 +296,7 @@
                 </div>
                 <!-- //sample04 -->
 
-                <div id="sample04" class="sample">
+                <div id="sample05" class="sample">
                     <h3>05. 상수 : 데이터 저장 + 데이터 변경(X)</h3>
                     상수는 데이터 저장은 가능하나 변경은 불가능합니다.<br>
                     <div class="script">
@@ -311,7 +336,7 @@
                     </div>
                 </div>
                 <!-- //sample04 -->
-                <div id="sample05" class="sample">
+                <div id="sample06" class="sample">
                     <h3>06. 배열 : 데이터 저장(여러개): 표현방법1</h3>
                     배열은 여러개의 데이터를 저장 할수있는 저장소이며, 표현 방법도 여러가지 입니다.<br>
                     그중 첫번째 표현방법입니다.
@@ -348,7 +373,7 @@
                     </div>
                 </div>
                 <!-- //sample05 -->
-                <div id="sample06" class="sample">
+                <div id="sample07" class="sample">
                     <h3>07. 배열 : 데이터 저장(여러개): 표현방법2</h3>
                     배열은 여러개의 데이터를 저장 할수있는 저장소이며, 표현 방법도 여러가지 입니다.<br>
                     그중 두번째 표현방법입니다.
@@ -383,7 +408,7 @@
                     </div>
                 </div>
                 <!-- //sample06 -->
-                <div id="sample07" class="sample">
+                <div id="sample08" class="sample">
                     <h3>08. 배열 : 데이터 저장(여러개): 표현방법3</h3>
                     배열은 여러개의 데이터를 저장 할수있는 저장소이며, 표현 방법도 여러가지 입니다.<br>
                     그중 세번째 표현방법입니다.
@@ -422,7 +447,7 @@
                     </div>
                 </div>
                 <!-- //sample07 -->
-                <div id="sample08" class="sample">
+                <div id="sample09" class="sample">
                     <h3>09. 배열 : 데이터 저장(여러개): 표현방법4</h3>
                     <p>배열은 여러개의 데이터를 저장 할수있는 저장소이며, 표현 방법도 여러가지 입니다.</p>
                     <p>그중 네번째 표현방법 입니다.</p>
@@ -452,7 +477,7 @@
                     </div>
                 </div>
                 <!-- //sample08 -->
-                <div id="sample09" class="sample">
+                <div id="sample10" class="sample">
                     <h3>10. 객체 : 데이터 저장(키와 값) : 표현방법1</h3>
                     변수는 데이터 값을 하나밖에 저장하지 못하지만 객체는 값이 필요한 대로 만들어 쓸 수 있습니다.<br>
                     객체는 여러방법으로 표현할수있지만 그 중 첫 번째 방법입니다.
@@ -517,7 +542,7 @@
                     </div>
                 </div>
                 <!-- //sample09 -->
-                <div id="sample10" class="sample">
+                <div id="sample11" class="sample">
                     <h3>11. 객체 : 데이터 저장(키와 값) : 표현방법2</h3>
                     변수는 데이터 값을 하나밖에 저장하지 못하지만 객체는 값이 필요한 대로 만들어 쓸 수 있습니다.<br>
                     객체는 여러방법으로 표현할수있지만 그 중 두 번째 방법입니다.
@@ -552,7 +577,7 @@
                     </div>
                 </div>
                 <!-- //sample10 -->
-                <div id="sample11" class="sample">
+                <div id="sample12" class="sample">
                     <h3>12. 객체 : 데이터 저장(키와 값) : 표현방법3</h3>
                     변수는 데이터 값을 하나밖에 저장하지 못하지만 객체는 값이 필요한 대로 만들어 쓸 수 있습니다.<br>
                     객체는 여러방법으로 표현할수있지만 그 중 세 번째 방법입니다.
@@ -585,7 +610,7 @@
                     </div>
                 </div>
                 <!-- //sample11 -->
-                <div id="sample12" class="sample">
+                <div id="sample13" class="sample">
                     <h3>13. 객체 : 데이터 저장(키와 값) : 표현방법4</h3>
                     변수는 데이터 값을 하나밖에 저장하지 못하지만 객체는 값이 필요한 대로 만들어 쓸 수 있습니다.<br>
                     객체는 여러방법으로 표현할수있지만 그 중 네 번째 방법입니다.
@@ -616,7 +641,7 @@
                     </div>
                 </div>
                 <!-- //sample12 -->
-                <div id="sample13" class="sample">
+                <div id="sample14" class="sample">
                     <h3>14. 객체 : 데이터 저장(키와 값) : 표현방법5</h3>
                     배열 속에 객체가 있는 표현 방법입니다.
                     <div class="script">
@@ -625,7 +650,7 @@
         {a:100, b:200},
         {c:"javascript"}
     ];
-                                     
+                            
     console.log(obj[0].a);
     console.log(obj[0].b);
     console.log(obj[1].c);            
@@ -650,7 +675,7 @@
                     </div>
                 </div>
                 <!-- //sample13 -->
-                <div id="sample14" class="sample">
+                <div id="sample15" class="sample">
                     <h3>15. 객체 : 데이터 저장(키와 값) : 표현방법6</h3>
                     객체 속에 배열이 있는 표현 방법입니다.
                     <div class="script">
@@ -696,7 +721,7 @@
                     </div>
                 </div>
                 <!-- //sample14 -->
-                <div id="sample17" class="sample">
+                <div id="sample16" class="sample">
                     <h3>16. 객체 : 데이터 저장(키와 값) : 표현방법7</h3>
                     여러 개의 변수 를 하나의 변수에 저장하고 값을 출력하는 방법입니다.
                     <div class="script">
@@ -729,7 +754,7 @@
                     </div>
                 </div>
                 <!-- //sample15 -->
-                <div id="sample18" class="sample">
+                <div id="sample17" class="sample">
                     <h3>17. 객체 : 데이터 저장(키와 값) : 표현방법8</h3>
                     여러 개의 데이터를 하나의 변수에 저장하고 데이터를 식별해서 가져오는 표현방법입니다.
                     <div class="script">
@@ -788,7 +813,7 @@
                     </div>
                 </div>
                 <!-- //sample16 -->
-                <div id="sample24" class="sample">
+                <div id="sample18" class="sample">
                     <h3>18. 연산자 (전치, 후치)</h3>
                 <p>연산자의 위치에 따라 달라지는 결과값 확인하기</p>                        
                     <div class="script">
@@ -816,28 +841,28 @@
                         <details>
                             <summary>결과 확인하기</summary>
                             <script>
-                                {
-                                    var score = 10;
-                                    var result = ++score;
-                                    var result = score++;
+                                // {
+                                //     var score = 10;
+                                //     var result = ++score;
+                                //     var result = score++;
 
-                                    document.write(result);
-                                    document.write("<br>");
-                                    document.write(score);
-                                    }
-                                    {
-                                    let hap, j, k, l;
-                                    j = k = l = 1;
-                                    hap = ++j + k++ + ++l;
-                                    document.write("<br>");
-                                    document.write(hap);
-                                    document.write("<br>");
-                                    document.write(j);
-                                    document.write("<br>");
-                                    document.write(k);
-                                    document.write("<br>");
-                                    document.write(l);
-                                    }
+                                //     document.write(result);
+                                //     document.write("<br>");
+                                //     document.write(score);
+                                //     }
+                                //     {
+                                //     let hap, j, k, l;
+                                //     j = k = l = 1;
+                                //     hap = ++j + k++ + ++l;
+                                //     document.write("<br>");
+                                //     document.write(hap);
+                                //     document.write("<br>");
+                                //     document.write(j);
+                                //     document.write("<br>");
+                                //     document.write(k);
+                                //     document.write("<br>");
+                                //     document.write(l);
+                                //     }
                             </script>
                         </details>
                     </div>
@@ -850,7 +875,7 @@
                     </div>
                 </div>
                 <!-- //sample24 -->
-                <div id="sample25" class="sample">
+                <div id="sample19" class="sample">
                     <h3>19. 비트 연산자</h3>
                 <p>비트연산자의 and, or, xor 알아보기</p>                        
                     <div class="script">
@@ -872,21 +897,21 @@
                         <details>
                             <summary>결과 확인하기</summary>
                             <script>
-                                {
-                                    let a = 30, b = 40;
-                                    document.write(a&b);   
-                                    document.write("<br>"); 
-                                }
-                                {
-                                    let a = 30, b = 40;
-                                    document.write(a|b);
-                                    document.write("<br>");
-                                }
-                                {
-                                    let a = 30, b = 40;
-                                    document.write(a^b);
-                                    document.write("<br>");
-                                }
+                                // {
+                                //     let a = 30, b = 40;
+                                //     document.write(a&b);   
+                                //     document.write("<br>"); 
+                                // }
+                                // {
+                                //     let a = 30, b = 40;
+                                //     document.write(a|b);
+                                //     document.write("<br>");
+                                // }
+                                // {
+                                //     let a = 30, b = 40;
+                                //     document.write(a^b);
+                                //     document.write("<br>");
+                                // }
                             </script>
                         </details>
                     </div>
@@ -901,7 +926,7 @@
                     </div>
                 </div>
                 <!-- //sample25 -->
-                <div id="sample25" class="sample">
+                <div id="sample20" class="sample">
                     <h3>20. 식별자, 예약자</h3>
                 <p>식별자는 변수, 함수, 매개변수 등의 이름을 지정하는 데 사용됩니다.<br>
                     예약자는 언어에서 특별한 의미를 가지는 단어로, 변수 또는 함수 이름으로 사용할 수 없습니다.</p>                        
@@ -924,21 +949,21 @@
                         <details>
                             <summary>결과 확인하기</summary>
                             <script>
-                                {
-                                    let a = 30, b = 40;
-                                    document.write(a&b);   
-                                    document.write("<br>"); 
-                                }
-                                {
-                                    let a = 30, b = 40;
-                                    document.write(a|b);
-                                    document.write("<br>");
-                                }
-                                {
-                                    let a = 30, b = 40;
-                                    document.write(a^b);
-                                    document.write("<br>");
-                                }
+                                // {
+                                //     let a = 30, b = 40;
+                                //     document.write(a&b);   
+                                //     document.write("<br>"); 
+                                // }
+                                // {
+                                //     let a = 30, b = 40;
+                                //     document.write(a|b);
+                                //     document.write("<br>");
+                                // }
+                                // {
+                                //     let a = 30, b = 40;
+                                //     document.write(a^b);
+                                //     document.write("<br>");
+                                // }
                             </script>
                         </details>
                     </div>
@@ -953,7 +978,7 @@
                     </div>
                 </div>
                 <!-- //sample25 -->
-                <div id="sample25" class="sample">
+                <div id="sample21" class="sample">
                     <h3>21. 형변화, typeof( )</h3>
                 <p>typeof( )는 JavaScript에서 사용하는 연산자이며, 주어진 값의 데이터 유형을 반환합니다.</p>                        
                     <div class="script">
@@ -976,26 +1001,26 @@ document.write(typeof(func));
                         <details>
                             <summary>결과 확인하기</summary>
                             <script>
-                                {
-                                    let x = 100, y = "200", z;
-                                    const func = function(){}
+                                // {
+                                //     let x = 100, y = "200", z;
+                                //     const func = function(){}
 
-                                    document.write(x);
-                                    document.write(("<br>"));
-                                    document.write(typeof(x));
-                                    document.write(("<br>"));
-                                    document.write(y);
-                                    document.write(("<br>"));
-                                    document.write(typeof(y));
-                                    document.write(("<br>"));
-                                    document.write(z);
-                                    document.write(("<br>"));
-                                    document.write(typeof(z));
-                                    document.write(("<br>"));
-                                    document.write(func);
-                                    document.write(("<br>"));
-                                    document.write(typeof(func));
-                                }
+                                //     document.write(x);
+                                //     document.write(("<br>"));
+                                //     document.write(typeof(x));
+                                //     document.write(("<br>"));
+                                //     document.write(y);
+                                //     document.write(("<br>"));
+                                //     document.write(typeof(y));
+                                //     document.write(("<br>"));
+                                //     document.write(z);
+                                //     document.write(("<br>"));
+                                //     document.write(typeof(z));
+                                //     document.write(("<br>"));
+                                //     document.write(func);
+                                //     document.write(("<br>"));
+                                //     document.write(typeof(func));
+                                // }
                             </script>
                         </details>
                     </div>
@@ -1012,6 +1037,7 @@ document.write(typeof(func));
                 <!-- //sample25 -->
             </div>
         </div>
+        <div><a id="top_btn" class="">TOP</a></div>
     </main>
     <!-- //main -->
 
@@ -1020,131 +1046,24 @@ document.write(typeof(func));
     </footer>
     <!-- //footer -->
     <script src="assets/js/prism.js"></script>
-    <script>
-        //연산자 
-//        var score = 10;
-//        ++score; //11
-//        score++; //12 //연산자를 전치하나 전치하나 1씩 증가되는 건 똑같으나 다음줄에 보면 차이가 남
-//        var result = score++; //11
-//
-//        console.log(result , score);
     
+<script>
+    $(window).scroll(function(){
 
-//        let hap, j, k, l;
-//        j = k = l = 1;
-//        hap = ++j + k++ + ++l;
-//
-//        console.log(hap);
-//        console.log(j);
-//        console.log(k);
-//        console.log(l)
-//
-//        let sum = 0;
-//
-//        for(let i=0; i<=10; i++) {
-//            sum += i
-//        }
-//
-//        for(let i=0; i<=10; i--) {
-//            sum += i
-//        }
-//
-//
-//        let a = 1, b = 2, c = 3, result;
-//        result = ++a + b++ + ++c;
-//
-//        console.log(result);
-//        console.log(a);
-//        console.log(b);
-//        console.log(c);
-
-//    let x = 7, y = 7, result;
-//
-//    result = x > y ? ++x : y--;
-//
-//    console.log(result);
-//    console.log(x);
-//    console.log(y);
-
-// let a,b,c,result; //연산자
-// a = 20, b=30, c=30;
-// 
-// result = a <b ? b++ : --c
-// 
-// console.log(result)
-// console.log(a)
-// console.log(b+c)
-// console.log(c)
-
-// 변수 : 지역변수 : + 전역 변수
-    let x = 100;    //전역 변수 //함수 안에 넣어도 변수가 먹히는 문법
-    let y = 200;    //전역 변수
-
-    function func() {
-        console.log(x);
-        console.log(y);
-    }
-    func();
-
-    console.log(x);
-    console.log(y);
-
-    // 변수 : 지역변수 : + 전역 변수
-{
-    let x = 100;    //전역 변수
-    let y = 200;    //전역 변수
-
-    function func() {
-        let x = 100;
-        let y = 200;
-
-        console.log("함수안"+x);    //지역 변수 //함수안에 같은 변수가있어도 에러가 뜨지않고 출력이됨
-        console.log("함수밖"+y);    //지역 변수
-    }
-    func();
-
-    console.log(x);
-    console.log(y);
+if( $(this).scrollTop() > 100 ){
+$("#top_btn").addClass("on");
 }
-   // 변수 : 지역변수 : + 전역 변수
-   {
-    let x = 100;    //let 이 있으면 지역변수 없으면 전역 변수
-    let y = 200;    //전역 변수
-
-    function func() {
-        x = 100;//let 이 있으면 지역변수 없으면 전역 변수
-        let y = 200;//전역 변수
-
-
-        console.log("함수안"+x);    //지역 변수 //함수안에 같은 변수가있어도 에러가 뜨지않고 출력이됨
-        console.log("함수밖"+y);    //지역 변수
-    }
-    func();
-
-    console.log(x);
-    console.log(y);
+else{
+$("#top_btn").removeClass("on");
 }
- // 변수 : 지역변수 : + 전역 변수
- {
-    x = 100;    //let 이 있으면 지역변수 없으면 전역 변수
-    let y = 200;    //전역 변수
 
-    function func() {
-        let x = 100;
-        let y = 200;
-        z = "javascript"
+});
 
-        console.log("함수안"+x);    //지역 변수 //함수안에 같은 변수가있어도 에러가 뜨지않고 출력이됨
-        console.log("함수밖"+y);    //지역 변수=[]p;'./'
-        console.log("함수밖"+z);    //지역 변수
-    }
-    func();
+$("#top_btn").click(function(){
+window.scrollTo({top : 0, behavior: 'smooth'}); 
+});
 
-    console.log(x);
-    console.log(y);
-    console.log(z);
-}
-    </script>
+</script>
 </body>
 
 </html>
