@@ -203,6 +203,7 @@
 }
 .parallax__dot li.active {
     box-shadow: 0 0 0 2px rgba(255, 255, 255, 1);
+    
 }
 .parallax__dot li.active a {
     transform: scale(0.4);
