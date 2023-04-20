@@ -68,9 +68,10 @@
                     <li><a href="#sample15">15. 객체 : 데이터 저장(키와값) : 표현방법6</a></li>
                     <li><a href="#sample16">16. 객체 : 데이터 저장(키와값) : 표현방법7</a></li>
                     <li><a href="#sample17">17. 객체 : 데이터 저장(키와값) : 표현방법8</a></li>
-                    <li><a href="#sample18">++ 식별자, 예약자</a></li>
-                    <li><a href="#sample19">++ 연산자(전치, 후치)</a></li>
-                    <li><a href="#sample20">++ 형변화, typeof( )</a></li>
+                    <li><a href="#sample18">++ 연산자(전치, 후치)</a></li>
+                    <li><a href="#sample19">++ 비트연산자</a></li>
+                    <li><a href="#sample20">++ 식별자, 예약자</a></li>
+                    <li><a href="#sample21">++ 형변화, typeof( )</a></li>
 
                 </ul>
             </div>
@@ -695,7 +696,7 @@
                     </div>
                 </div>
                 <!-- //sample14 -->
-                <div id="sample15" class="sample">
+                <div id="sample17" class="sample">
                     <h3>16. 객체 : 데이터 저장(키와 값) : 표현방법7</h3>
                     여러 개의 변수 를 하나의 변수에 저장하고 값을 출력하는 방법입니다.
                     <div class="script">
@@ -728,7 +729,7 @@
                     </div>
                 </div>
                 <!-- //sample15 -->
-                <div id="sample16" class="sample">
+                <div id="sample18" class="sample">
                     <h3>17. 객체 : 데이터 저장(키와 값) : 표현방법8</h3>
                     여러 개의 데이터를 하나의 변수에 저장하고 데이터를 식별해서 가져오는 표현방법입니다.
                     <div class="script">
@@ -780,24 +781,34 @@
                         </details>
                     </div>
                     <div class="notice">
-                        여러 개의 데이터를 하나의 변수에 저장하고 데이터를 식별해서 가져올수 있습니다.
+                        <mark>여러 개의 데이터를 하나의 변수에 저장</mark>하고 <mark>데이터를 식별해서 가져올수</mark> 있습니다.<br><br>
+                        이 코드는 JavaScript로 작성된 것으로, 상수(const) a, b, c를 정의하고 있습니다. 그리고 객체(object) obj를 만들어서 a, b, c를 프로퍼티(property)로 갖도록 하고 있습니다.<br>
+                        그 다음에는 각각의 상수인 a, b, c를 console.log로 출력하고 있습니다.<br>
+                        따라서, 이 코드를 실행하면 콘솔에는 100, 200, "javascript"가 차례로 출력됩니다.
                     </div>
                 </div>
                 <!-- //sample16 -->
-                <!-- //sample23 -->
                 <div id="sample24" class="sample">
-                    <h3>18."++" 전치 증감연산자와 후치 증감연산자</h3>
-                <p>증감연산자에서 기호를 앞에 쓰는 것과 뒤에 쓰는 것은 연산 우선순위에서 차이가 있습니다.<br>
-                전치증감연산자는 우선순위가 "="보다 높고 후치증감연산자는 낮습니다.</p>                        
+                    <h3>18. 연산자 (전치, 후치)</h3>
+                <p>연산자의 위치에 따라 달라지는 결과값 확인하기</p>                        
                     <div class="script">
 <pre><code class="language-js">{
-let x = 7 , y = 7, result;
-result = x &gt; y ? ++x : y--;
+    var score = 10;
+    var result = ++score;
+    var result = score++;
 
-console.log(result);
-console.log(x);
-console.log(y);
-//만약 삼항연산자가 아니고 if 문이면 x 는 8 이된다.
+    console.log(result);
+    console.log(score);
+}
+{
+    let hap, j, k, l;
+    j = k = l = 1;
+    hap = ++j + k++ + ++l;
+
+    console.log(hap);
+    console.log(j);
+    console.log(k);
+    console.log(l);
 }
 </code></pre>
                     </div>
@@ -806,36 +817,54 @@ console.log(y);
                             <summary>결과 확인하기</summary>
                             <script>
                                 {
-                                    let x = 7 , y = 7, result;
-                                    result = x > y ? ++x : y--;
+                                    var score = 10;
+                                    var result = ++score;
+                                    var result = score++;
 
                                     document.write(result);
                                     document.write("<br>");
-                                    document.write(x);
+                                    document.write(score);
+                                    }
+                                    {
+                                    let hap, j, k, l;
+                                    j = k = l = 1;
+                                    hap = ++j + k++ + ++l;
                                     document.write("<br>");
-                                    document.write(y);
-                                }
+                                    document.write(hap);
+                                    document.write("<br>");
+                                    document.write(j);
+                                    document.write("<br>");
+                                    document.write(k);
+                                    document.write("<br>");
+                                    document.write(l);
+                                    }
                             </script>
                         </details>
                     </div>
                     <div class="notice">
-                        복습전
+                        <b>연산자 (전치, 후치) 알아보기</b><br>
+                        연산자는 위치에 따라 결과값이 달라진다.<br>
+                        <mark>'++'연산자가 변수 앞에 오게되면</mark> '='보다 우선순위가 높아 연산 후의 값이 적용이 되지만,<br>
+                        <mark>'++'연산자가 변수 뒤에 오게되면</mark> '='보다 우선순위가 낮아 연산 전의 값이 적용이 된다.<br>
+                        그 값을 저장하는 <mark>변수에는 연산 전의 값이 적용이 되지만 해당 변수에는 연산이 적용</mark>된다.<br>
                     </div>
                 </div>
                 <!-- //sample24 -->
                 <div id="sample25" class="sample">
-                    <h3>19.형변환, typeof</h3>
-                <p>증감연산자에서 기호를 앞에 쓰는 것과 뒤에 쓰는 것은 연산 우선순위에서 차이가 있습니다.<br>
-                전치증감연산자는 우선순위가 "="보다 높고 후치증감연산자는 낮습니다.</p>                        
+                    <h3>19. 비트 연산자</h3>
+                <p>비트연산자의 and, or, xor 알아보기</p>                        
                     <div class="script">
 <pre><code class="language-js">{
-let x = 7 , y = 7, result;
-result = x &gt; y ? ++x : y--;
-
-console.log(result);
-console.log(x);
-console.log(y);
-//만약 삼항연산자가 아니고 if 문이면 x 는 8 이된다.
+    let a = 30, b = 40;
+    console.log(a&b);    
+}
+{
+    let a = 30, b = 40;
+    console.log(a|b);
+}
+{
+    let a = 30, b = 40;
+    console.log(a^b);
 }
 </code></pre>
                     </div>
@@ -844,20 +873,140 @@ console.log(y);
                             <summary>결과 확인하기</summary>
                             <script>
                                 {
-                                    let x = 7 , y = 7, result;
-                                    result = x > y ? ++x : y--;
-
-                                    document.write(result);
+                                    let a = 30, b = 40;
+                                    document.write(a&b);   
+                                    document.write("<br>"); 
+                                }
+                                {
+                                    let a = 30, b = 40;
+                                    document.write(a|b);
                                     document.write("<br>");
-                                    document.write(x);
+                                }
+                                {
+                                    let a = 30, b = 40;
+                                    document.write(a^b);
                                     document.write("<br>");
-                                    document.write(y);
                                 }
                             </script>
                         </details>
                     </div>
                     <div class="notice">
-                        복습전
+                        &(and) |(or) ^(xor) 알아보기<br>
+                        30의 2진수표현 : 00011110<br>
+                        40의 2진수 표현 : 00101000<br>
+                        1번 문제 : 30과 40의 &연산을 해준다. &연산은 이진수를 서로 <mark>비교하여 동시에 1일 경우에만 1의 결과를 갖는다.</mark><br>
+                        2번 문제 : 30과 40의 |연산을 해준다. |연산은 이진수를 서로 <mark>비교하여 하나라도 1인 경우에 1의 결과를 갖는다.</mark><br>
+                        3번 문제 : 30과 40의 ^연산을 해준다. ^연산은 이진수를 서로 <mark>비교하여 서로 같을 때는 0의 값을, 서로 다를 때는 1의 값을 갖는다.</mark><br>
+                        각각의 결과를 다시 10진수로 표현해주면 된다.
+                    </div>
+                </div>
+                <!-- //sample25 -->
+                <div id="sample25" class="sample">
+                    <h3>20. 식별자, 예약자</h3>
+                <p>식별자는 변수, 함수, 매개변수 등의 이름을 지정하는 데 사용됩니다.<br>
+                    예약자는 언어에서 특별한 의미를 가지는 단어로, 변수 또는 함수 이름으로 사용할 수 없습니다.</p>                        
+                    <div class="script">
+<pre><code class="language-js">{
+    let a = 30, b = 40;
+    console.log(a&b);    
+}
+{
+    let a = 30, b = 40;
+    console.log(a|b);
+}
+{
+    let a = 30, b = 40;
+    console.log(a^b);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                {
+                                    let a = 30, b = 40;
+                                    document.write(a&b);   
+                                    document.write("<br>"); 
+                                }
+                                {
+                                    let a = 30, b = 40;
+                                    document.write(a|b);
+                                    document.write("<br>");
+                                }
+                                {
+                                    let a = 30, b = 40;
+                                    document.write(a^b);
+                                    document.write("<br>");
+                                }
+                            </script>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        &(and) |(or) ^(xor) 알아보기<br>
+                        30의 2진수표현 : 00011110<br>
+                        40의 2진수 표현 : 00101000<br>
+                        1번 문제 : 30과 40의 &연산을 해준다. &연산은 이진수를 서로 <mark>비교하여 동시에 1일 경우에만 1의 결과를 갖는다.</mark><br>
+                        2번 문제 : 30과 40의 |연산을 해준다. |연산은 이진수를 서로 <mark>비교하여 하나라도 1인 경우에 1의 결과를 갖는다.</mark><br>
+                        3번 문제 : 30과 40의 ^연산을 해준다. ^연산은 이진수를 서로 <mark>비교하여 서로 같을 때는 0의 값을, 서로 다를 때는 1의 값을 갖는다.</mark><br>
+                        각각의 결과를 다시 10진수로 표현해주면 된다.
+                    </div>
+                </div>
+                <!-- //sample25 -->
+                <div id="sample25" class="sample">
+                    <h3>21. 형변화, typeof( )</h3>
+                <p>typeof( )는 JavaScript에서 사용하는 연산자이며, 주어진 값의 데이터 유형을 반환합니다.</p>                        
+                    <div class="script">
+<pre><code class="language-js">{
+let x = 100, y = "200", z;
+const func = function(){}
+
+document.write(x);
+document.write(typeof(x));
+document.write(y);
+document.write(typeof(y));
+document.write(z);
+document.write(typeof(z));
+document.write(func);
+document.write(typeof(func));
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                {
+                                    let x = 100, y = "200", z;
+                                    const func = function(){}
+
+                                    document.write(x);
+                                    document.write(("<br>"));
+                                    document.write(typeof(x));
+                                    document.write(("<br>"));
+                                    document.write(y);
+                                    document.write(("<br>"));
+                                    document.write(typeof(y));
+                                    document.write(("<br>"));
+                                    document.write(z);
+                                    document.write(("<br>"));
+                                    document.write(typeof(z));
+                                    document.write(("<br>"));
+                                    document.write(func);
+                                    document.write(("<br>"));
+                                    document.write(typeof(func));
+                                }
+                            </script>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        &(and) |(or) ^(xor) 알아보기<br>
+                        30의 2진수표현 : 00011110<br>
+                        40의 2진수 표현 : 00101000<br>
+                        1번 문제 : 30과 40의 &연산을 해준다. &연산은 이진수를 서로 <mark>비교하여 동시에 1일 경우에만 1의 결과를 갖는다.</mark><br>
+                        2번 문제 : 30과 40의 |연산을 해준다. |연산은 이진수를 서로 <mark>비교하여 하나라도 1인 경우에 1의 결과를 갖는다.</mark><br>
+                        3번 문제 : 30과 40의 ^연산을 해준다. ^연산은 이진수를 서로 <mark>비교하여 서로 같을 때는 0의 값을, 서로 다를 때는 1의 값을 갖는다.</mark><br>
+                        각각의 결과를 다시 10진수로 표현해주면 된다.
                     </div>
                 </div>
                 <!-- //sample25 -->
