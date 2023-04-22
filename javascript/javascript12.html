@@ -522,6 +522,7 @@ for(let i=0; i&lt;arr.length; i++){
     복습전
     </div>
 <!-- //sample01 -->
+<div><a id="top_btn" class="">TOP</a></div>
     </main>
     <!-- //main -->
 
@@ -529,9 +530,24 @@ for(let i=0; i&lt;arr.length; i++){
     </footer>
     <!-- //footer -->
     <script src="assets/js/prism.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script>
-
-    </script>
+        $(window).scroll(function(){
+    
+    if( $(this).scrollTop() > 100 ){
+    $("#top_btn").addClass("on");
+    }
+    else{
+    $("#top_btn").removeClass("on");
+    }
+    
+    });
+    
+    $("#top_btn").click(function(){
+    window.scrollTo({top : 0, behavior: 'smooth'}); 
+    });
+    
+        </script>
 
     <body>
         <footer id="footer">

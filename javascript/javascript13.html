@@ -86,16 +86,31 @@
                         </ul>
                         <a href="shearchEffecti.html">확인하기</a>
                 </div>
-    </main>
+                <div><a id="top_btn" class="">TOP</a></div>
     <!-- //main -->
 
     <footer id="footer">
     </footer>
     <!-- //footer -->
 
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script>
-
-    </script>
+        $(window).scroll(function(){
+    
+    if( $(this).scrollTop() > 100 ){
+    $("#top_btn").addClass("on");
+    }
+    else{
+    $("#top_btn").removeClass("on");
+    }
+    
+    });
+    
+    $("#top_btn").click(function(){
+    window.scrollTo({top : 0, behavior: 'smooth'}); 
+    });
+    
+        </script>
 
     <body>
     <footer id="footer">

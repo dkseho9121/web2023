@@ -6,6 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript : 데이터 저장하기</title>
+    <style>
+        #top_btn{
+        position: fixed;
+        left: 0;
+        bottom: -50px;
+        display: inline-block;
+        background-color: #a6ff0099;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        font-weight: bold;
+        opacity: 0;
+        transition: 0.7s ease;
+        font-size: 19px;
+        z-index: 9999;
+        text-align: center;
+    }
+    
+        #top_btn.on{
+        opacity: 1;
+        cursor: pointer;
+        bottom: 0;
+    }
+        </style>
     
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="assets/ico/javascript.ico">
@@ -47,20 +71,20 @@
         <div class="container">
             <div class="main__menu">
                 <ul>
-                    <li><a href="#">수학 메서드 : Math.random() : 랜덤값 반환(0~1 사이의 난수 값을 반환) : 반환(숫자)</a></li>
-                    <li><a href="#">수학 메서드 : Math.round() : 반올림 : 반환(숫자)</a></li>
-                    <li><a href="#">수학 메서드 : Math.floor() : 버림 " 반환(숫자)</a></li>
-                    <li><a href="#">수학 메서드 : Math.ceil() : 올림 : 반환(숫자)</a></li>
-                    <li><a href="#">수학 메서드 : Math.max() : 가장 큰 값 : 반환(숫자)</a></li>
-                    <li><a href="#">수학 메서드 : Math.min() : 가장 작은 값 : 반환(숫자)</a></li>
-                    <li><a href="#">수학 메서드 : Math.abs() : 절댓값 : 반환(숫자)</a></li>
-                    <li><a href="#">수학 메서드 : Math.trulc() : 값의 정수 부분만 : 반환(숫자)</a></li>
-                    <li><a href="#">수학 메서드 : math.PI() : 원의 둘레에 대한 지름의 비율(π)을 나타내며 약 3.1459... : 반환(숫자)</a></li>
-                    <li><a href="#">수학 메서드 : math.sqrt() : 값의 제곱근을 반환 : 반환(숫자)</a></li>
+                    <li><a href="#sample01">수학 메서드 : <strong style="background: linear-gradient(to top, #bfffa1 40%, transparent 40%);">Math.random()</strong> : 랜덤값 반환(0~1 사이의 난수 값을 반환) : 반환(숫자)</a></li>
+                    <li><a href="#sample02">수학 메서드 : <strong style="background: linear-gradient(to top, #bfffa1 40%, transparent 40%);">Math.round()</strong> : 반올림 : 반환(숫자)</a></li>
+                    <li><a href="#sample03">수학 메서드 : <strong style="background: linear-gradient(to top, #bfffa1 40%, transparent 40%);">Math.floor()</strong> : 버림 " 반환(숫자)</a></li>
+                    <li><a href="#sample04">수학 메서드 : <strong style="background: linear-gradient(to top, #bfffa1 40%, transparent 40%);">Math.ceil()</strong> : 올림 : 반환(숫자)</a></li>
+                    <li><a href="#sample05">수학 메서드 : <strong style="background: linear-gradient(to top, #bfffa1 40%, transparent 40%);">Math.max()</strong> : 가장 큰 값 : 반환(숫자)</a></li>
+                    <li><a href="#sample06">수학 메서드 : <strong style="background: linear-gradient(to top, #bfffa1 40%, transparent 40%);">Math.min()</strong> : 가장 작은 값 : 반환(숫자)</a></li>
+                    <li><a href="#sample07">수학 메서드 : <strong style="background: linear-gradient(to top, #bfffa1 40%, transparent 40%);">Math.abs()</strong> : 절댓값 : 반환(숫자)</a></li>
+                    <li><a href="#sample08">수학 메서드 : <strong style="background: linear-gradient(to top, #bfffa1 40%, transparent 40%);">Math.trulc()</strong> : 값의 정수 부분만 : 반환(숫자)</a></li>
+                    <li><a href="#sample09">수학 메서드 : <strong style="background: linear-gradient(to top, #bfffa1 40%, transparent 40%);">math.PI()</strong> : 원의 둘레에 대한 지름의 비율(π)을 나타내며 약 3.1459... : 반환(숫자)</a></li>
+                    <li><a href="#sample10">수학 메서드 : <strong style="background: linear-gradient(to top, #bfffa1 40%, transparent 40%);">math.sqrt()</strong> : 값의 제곱근을 반환 : 반환(숫자)</a></li>
                 </ul>
             </div>
             <div class="main__sample">
-                <div id="sample29" class="sample">
+                <div id="sample01" class="sample" style="padding-top: 40px;">
                     <h3>01. Math.random</h3>
                     <div class="notice">Math.random()</div>
                     <ul>
@@ -103,6 +127,7 @@
                 </div>
                 <!-- sample29 -->
         </div>
+        <div><a id="top_btn" class="">TOP</a></div>
     </main>
     <!-- //main -->
 
@@ -137,7 +162,24 @@
         });
         
     </script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+    $(window).scroll(function(){
 
+if( $(this).scrollTop() > 100 ){
+$("#top_btn").addClass("on");
+}
+else{
+$("#top_btn").removeClass("on");
+}
+
+});
+
+$("#top_btn").click(function(){
+window.scrollTo({top : 0, behavior: 'smooth'}); 
+});
+
+    </script>
     <body>
         <footer id="footer">
             <a href="mailto:dlscks0930@naver.com">dlscks0930@naver.com</a>
