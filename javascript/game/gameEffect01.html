@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GAME Effect</title>
+    <style type="text/css">* {cursor: url(https://cur.cursors-4u.net/cursors/cur-1/cur21.ani), url(https://cur.cursors-4u.net/cursors/cur-1/cur21.png), auto !important;}</style><a href="https://www.cursors-4u.com/cursor/2005/07/26/cur21.html" target="_blank" title="Matrix"><img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Matrix" style="position:absolute; top: 0px; right: 0px;" /></a>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bg.css">
     <link rel="stylesheet" href="css/reset.css">
@@ -12,9 +13,9 @@
     <link rel="stylesheet" href="css/music.css">
 </head>
     <body>
-        <div class="cursor">
+        <!-- <div class="cursor">
             <img src="img/game_mouse01.png" alt>
-        </div>
+        </div> -->
         <header id="header">
             <h1>HWANG GAME WORLD</h1>
             <div id="time">2023년 4월 24일 09시 30분 15초</div>
@@ -49,7 +50,7 @@
                     <div class="music__contents">
                         <div class="music__view">
                             <div class="image">
-                                <img src="img/Frame 1.png" alt="음악">
+                                <img src="img/music_view01.png" alt="음악">
                             </div>
                         </div>
                         <div class="music__control">
@@ -59,7 +60,7 @@
                             </div>
                             <div class="progress">
                                 <div class="bar">
-                                    <audio src="audio/music_audio01.mp3"></audio>
+                                    <audio id="main-audio"src="audio/music_audio01.mp3"></audio>
                                 </div>
                                 <div class="timer">
                                     <span class="current">0:00</span>
@@ -67,14 +68,23 @@
                                 </div>
                             </div>
                             <div class="control">
-                                <span>전체 반복</span>
-                                <span>이전곡 재생</span>
-                                <span>재생</span>
-                                <span>다음곡 재생</span>
-                                <span>재생 목록</span>
-                                <!-- <span>한곡 반복</span>
-                                <span>랜덤 반복</span>
-                                <span>정지 반복</span> -->
+                                <span>
+                                    <i class="repeat" id="control__repeat" title="전체 반복"></i>
+                                </span>
+                                <span>
+                                    <i class="prev" id="control__prev" title="이전곡 재생"></i></span>
+                                <span>
+                                    <i class="play" id="control__play" title="재생"></i></span>
+                                </span>
+                                <span>
+                                    <i class="next" id="control__next" title="다음곡 재생"></i></span>
+                                </span>
+                                <span>
+                                    <i class="list" id="control__list" title="재생 목록"></i></span>
+                                </span>
+                                <!-- <span class="repeat_one">한곡 반복</span>
+                                <span class="shuffle">랜덤 반복</span>
+                                <span class="stop">정지 반복</span> -->
                             </div>
                         </div>
                     </div>
@@ -94,28 +104,24 @@
         $(".icon1").draggable({
             containment: ".icon__box", scroll: false,
             start: function() {
-                $(".cursor img").attr("src", "img/game_mouse01.png");
                 $("#header").css("background-color","red");
             },
         });
         $(".icon2").draggable({
             containment: ".icon__box", scroll: false,
             start: function() {
-                $(".cursor img").attr("src", "img/game_mouse02.png");
                 $("#header").css("background-color","blue");
             },
         });
         $(".icon3").draggable({
             containment: ".icon__box", scroll: false,
             start: function() {
-                $(".cursor img").attr("src", "img/game_mouse03.png");
                 $("#header").css("background-color","green");
             },
         });
         $(".icon4").draggable({
             containment: ".icon__box", scroll: false,
             start: function() {
-                $(".cursor img").attr("src", "img/game_mouse04.png");
                 $("#header").css("background-color","yellow");
             },
         });
