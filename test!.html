@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블랙잭 게임</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    }
+
+    .game-board {
+        display: flex;
+        justify-content: center;
+    }
+
+    .dealer, .player {
+        margin: 0 20px;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        margin: 5px;
+    }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>블랙잭 게임</h1>
+    <div class="game-board">
+        <div class="dealer">
+            <h2>딜러 카드</h2>
+            <div class="cards"></div>
+        </div>
+        <div class="player">
+            <h2>플레이어 카드</h2>
+            <div class="cards"></div>
+            <button id="hit">Hit</button>
+            <button id="stand">Stand</button>
+        </div>
+    </div>
+    <div class="result">
+        <h2>결과</h2>
+        <p id="result-text"></p>
+    </div>
+    <button id="reset">새 게임 시작</button>
+
+    <script src="app.js"></script>
+</body>
+</html>
+<script>
+    const hitButton = document.getElementById("hit");
+const standButton = document.getElementById("stand");
+const resetButton = document.getElementById("reset");
+const dealerCards = document.querySelector(".dealer .cards");
+const playerCards = document.querySelector(".player .cards");
+const resultText = document.getElementById("result-text");
+
+const suits = ["♠", "♥", "♦", "♣"];
+const values = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
+
+class Card {
+    constructor(suit, value) {
+        this.suit = suit;
+        this.value = value;
+    }
+}
+
+class Deck {
+    constructor() {
+        this.cards = [];
+
+        for (const suit of suits) {
+            for (const value of values) {
+                this.cards.push(new Card(suit, value));
+            }
+        }
+    }
+
+    shuffle() {
+        for (let i = this.cards.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [this.cards[i], this.cards[j]] = [this.cards[j], this.cards[i]];
+        }
+    }
+
+    drawCard() {
+        return this.cards.pop();
+    }
+}
+
+let deck = new Deck();
+let dealerHand = [];
+let playerHand = [];
+
+function startGame() {
+    deck = new Deck();
+    deck.shuffle();
+    dealerHand = [];
+    playerHand = [];
+
+    // 카드를 2장씩 나눠줍니다.
+    dealerHand.push(deck.drawCard());
+    dealerHand.push(deck.drawCard());
+    playerHand.push(deck.drawCard());
+    playerHand.push(deck.drawCard());
+
+    updateBoard();
+    checkForBlackjack();
+}
+
+function updateBoard() {
+    dealerCards.innerHTML = '';
+    playerCards.innerHTML = '';
+
+    for (const card of dealerHand) {
+        const cardElement = document.createElement('div');
+        cardElement.classList.add('card');
+        cardElement.textContent = `${card.value} ${card.suit}`;
+        dealerCards.appendChild(cardElement);
+    }
+
+    for (const card of playerHand) {
+        const cardElement = document.createElement('div');
+        cardElement.classList.add('card');
+        cardElement.textContent = `${card.value} ${card.suit}`;
+        playerCards.appendChild(cardElement);
+    }
+}
+
+function checkForBlackjack() {
+    if (getHandValue(playerHand) === 21) {
+        endGame('블랙잭! 플레이어가 이겼습니다.');
+    } else if (getHandValue(dealerHand) === 21) {
+        endGame('블랙잭! 딜러가 이겼습니다.');
+    }
+}
+
+function hit() {
+    playerHand.push(deck.drawCard());
+    updateBoard();
+
+    if (getHandValue(playerHand) > 21) {
+        endGame('플레이어가 패배했습니다. (버스트)');
+    }
+}
+
+function stand() {
+    while (getHandValue(dealerHand) < 17) {
+        dealerHand.push(deck.drawCard());
+    }
+
+    const playerValue = getHandValue(playerHand);
+    const dealerValue = getHandValue(dealerHand);
+
+    if (dealerValue > 21 || playerValue > dealerValue) {
+        endGame('플레이어가 이겼습니다.');
+    } else if (dealerValue === playerValue) {
+        endGame('무승부입니다.');
+    } else {
+        endGame('딜러가 이겼습니다.');
+    }
+}
+
+function getHandValue(hand) {
+    let value = 0;
+    let aces = 0;
+
+    for (const card of hand) {
+        if (card.value === 'A') {
+            aces++;
+            value += 11;
+        } else if (['K', 'Q', 'J'].includes(card.value)) {
+            value += 10;
+        } else {
+            value += parseInt(card.value);
+        }
+    }
+
+    while (value > 21 && aces > 0) {
+        value -= 10;
+        aces--;
+    }
+
+    return value;
+}
+
+function endGame(message) {
+    resultText.textContent = message;
+    hitButton.disabled = true;
+    standButton.disabled = true;
+}
+
+hitButton.addEventListener('click', hit);
+standButton.addEventListener('click', stand);
+resetButton.addEventListener('click', () => {
+    resultText.textContent = '';
+    hitButton.disabled = false;
+    standButton.disabled = false;
+    startGame();
+});
+
+startGame();
+</script>
