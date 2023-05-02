@@ -7,17 +7,25 @@
     <title>GAME Effect</title>
     <style type="text/css">* {cursor: url(https://cur.cursors-4u.net/people/peo-1/peo4.ani), url(https://cur.cursors-4u.net/people/peo-1/peo4.png), auto !important;}</style><a href="https://www.cursors-4u.com/cursor/2005/04/21/peo4-10.html" target="_blank" title="Mario Walking"><img src="" border="0" alt="Mario Walking" style="position:absolute; top: 0px; right: 0px;" /></a>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="css/bg.css"> -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/game.css">
     <link rel="stylesheet" href="css/music.css">
+    <link rel="stylesheet" href="css/title.css">
 </head>
     <body>
         <!-- <div class="cursor">
             <img src="img/game_mouse01.png" alt>
         </div> -->
+        
         <header id="header">
-            <h1>HWANG GAME WORLD</h1>
+                <h1>Inchan's World</h1>
+                <h1>Inchan's World</h1>
+                <h1>Inchan's World</h1>
             <div class="time">2023년 4월 24일 09시 30분 15초</div>
         </header>
         <main>
@@ -69,7 +77,9 @@
                             </div>
                             <div class="control">
                                 <span>
-                                    <i class="repeat" id="control-repeat" title="전체 반복"></i>
+                                    <!-- <i class="repeat" id="control-repeat" title="전체 반복"></i> -->
+                                    <i class="repeat_one" id="control-repeat" title="한곡 반복"></i>
+                                    <!-- <i class="shuffle" id="control-repeat" title="랜덤 반복"></i> -->
                                 </span>
                                 <span>
                                     <i class="prev" id="control-prev" title="이전곡 재생"></i></span>
@@ -87,8 +97,22 @@
                                 <span class="stop">정지 반복</span> -->
                             </div>
                         </div>
+                        <div class="music__list">
+                            <h3>뮤직 리스트<a href="#" class="close"></a></h3>
+                            <ul>
+                                <!-- <li>
+                                    <span class="img">
+                                        <img class="img" src="img/music_view01.png" alt="">
+                                    </span>
+                                    <span class="title">
+                                        <strong>1. 저리가라</strong>
+                                        <em>DJ Freedom</em>
+                                    </span>
+                                    <span class="time">3:04</span>
+                                </li> -->
+                            </ul>
+                        </div>
                     </div>
-                    <div class="music__footer"></div>
                 </div>
             </div>
             <!-- //뮤직 플레이어 -->
@@ -134,7 +158,7 @@
         const minutes = now.getMinutes();
         const seconds = now.getSeconds();
         const dateTimeString = `${year}년 ${month}월 ${date}일 ${hours}시 ${minutes}분 ${seconds}초`;
-        document.getElementById("time").innerHTML = dateTimeString;
+        document.getElementById("header").innerHTML = dateTimeString;
       }
       // 페이지가 로드될 때마다 1초마다 현재 날짜와 시간을 업데이트합니다.
       setInterval(displayCurrentDateTime, 1000);
